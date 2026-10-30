@@ -239,6 +239,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.TunnelsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tunnelsBetaTrue property</summary>
+        [Obsolete("")]
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.TunnelsBetaTrue.TunnelsBetaTrueRequestBuilder TunnelsBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.TunnelsBetaTrue.TunnelsBetaTrueRequestBuilder(PathParameters, RequestAdapter);

@@ -16,6 +16,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Certif
     public partial class WithCertificate_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The archiveBetaTrue property</summary>
+        [Obsolete("")]
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Certificates.Item.ArchiveBetaTrue.ArchiveBetaTrueRequestBuilder ArchiveBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Certificates.Item.ArchiveBetaTrue.ArchiveBetaTrueRequestBuilder(PathParameters, RequestAdapter);

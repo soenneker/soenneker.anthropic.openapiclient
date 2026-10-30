@@ -20,6 +20,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item
     public partial class WithTunnel_ItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The archiveBetaTrue property</summary>
+        [Obsolete("")]
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.ArchiveBetaTrue.ArchiveBetaTrueRequestBuilder ArchiveBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.ArchiveBetaTrue.ArchiveBetaTrueRequestBuilder(PathParameters, RequestAdapter);
@@ -30,16 +31,19 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Certificates.CertificatesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The certificatesBetaTrue property</summary>
+        [Obsolete("")]
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.CertificatesBetaTrue.CertificatesBetaTrueRequestBuilder CertificatesBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.CertificatesBetaTrue.CertificatesBetaTrueRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The reveal_tokenBetaTrue property</summary>
+        [Obsolete("")]
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Reveal_tokenBetaTrue.Reveal_tokenBetaTrueRequestBuilder Reveal_tokenBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Reveal_tokenBetaTrue.Reveal_tokenBetaTrueRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The rotate_tokenBetaTrue property</summary>
+        [Obsolete("")]
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Rotate_tokenBetaTrue.Rotate_tokenBetaTrueRequestBuilder Rotate_tokenBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Tunnels.Item.Rotate_tokenBetaTrue.Rotate_tokenBetaTrueRequestBuilder(PathParameters, RequestAdapter);

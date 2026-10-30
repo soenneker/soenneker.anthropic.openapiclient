@@ -2,7 +2,7 @@
   "descriptionHash": "F5252D766337A8821310D49CDBD7855975A68D49933D140795ADEBA9C810004214C5228C72BF7156C554AC9BACC48D855D06D8A7D748DA374CF6BE5EEB2DE6CC",
   "descriptionLocation": "../../openapi.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.36.1",
+  "kiotaVersion": "1.37.0",
   "clientClassName": "AnthropicOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Anthropic.OpenApiClient",

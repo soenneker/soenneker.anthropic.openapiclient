@@ -55,6 +55,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.AgentsBetaTrue.AgentsBetaTrueRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The complete property</summary>
+        [Obsolete("")]
         public global::Soenneker.Anthropic.OpenApiClient.V1.Complete.CompleteRequestBuilder Complete
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Complete.CompleteRequestBuilder(PathParameters, RequestAdapter);
