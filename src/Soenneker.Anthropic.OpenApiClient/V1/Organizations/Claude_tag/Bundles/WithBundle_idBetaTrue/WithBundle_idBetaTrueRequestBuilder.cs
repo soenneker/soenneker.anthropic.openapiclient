@@ -41,21 +41,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 408 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 412 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 413 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 431 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 499 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 501 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 503 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 504 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 412 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 413 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 431 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 499 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 501 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 503 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 504 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -68,21 +68,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle403Error.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

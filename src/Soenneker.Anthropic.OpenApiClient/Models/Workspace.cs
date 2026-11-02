@@ -22,7 +22,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_archived_at ArchivedAt { get; set; }
 #endif
-        /// <summary>Identifier for this Workspace&apos;s encryption compartment. When you configure acustomer-managed encryption key (CMEK) on AWS, reference this value in yourKMS key-policy condition so the key is scoped to this compartment. On GCP andAzure, Anthropic enforces the compartment binding automatically; you do notneed to reference this value in your key configuration. See the CMEKintegration guide for the required key configuration; unless your organizationis on Claude Platform on AWS, it includes a separate value used during keyvalidation. On Claude Platform on AWS there is no separate validation value:the key is validated against this Workspace&apos;s own value when it is attached, soif your key policy uses the compartment condition, add this value to it beforeattaching the key.</summary>
+        /// <summary>Identifier for this Workspace&apos;s encryption compartment. When you configure anAWS KMS customer-managed encryption key (CMEK) that isn&apos;t bound to a userprofile, reference this value in your KMS key-policy condition so the key isscoped to this compartment. On GCP and Azure, Anthropic enforces the compartmentbinding automatically; you do not need to reference this value in your keyconfiguration. See the CMEK integration guide for the required keyconfiguration; unless your organization is on Claude Platform on AWS, itincludes a separate value used during key validation. On Claude Platform on AWSthere is no separate validation value: your organization&apos;s own key is validatedagainst this Workspace&apos;s own value when it is attached, so if its key policyuses the compartment condition, add this value to it before attaching the key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CompartmentId { get; set; }
@@ -48,7 +48,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string DisplayColor { get; set; }
 #endif
-        /// <summary>ID of the customer-managed encryption key (CMEK) configuration to use for thisWorkspace. Setting this field requires CMEK to be enabled for yourorganization. When set, data stored for this Workspace is encrypted with thereferenced key. Create key configurations with the External Keys API. OnClaude Platform on AWS the value is the AWS KMS key ARN, and the key must be asingle-Region key in the same AWS account and Region as the Workspace. On thatplatform the key is validated against this Workspace when it is attached, so akey-policy problem is reported as an error on this request. This field is write-once:once a key is attached to a Workspace it cannot be detached or replaced. Torotate key material, rotate the underlying key on your cloud KMS; the`external_key_id` stays the same.</summary>
+        /// <summary>ID of the customer-managed encryption key (CMEK) configuration to use for thisWorkspace. Setting this field requires CMEK to be enabled for yourorganization. When set, data stored for this Workspace is encrypted with thereferenced key. Create key configurations with the External Keys API. OnClaude Platform on AWS the value for an AWS KMS key is the key&apos;s ARN, and yourorganization&apos;s own key must be a single-Region key in the same AWS account andRegion as the Workspace. On that platform the key is validated against thisWorkspace when it is attached, so a key-policy problem is reported as an erroron this request. This field is write-once: once a key is attached to a Workspaceit cannot be detached or replaced. To rotate key material, rotate the underlyingkey on your cloud KMS; the `external_key_id` stays the same.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_external_key_id? ExternalKeyId { get; set; }
@@ -88,6 +88,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string Type { get; set; }
 #endif
+        /// <summary>ID of the user profile attached to the Workspace, or null if it has none. Every inference request through a Workspace that has a user profile must name that profile.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id? UserProfileId { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id UserProfileId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.Workspace"/> and sets the default values.
         /// </summary>
@@ -124,6 +132,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_tags>(global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_tags.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
+                { "user_profile_id", n => { UserProfileId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id>(global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -143,6 +152,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_tags>("tags", Tags);
             writer.WriteStringValue("type", Type);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id>("user_profile_id", UserProfileId);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
@@ -272,6 +282,74 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 }
                 else {
                     writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_external_key_idMember1>(null, WorkspaceExternalKeyIdMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_user_profile_idMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class Workspace_user_profile_id : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_user_profile_idMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_user_profile_idMember1? WorkspaceUserProfileIdMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_user_profile_idMember1 WorkspaceUserProfileIdMember1 { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.Workspace.Workspace_user_profile_id();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.WorkspaceUserProfileIdMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_user_profile_idMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(WorkspaceUserProfileIdMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(WorkspaceUserProfileIdMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.Workspace_user_profile_idMember1>(null, WorkspaceUserProfileIdMember1);
                 }
             }
         }

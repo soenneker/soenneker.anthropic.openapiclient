@@ -3,17 +3,23 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Artifacts;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.ArtifactsBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Connectors;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.ConnectorsBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.CostBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Cost_reportBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Plugins;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.PluginsBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Skills;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.SkillsBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Summaries;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.SummariesBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Usage_reportBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.User_cost_reportBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.User_usage_reportBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Users;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsersBetaTrue;
 using System.Collections.Generic;
 using System.IO;
@@ -32,10 +38,20 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps.AppsRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The artifacts property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Artifacts.ArtifactsRequestBuilder Artifacts
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Artifacts.ArtifactsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The artifactsBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.ArtifactsBetaTrue.ArtifactsBetaTrueRequestBuilder ArtifactsBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.ArtifactsBetaTrue.ArtifactsBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The connectors property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Connectors.ConnectorsRequestBuilder Connectors
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Connectors.ConnectorsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The connectorsBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.ConnectorsBetaTrue.ConnectorsBetaTrueRequestBuilder ConnectorsBetaTrue
@@ -52,15 +68,30 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.CostBetaTrue.CostBetaTrueRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The plugins property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Plugins.PluginsRequestBuilder Plugins
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Plugins.PluginsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The pluginsBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.PluginsBetaTrue.PluginsBetaTrueRequestBuilder PluginsBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.PluginsBetaTrue.PluginsBetaTrueRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The skills property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Skills.SkillsRequestBuilder Skills
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Skills.SkillsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The skillsBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.SkillsBetaTrue.SkillsBetaTrueRequestBuilder SkillsBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.SkillsBetaTrue.SkillsBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The summaries property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Summaries.SummariesRequestBuilder Summaries
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Summaries.SummariesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The summariesBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.SummariesBetaTrue.SummariesBetaTrueRequestBuilder SummariesBetaTrue
@@ -86,6 +117,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.User_usage_reportBetaTrue.User_usage_reportBetaTrueRequestBuilder User_usage_reportBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.User_usage_reportBetaTrue.User_usage_reportBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The users property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Users.UsersRequestBuilder Users
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Users.UsersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The usersBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsersBetaTrue.UsersBetaTrueRequestBuilder UsersBetaTrue

@@ -15,7 +15,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     {
         /// <summary>Time the channel was set up, by whichever route. It does not change for as long as `id` does not.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The channel&apos;s identifier. Starts with `slch_`. It does not change for as long as the channel is set up, with one exception: a channel that is not configured gets a new one when claude.ai replaces its record, which happens only while the organization&apos;s read-only mode is off. A channel that is removed and set up again also has a new one. The old one keeps returning 404; look the channel up by its Slack identifiers for the new one.</summary>
+        /// <summary>The channel&apos;s identifier. Starts with `slch_`. It does not change for as long as the channel is set up, with one exception: a channel that is not configured can get a new one. A channel that is removed and set up again also has a new one. The old one keeps returning 404; look the channel up by its Slack identifiers for the new one.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

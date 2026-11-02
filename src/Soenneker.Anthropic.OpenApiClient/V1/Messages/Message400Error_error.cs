@@ -84,7 +84,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.AvailableToolsLimitExceededErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ClaudeCodeKeyCreatorNotMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ClaudeCodeVersionTooOldErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CmekKeyDisabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CmekKeyNetworkBlockedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionBlockAmbiguousErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionBlockMisplacedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionContentMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionIncompleteTurnErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionNothingToSummarizeErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionSignatureInvalidErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionToolChangesMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionTooManyToolReferencesErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.OrganizationOnHoldErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RequestBodyEncodingInvalidErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RequestBodyEncodingUnsupportedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ToolNameConflictErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ToolReferenceUnresolvedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message400Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.AvailableToolsLimitExceededErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ClaudeCodeKeyCreatorNotMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ClaudeCodeVersionTooOldErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CmekKeyDisabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CmekKeyNetworkBlockedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionBlockAmbiguousErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionBlockMisplacedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionContentMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionIncompleteTurnErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionNothingToSummarizeErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionSignatureInvalidErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionToolChangesMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.CompactionTooManyToolReferencesErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.OrganizationOnHoldErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RequestBodyEncodingInvalidErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RequestBodyEncodingUnsupportedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadAlreadyContinuedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadContinueInFlightErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadFingerprintMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadUnsupportedRequestErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ToolNameConflictErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ToolReferenceUnresolvedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message400Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Message400Error_error_details : IComposedTypeWrapper, IParsable
@@ -225,6 +225,38 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.RequestBodyEncodingUnsupportedErrorDetails RequestBodyEncodingUnsupportedErrorDetails { get; set; }
 #endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadAlreadyContinuedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadAlreadyContinuedErrorDetails? ThreadAlreadyContinuedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadAlreadyContinuedErrorDetails ThreadAlreadyContinuedErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadContinueInFlightErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadContinueInFlightErrorDetails? ThreadContinueInFlightErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadContinueInFlightErrorDetails ThreadContinueInFlightErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadFingerprintMismatchErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadFingerprintMismatchErrorDetails? ThreadFingerprintMismatchErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadFingerprintMismatchErrorDetails ThreadFingerprintMismatchErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ThreadUnsupportedRequestErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadUnsupportedRequestErrorDetails? ThreadUnsupportedRequestErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ThreadUnsupportedRequestErrorDetails ThreadUnsupportedRequestErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ToolNameConflictErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -267,6 +299,10 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
                 result.OrganizationOnHoldErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.OrganizationOnHoldErrorDetails();
                 result.RequestBodyEncodingInvalidErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.RequestBodyEncodingInvalidErrorDetails();
                 result.RequestBodyEncodingUnsupportedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.RequestBodyEncodingUnsupportedErrorDetails();
+                result.ThreadAlreadyContinuedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ThreadAlreadyContinuedErrorDetails();
+                result.ThreadContinueInFlightErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ThreadContinueInFlightErrorDetails();
+                result.ThreadFingerprintMismatchErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ThreadFingerprintMismatchErrorDetails();
+                result.ThreadUnsupportedRequestErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ThreadUnsupportedRequestErrorDetails();
                 result.ToolNameConflictErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ToolNameConflictErrorDetails();
                 result.ToolReferenceUnresolvedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ToolReferenceUnresolvedErrorDetails();
                 return result;
@@ -277,9 +313,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(AvailableToolsLimitExceededErrorDetails != null || ClaudeCodeKeyCreatorNotMemberErrorDetails != null || ClaudeCodeVersionTooOldErrorDetails != null || CmekKeyDisabledErrorDetails != null || CmekKeyNetworkBlockedErrorDetails != null || CompactionBlockAmbiguousErrorDetails != null || CompactionBlockMisplacedErrorDetails != null || CompactionContentMismatchErrorDetails != null || CompactionIncompleteTurnErrorDetails != null || CompactionNothingToSummarizeErrorDetails != null || CompactionSignatureInvalidErrorDetails != null || CompactionToolChangesMismatchErrorDetails != null || CompactionTooManyToolReferencesErrorDetails != null || Message400ErrorErrorDetailsMember1 != null || OrganizationOnHoldErrorDetails != null || RequestBodyEncodingInvalidErrorDetails != null || RequestBodyEncodingUnsupportedErrorDetails != null || ToolNameConflictErrorDetails != null || ToolReferenceUnresolvedErrorDetails != null)
+                if(AvailableToolsLimitExceededErrorDetails != null || ClaudeCodeKeyCreatorNotMemberErrorDetails != null || ClaudeCodeVersionTooOldErrorDetails != null || CmekKeyDisabledErrorDetails != null || CmekKeyNetworkBlockedErrorDetails != null || CompactionBlockAmbiguousErrorDetails != null || CompactionBlockMisplacedErrorDetails != null || CompactionContentMismatchErrorDetails != null || CompactionIncompleteTurnErrorDetails != null || CompactionNothingToSummarizeErrorDetails != null || CompactionSignatureInvalidErrorDetails != null || CompactionToolChangesMismatchErrorDetails != null || CompactionTooManyToolReferencesErrorDetails != null || Message400ErrorErrorDetailsMember1 != null || OrganizationOnHoldErrorDetails != null || RequestBodyEncodingInvalidErrorDetails != null || RequestBodyEncodingUnsupportedErrorDetails != null || ThreadAlreadyContinuedErrorDetails != null || ThreadContinueInFlightErrorDetails != null || ThreadFingerprintMismatchErrorDetails != null || ThreadUnsupportedRequestErrorDetails != null || ToolNameConflictErrorDetails != null || ToolReferenceUnresolvedErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AvailableToolsLimitExceededErrorDetails, ClaudeCodeKeyCreatorNotMemberErrorDetails, ClaudeCodeVersionTooOldErrorDetails, CmekKeyDisabledErrorDetails, CmekKeyNetworkBlockedErrorDetails, CompactionBlockAmbiguousErrorDetails, CompactionBlockMisplacedErrorDetails, CompactionContentMismatchErrorDetails, CompactionIncompleteTurnErrorDetails, CompactionNothingToSummarizeErrorDetails, CompactionSignatureInvalidErrorDetails, CompactionToolChangesMismatchErrorDetails, CompactionTooManyToolReferencesErrorDetails, Message400ErrorErrorDetailsMember1, OrganizationOnHoldErrorDetails, RequestBodyEncodingInvalidErrorDetails, RequestBodyEncodingUnsupportedErrorDetails, ToolNameConflictErrorDetails, ToolReferenceUnresolvedErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(AvailableToolsLimitExceededErrorDetails, ClaudeCodeKeyCreatorNotMemberErrorDetails, ClaudeCodeVersionTooOldErrorDetails, CmekKeyDisabledErrorDetails, CmekKeyNetworkBlockedErrorDetails, CompactionBlockAmbiguousErrorDetails, CompactionBlockMisplacedErrorDetails, CompactionContentMismatchErrorDetails, CompactionIncompleteTurnErrorDetails, CompactionNothingToSummarizeErrorDetails, CompactionSignatureInvalidErrorDetails, CompactionToolChangesMismatchErrorDetails, CompactionTooManyToolReferencesErrorDetails, Message400ErrorErrorDetailsMember1, OrganizationOnHoldErrorDetails, RequestBodyEncodingInvalidErrorDetails, RequestBodyEncodingUnsupportedErrorDetails, ThreadAlreadyContinuedErrorDetails, ThreadContinueInFlightErrorDetails, ThreadFingerprintMismatchErrorDetails, ThreadUnsupportedRequestErrorDetails, ToolNameConflictErrorDetails, ToolReferenceUnresolvedErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -290,7 +326,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AvailableToolsLimitExceededErrorDetails>(null, AvailableToolsLimitExceededErrorDetails, ClaudeCodeKeyCreatorNotMemberErrorDetails, ClaudeCodeVersionTooOldErrorDetails, CmekKeyDisabledErrorDetails, CmekKeyNetworkBlockedErrorDetails, CompactionBlockAmbiguousErrorDetails, CompactionBlockMisplacedErrorDetails, CompactionContentMismatchErrorDetails, CompactionIncompleteTurnErrorDetails, CompactionNothingToSummarizeErrorDetails, CompactionSignatureInvalidErrorDetails, CompactionToolChangesMismatchErrorDetails, CompactionTooManyToolReferencesErrorDetails, Message400ErrorErrorDetailsMember1, OrganizationOnHoldErrorDetails, RequestBodyEncodingInvalidErrorDetails, RequestBodyEncodingUnsupportedErrorDetails, ToolNameConflictErrorDetails, ToolReferenceUnresolvedErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AvailableToolsLimitExceededErrorDetails>(null, AvailableToolsLimitExceededErrorDetails, ClaudeCodeKeyCreatorNotMemberErrorDetails, ClaudeCodeVersionTooOldErrorDetails, CmekKeyDisabledErrorDetails, CmekKeyNetworkBlockedErrorDetails, CompactionBlockAmbiguousErrorDetails, CompactionBlockMisplacedErrorDetails, CompactionContentMismatchErrorDetails, CompactionIncompleteTurnErrorDetails, CompactionNothingToSummarizeErrorDetails, CompactionSignatureInvalidErrorDetails, CompactionToolChangesMismatchErrorDetails, CompactionTooManyToolReferencesErrorDetails, Message400ErrorErrorDetailsMember1, OrganizationOnHoldErrorDetails, RequestBodyEncodingInvalidErrorDetails, RequestBodyEncodingUnsupportedErrorDetails, ThreadAlreadyContinuedErrorDetails, ThreadContinueInFlightErrorDetails, ThreadFingerprintMismatchErrorDetails, ThreadUnsupportedRequestErrorDetails, ToolNameConflictErrorDetails, ToolReferenceUnresolvedErrorDetails);
             }
         }
     }

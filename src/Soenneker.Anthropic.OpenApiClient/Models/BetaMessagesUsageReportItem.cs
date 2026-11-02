@@ -12,7 +12,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public partial class BetaMessagesUsageReportItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>ID of the user account that made the request. `null` if not grouping by account or for non-OAuth requests.</summary>
+        /// <summary>ID of the user account that made the request. `null` if not grouping by account or if no user account made the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaMessagesUsageReportItem.BetaMessagesUsageReportItem_account_id? AccountId { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>ID of the API key used. `null` if not grouping by API key or for usage in the Anthropic Console.</summary>
+        /// <summary>ID of the API key used. `null` if not grouping by API key or if the request did not use an API key, as with usage in the Claude Console or from most Claude Managed Agents sessions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaMessagesUsageReportItem.BetaMessagesUsageReportItem_api_key_id? ApiKeyId { get; set; }
@@ -62,7 +62,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaServerToolUse ServerToolUse { get; set; }
 #endif
-        /// <summary>ID of the service account that made the request. `null` if not grouping by service account or for non-OIDC-federation requests.</summary>
+        /// <summary>ID of the service account that made the request. `null` if not grouping by service account or if no service account made the request. This can be the ID of an Anthropic-managed service account, such as one that runs Claude Managed Agents sessions, which the Service Accounts endpoints do not return.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaMessagesUsageReportItem.BetaMessagesUsageReportItem_service_account_id? ServiceAccountId { get; set; }

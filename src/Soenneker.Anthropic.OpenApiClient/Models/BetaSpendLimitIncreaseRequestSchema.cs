@@ -12,13 +12,13 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public partial class BetaSpendLimitIncreaseRequestSchema : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>The actor property</summary>
+        /// <summary>Who submitted the increase request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor? Actor { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestActor? Actor { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor Actor { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestActor Actor { get; set; }
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -45,10 +45,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>The resolved_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ResolvedBy { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestResolvedBy? ResolvedBy { get; set; }
 #nullable restore
 #else
-        public UntypedNode ResolvedBy { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestResolvedBy ResolvedBy { get; set; }
 #endif
         /// <summary>The spend_summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -94,12 +94,12 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "actor", n => { Actor = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor.CreateFromDiscriminatorValue); } },
+                { "actor", n => { Actor = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestActor>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestActor.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "period", n => { Period = n.GetEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitPeriod>(); } },
                 { "resolved_at", n => { ResolvedAt = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_resolved_at>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_resolved_at.CreateFromDiscriminatorValue); } },
-                { "resolved_by", n => { ResolvedBy = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "resolved_by", n => { ResolvedBy = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestResolvedBy>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestResolvedBy.CreateFromDiscriminatorValue); } },
                 { "spend_summary", n => { SpendSummary = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendSummary>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendSummary.CreateFromDiscriminatorValue); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestStatus>(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -112,91 +112,16 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor>("actor", Actor);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestActor>("actor", Actor);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitPeriod>("period", Period);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_resolved_at>("resolved_at", ResolvedAt);
-            writer.WriteObjectValue<UntypedNode>("resolved_by", ResolvedBy);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestResolvedBy>("resolved_by", ResolvedBy);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendSummary>("spend_summary", SpendSummary);
             writer.WriteEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestStatus>("status", Status);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaScopedApiKeyActorSchema"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserActorSchema"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BetaSpendLimitIncreaseRequestSchema_actor : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaScopedApiKeyActorSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaScopedApiKeyActorSchema? BetaScopedApiKeyActorSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaScopedApiKeyActorSchema BetaScopedApiKeyActorSchema { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserActorSchema"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserActorSchema? BetaUserActorSchema { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserActorSchema BetaUserActorSchema { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
-                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema.BetaSpendLimitIncreaseRequestSchema_actor();
-                if("scoped_api_key_actor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BetaScopedApiKeyActorSchema = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaScopedApiKeyActorSchema();
-                }
-                else if("user_actor".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
-                {
-                    result.BetaUserActorSchema = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserActorSchema();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BetaScopedApiKeyActorSchema != null)
-                {
-                    return BetaScopedApiKeyActorSchema.GetFieldDeserializers();
-                }
-                else if(BetaUserActorSchema != null)
-                {
-                    return BetaUserActorSchema.GetFieldDeserializers();
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(BetaScopedApiKeyActorSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaScopedApiKeyActorSchema>(null, BetaScopedApiKeyActorSchema);
-                }
-                else if(BetaUserActorSchema != null)
-                {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserActorSchema>(null, BetaUserActorSchema);
-                }
-            }
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="DateTimeOffset"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitIncreaseRequestSchema_resolved_atMember1"/>

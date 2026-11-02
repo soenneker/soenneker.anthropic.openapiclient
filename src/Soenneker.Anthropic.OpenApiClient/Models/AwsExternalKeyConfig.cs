@@ -12,7 +12,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public partial class AwsExternalKeyConfig : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Full ARN of the AWS KMS key. On Claude Platform on AWS the key must be a single-Region key in your organization&apos;s own AWS account; cross-account keys, multi-Region keys, and alias ARNs are rejected.</summary>
+        /// <summary>Full ARN of the AWS KMS key. On Claude Platform on AWS, alias ARNs are rejected, and your organization&apos;s own key must be a single-Region key in your organization&apos;s AWS account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? KmsArn { get; set; }
@@ -28,7 +28,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.AwsExternalKeyConfig.AwsExternalKeyConfig_region Region { get; set; }
 #endif
-        /// <summary>IAM role ARN. Deprecated — Anthropic reaches the KMS key through its own intermediate role (or, on Claude Platform on AWS, with credentials AWS issues for the Workspace); this field is ignored.</summary>
+        /// <summary>IAM role ARN. Deprecated; this field is ignored.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

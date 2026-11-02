@@ -41,7 +41,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string Geo { get; set; }
 #endif
-        /// <summary>Identifier of the external key config. A tagged ID prefixed `ekey_`, or — for organizations on the Claude Platform on AWS — the AWS KMS key ARN.</summary>
+        /// <summary>Identifier of the external key config: a tagged ID prefixed `ekey_`, or, on Claude Platform on AWS, an AWS KMS key&apos;s ARN.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }
@@ -67,6 +67,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #endif
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
+        /// <summary>ID of the user profile the key is bound to, or null if the key is not bound to one. A key bound to a user profile can only be attached to a Workspace that has the same user profile. A key that isn&apos;t bound can be attached to a Workspace whatever its user profile.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id? UserProfileId { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id UserProfileId { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey"/> and sets the default values.
         /// </summary>
@@ -101,6 +109,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "provider_config", n => { ProviderConfig = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_provider_config>(global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_provider_config.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
+                { "user_profile_id", n => { UserProfileId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id>(global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -118,6 +127,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_provider_config>("provider_config", ProviderConfig);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id>("user_profile_id", UserProfileId);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
@@ -355,6 +365,74 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 else if(GcpExternalKeyConfig != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.GcpExternalKeyConfig>(null, GcpExternalKeyConfig);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey_user_profile_idMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class ExternalKey_user_profile_id : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey_user_profile_idMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey_user_profile_idMember1? ExternalKeyUserProfileIdMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey_user_profile_idMember1 ExternalKeyUserProfileIdMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.ExternalKey_user_profile_id();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.ExternalKeyUserProfileIdMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey_user_profile_idMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(ExternalKeyUserProfileIdMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ExternalKeyUserProfileIdMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey_user_profile_idMember1>(null, ExternalKeyUserProfileIdMember1);
                 }
             }
         }

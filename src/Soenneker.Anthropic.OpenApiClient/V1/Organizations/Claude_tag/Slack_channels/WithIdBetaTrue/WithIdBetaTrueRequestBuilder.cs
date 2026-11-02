@@ -41,21 +41,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagDeletedSlackChannel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 408 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 412 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 413 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 431 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 499 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 501 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 503 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 504 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagDeletedSlackChannel403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagDeletedSlackChannel409Error">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 412 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 413 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 431 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 499 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 501 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 503 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 504 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagDeletedSlackChannel?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -68,21 +68,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagDeletedSlackChannel403Error.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagDeletedSlackChannel409Error.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagDeletedSlackChannel>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagDeletedSlackChannel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -92,21 +92,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannel"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 408 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 412 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 413 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 431 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 499 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 501 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 503 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 504 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 412 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 413 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 431 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 499 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 501 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 503 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 504 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannel?> GetAsync(Action<RequestConfiguration<global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.WithIdBetaTrueRequestBuilder.WithIdBetaTrueRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -119,21 +119,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel403Error.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannel>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -144,21 +144,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 400 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 404 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 408 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 409 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 412 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 413 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 429 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 431 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 499 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 500 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 501 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 503 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse">When receiving a 504 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel404Error">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel409Error">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 412 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 413 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 431 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 499 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 501 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 503 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 504 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannel?> PostAsync(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagUpdateSlackChannelRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -172,21 +172,21 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
-                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel403Error.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel404Error.CreateFromDiscriminatorValue },
+                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_channels.WithIdBetaTrue.BetaClaudeTagSlackChannel409Error.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannel>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannel.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

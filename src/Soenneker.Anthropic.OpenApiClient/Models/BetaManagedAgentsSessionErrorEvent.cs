@@ -76,7 +76,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteStringValue("type", Type);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsBillingError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCredentialHostUnreachableError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMcpAuthenticationFailedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMcpConnectionFailedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelOverloadedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelRateLimitedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelRequestFailedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryAuthenticationError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryCheckoutError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryCloneError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryForbiddenError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryNotFoundError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsUnknownError"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsBillingError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCompactionLimitReachedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCredentialHostUnreachableError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMcpAuthenticationFailedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMcpConnectionFailedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelOverloadedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelRateLimitedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelRequestFailedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryAuthenticationError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryCheckoutError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryCloneError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryForbiddenError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryNotFoundError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsToolUseLimitReachedError"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsUnknownError"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaManagedAgentsSessionErrorEvent_error : IComposedTypeWrapper, IParsable
@@ -88,6 +88,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #nullable restore
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsBillingError BetaManagedAgentsBillingError { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCompactionLimitReachedError"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCompactionLimitReachedError? BetaManagedAgentsCompactionLimitReachedError { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCompactionLimitReachedError BetaManagedAgentsCompactionLimitReachedError { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCredentialHostUnreachableError"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -177,6 +185,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryNotFoundError BetaManagedAgentsRepositoryNotFoundError { get; set; }
 #endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsToolUseLimitReachedError"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsToolUseLimitReachedError? BetaManagedAgentsToolUseLimitReachedError { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsToolUseLimitReachedError BetaManagedAgentsToolUseLimitReachedError { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsUnknownError"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -198,6 +214,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 if("billing_error".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.BetaManagedAgentsBillingError = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsBillingError();
+                }
+                else if("compaction_limit_reached_error".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.BetaManagedAgentsCompactionLimitReachedError = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCompactionLimitReachedError();
                 }
                 else if("credential_host_unreachable_error".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
@@ -243,6 +263,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 {
                     result.BetaManagedAgentsRepositoryNotFoundError = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryNotFoundError();
                 }
+                else if("tool_use_limit_reached_error".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+                {
+                    result.BetaManagedAgentsToolUseLimitReachedError = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsToolUseLimitReachedError();
+                }
                 else if("unknown_error".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
                 {
                     result.BetaManagedAgentsUnknownError = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsUnknownError();
@@ -258,6 +282,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 if(BetaManagedAgentsBillingError != null)
                 {
                     return BetaManagedAgentsBillingError.GetFieldDeserializers();
+                }
+                else if(BetaManagedAgentsCompactionLimitReachedError != null)
+                {
+                    return BetaManagedAgentsCompactionLimitReachedError.GetFieldDeserializers();
                 }
                 else if(BetaManagedAgentsCredentialHostUnreachableError != null)
                 {
@@ -303,6 +331,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 {
                     return BetaManagedAgentsRepositoryNotFoundError.GetFieldDeserializers();
                 }
+                else if(BetaManagedAgentsToolUseLimitReachedError != null)
+                {
+                    return BetaManagedAgentsToolUseLimitReachedError.GetFieldDeserializers();
+                }
                 else if(BetaManagedAgentsUnknownError != null)
                 {
                     return BetaManagedAgentsUnknownError.GetFieldDeserializers();
@@ -319,6 +351,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 if(BetaManagedAgentsBillingError != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsBillingError>(null, BetaManagedAgentsBillingError);
+                }
+                else if(BetaManagedAgentsCompactionLimitReachedError != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCompactionLimitReachedError>(null, BetaManagedAgentsCompactionLimitReachedError);
                 }
                 else if(BetaManagedAgentsCredentialHostUnreachableError != null)
                 {
@@ -363,6 +399,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 else if(BetaManagedAgentsRepositoryNotFoundError != null)
                 {
                     writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsRepositoryNotFoundError>(null, BetaManagedAgentsRepositoryNotFoundError);
+                }
+                else if(BetaManagedAgentsToolUseLimitReachedError != null)
+                {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsToolUseLimitReachedError>(null, BetaManagedAgentsToolUseLimitReachedError);
                 }
                 else if(BetaManagedAgentsUnknownError != null)
                 {

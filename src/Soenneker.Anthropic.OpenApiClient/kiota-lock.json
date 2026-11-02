@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "F5252D766337A8821310D49CDBD7855975A68D49933D140795ADEBA9C810004214C5228C72BF7156C554AC9BACC48D855D06D8A7D748DA374CF6BE5EEB2DE6CC",
+  "descriptionHash": "A45791BC5179C919C876564CE53F126B2E36611E67E5B443A3D7716F3BC98B7B9C0CF3BAC04FAB1BF42D6D0F9AEA53FC831A6EC4BBD82DEE1585E8EB418FCDF2",
   "descriptionLocation": "../../openapi.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "AnthropicOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.Anthropic.OpenApiClient",

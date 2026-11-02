@@ -29,7 +29,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string DisplayColor { get; set; }
 #endif
-        /// <summary>ID of the customer-managed encryption key (CMEK) configuration to use for thisWorkspace. Setting this field requires CMEK to be enabled for yourorganization. When set, data stored for this Workspace is encrypted with thereferenced key. Create key configurations with the External Keys API. OnClaude Platform on AWS the value is the AWS KMS key ARN, and the key must be asingle-Region key in the same AWS account and Region as the Workspace. On thatplatform the key is validated against this Workspace when it is attached, so akey-policy problem is reported as an error on this request. This field is write-once:once a key is attached to a Workspace it cannot be detached or replaced. Torotate key material, rotate the underlying key on your cloud KMS; the`external_key_id` stays the same.</summary>
+        /// <summary>ID of the customer-managed encryption key (CMEK) configuration to use for thisWorkspace. Setting this field requires CMEK to be enabled for yourorganization. When set, data stored for this Workspace is encrypted with thereferenced key. Create key configurations with the External Keys API. OnClaude Platform on AWS the value for an AWS KMS key is the key&apos;s ARN, and yourorganization&apos;s own key must be a single-Region key in the same AWS account andRegion as the Workspace. On that platform the key is validated against thisWorkspace when it is attached, so a key-policy problem is reported as an erroron this request. This field is write-once: once a key is attached to a Workspaceit cannot be detached or replaced. To rotate key material, rotate the underlyingkey on your cloud KMS; the `external_key_id` stays the same.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalKeyId { get; set; }
@@ -52,6 +52,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #nullable restore
 #else
         public UntypedNode Tags { get; set; }
+#endif
+        /// <summary>ID of a user profile to attach to the Workspace. Every inference request through the Workspace must then name this user profile; the API rejects a request that names none or a different one. Once set, it can&apos;t be replaced or removed (sending the same ID again changes nothing); only deleting the user profile clears it. The default Workspace can&apos;t have a user profile.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserProfileId { get; set; }
+#nullable restore
+#else
+        public string UserProfileId { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -76,6 +84,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "external_key_id", n => { ExternalKeyId = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
+                { "user_profile_id", n => { UserProfileId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteStringValue("external_key_id", ExternalKeyId);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<UntypedNode>("tags", Tags);
+            writer.WriteStringValue("user_profile_id", UserProfileId);
         }
     }
 }

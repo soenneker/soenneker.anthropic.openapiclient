@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.Effective;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.EffectiveBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class Spend_limitsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The effective property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.Effective.EffectiveRequestBuilder Effective
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.Effective.EffectiveRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The effectiveBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.EffectiveBetaTrue.EffectiveBetaTrueRequestBuilder EffectiveBetaTrue
         {

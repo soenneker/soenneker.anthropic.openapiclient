@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The marketplace already holds this name. `plugin_id` is the Plugin that holds it, and is absent when a standalone skill holds the name.
+    /// The marketplace already holds this name. `plugin_id` is the Plugin that holds it, and can be absent.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaPluginNameTakenErrorDetails : IAdditionalDataHolder, IParsable

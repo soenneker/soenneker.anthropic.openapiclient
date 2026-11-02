@@ -43,14 +43,6 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public int? DistinctUserCount { get; set; }
         /// <summary>Number of messages sent in the project on the requested day</summary>
         public int? MessageCount { get; set; }
-        /// <summary>Product that produced this row&apos;s activity: one of `chat`, `claude_code`, `cowork`, `office_agent`, or `chat_cowork_unified` (Chat and Cowork unified). These are the canonical Cost &amp; Usage product names; an `office_agent` row&apos;s per-surface breakdown is in its `office_metrics`. On `/plugins` only `cowork`, `claude_code` and `chat_cowork_unified` occur (the only surfaces with plugin attribution); on `/artifacts` only `chat`, `claude_code`, `cowork` and `chat_cowork_unified` occur (the surfaces that create artifacts); `/apps/chat/projects` does not support the product dimension (a `product` entry in `group_by[]` or `filter[]` there is rejected). Present only when the request grouped by `product`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product? Product { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product Product { get; set; }
-#endif
         /// <summary>Tagged project identifier (e.g. `claude_proj_...`)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -121,7 +113,6 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "distinct_conversation_count", n => { DistinctConversationCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_distinct_conversation_count>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_distinct_conversation_count.CreateFromDiscriminatorValue); } },
                 { "distinct_user_count", n => { DistinctUserCount = n.GetIntValue(); } },
                 { "message_count", n => { MessageCount = n.GetIntValue(); } },
-                { "product", n => { Product = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product.CreateFromDiscriminatorValue); } },
                 { "project_id", n => { ProjectId = n.GetStringValue(); } },
                 { "project_name", n => { ProjectName = n.GetStringValue(); } },
                 { "rbac_group_id", n => { RbacGroupId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_rbac_group_id>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_rbac_group_id.CreateFromDiscriminatorValue); } },
@@ -141,7 +132,6 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_distinct_conversation_count>("distinct_conversation_count", DistinctConversationCount);
             writer.WriteIntValue("distinct_user_count", DistinctUserCount);
             writer.WriteIntValue("message_count", MessageCount);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product>("product", Product);
             writer.WriteStringValue("project_id", ProjectId);
             writer.WriteStringValue("project_name", ProjectName);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_rbac_group_id>("rbac_group_id", RbacGroupId);
@@ -270,74 +260,6 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 }
                 else {
                     writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity_distinct_conversation_countMember1>(null, BetaAnalyticsProjectActivityDistinctConversationCountMember1);
-                }
-            }
-        }
-        /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity_productMember1"/>, <see cref="string"/>
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BetaAnalyticsProjectActivity_product : IComposedTypeWrapper, IParsable
-        {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity_productMember1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity_productMember1? BetaAnalyticsProjectActivityProductMember1 { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity_productMember1 BetaAnalyticsProjectActivityProductMember1 { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="string"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public string? String { get; set; }
-#nullable restore
-#else
-            public string String { get; set; }
-#endif
-            /// <summary>
-            /// Creates a new instance of the appropriate class based on discriminator value
-            /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product"/></returns>
-            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product CreateFromDiscriminatorValue(IParseNode parseNode)
-            {
-                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity.BetaAnalyticsProjectActivity_product();
-                if(parseNode.GetStringValue() is string stringValue)
-                {
-                    result.String = stringValue;
-                }
-                else {
-                    result.BetaAnalyticsProjectActivityProductMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity_productMember1();
-                }
-                return result;
-            }
-            /// <summary>
-            /// The deserialization information for the current model
-            /// </summary>
-            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
-            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
-            {
-                if(BetaAnalyticsProjectActivityProductMember1 != null)
-                {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaAnalyticsProjectActivityProductMember1);
-                }
-                return new Dictionary<string, Action<IParseNode>>();
-            }
-            /// <summary>
-            /// Serializes information the current object
-            /// </summary>
-            /// <param name="writer">Serialization writer to use to serialize this model</param>
-            public virtual void Serialize(ISerializationWriter writer)
-            {
-                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                if(String != null)
-                {
-                    writer.WriteStringValue(null, String);
-                }
-                else {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsProjectActivity_productMember1>(null, BetaAnalyticsProjectActivityProductMember1);
                 }
             }
         }

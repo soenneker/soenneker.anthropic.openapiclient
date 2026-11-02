@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps.Chat.Projects;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps.Chat.ProjectsBetaTrue;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps.Chat
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChatRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The projects property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps.Chat.Projects.ProjectsRequestBuilder Projects
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps.Chat.Projects.ProjectsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The projectsBetaTrue property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Apps.Chat.ProjectsBetaTrue.ProjectsBetaTrueRequestBuilder ProjectsBetaTrue
         {

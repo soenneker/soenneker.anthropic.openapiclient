@@ -13,7 +13,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaDreamSessionsInput : IParsable
     {
-        /// <summary>The IDs of the sessions whose transcripts the dream reads (`sesn_...`).Give 1 to 100 IDs, with no duplicates. Each session must be in the same workspace as the dream. Responses list the IDs in sorted order.The [limits table in the Dreams guide](https://platform.claude.com/docs/en/managed-agents/dreams#limits) lists all the limits on a dream.</summary>
+        /// <summary>The IDs of the sessions whose transcripts the dream reads (`sesn_...`).Give 1 to 100 IDs, with no duplicates. Each session must be in the same workspace as the dream. Responses list the IDs in sorted order.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? SessionIds { get; set; }

@@ -13,7 +13,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaDreamModelConfigParams : IParsable
     {
-        /// <summary>The ID of the model to run the dream with.The ID can be 1 to 256 characters long.The [limits table in the Dreams guide](https://platform.claude.com/docs/en/managed-agents/dreams#limits) lists the supported models.</summary>
+        /// <summary>The ID of the model to run the dream with.The ID can be 1 to 256 characters long.The [Availability section of the Dreams guide](https://platform.claude.com/docs/en/managed-agents/dreams#feature-availability) lists the supported models.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

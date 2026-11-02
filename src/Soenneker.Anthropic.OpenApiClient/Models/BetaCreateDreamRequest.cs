@@ -28,7 +28,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaCreateDreamRequest.BetaCreateDreamRequest_instructions Instructions { get; set; }
 #endif
-        /// <summary>The model that runs a dream, given as a model ID or as an object with `id` and `speed`.In the object form, `speed` can only be `standard`.The [limits table in the Dreams guide](https://platform.claude.com/docs/en/managed-agents/dreams#limits) lists the supported models.</summary>
+        /// <summary>The model that runs a dream, given as a model ID or as an object with `id` and `speed`.In the object form, `speed` can only be `standard`.The [Availability section of the Dreams guide](https://platform.claude.com/docs/en/managed-agents/dreams#feature-availability) lists the supported models.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaDreamModelParams? Model { get; set; }
