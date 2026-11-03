@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
-    /// <summary>Period this row&apos;s effective limit and spend are reported for.</summary>
+    /// <summary>Length of the window the limit resets over. `amount` caps spend within each period.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BetaSpendLimitPeriod
     {
