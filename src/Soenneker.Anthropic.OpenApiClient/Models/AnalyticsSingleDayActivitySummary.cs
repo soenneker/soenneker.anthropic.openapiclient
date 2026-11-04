@@ -23,7 +23,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsSingleDayActivitySummary.AnalyticsSingleDayActivitySummary_assigned_seat_count AssignedSeatCount { get; set; }
 #endif
-        /// <summary>Number of users with activity in Chat and Cowork unified on the requested day. Omitted from the response on deployments that do not offer Chat and Cowork unified.</summary>
+        /// <summary>Number of users with activity in Chat and Cowork unified on the requested day. Omitted from the response where Chat and Cowork unified is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsSingleDayActivitySummary.AnalyticsSingleDayActivitySummary_chat_cowork_unified_daily_active_user_count? ChatCoworkUnifiedDailyActiveUserCount { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsSingleDayActivitySummary.AnalyticsSingleDayActivitySummary_chat_cowork_unified_daily_active_user_count ChatCoworkUnifiedDailyActiveUserCount { get; set; }
 #endif
-        /// <summary>Number of users with activity in Chat and Cowork unified in the 28-day rolling window (30 days when the request filters by `rbac_group_id`). Omitted from the response on deployments that do not offer Chat and Cowork unified.</summary>
+        /// <summary>Number of users with activity in Chat and Cowork unified in the 28-day rolling window (30 days when the request filters by `rbac_group_id`). Omitted from the response where Chat and Cowork unified is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsSingleDayActivitySummary.AnalyticsSingleDayActivitySummary_chat_cowork_unified_monthly_active_user_count? ChatCoworkUnifiedMonthlyActiveUserCount { get; set; }
@@ -39,7 +39,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsSingleDayActivitySummary.AnalyticsSingleDayActivitySummary_chat_cowork_unified_monthly_active_user_count ChatCoworkUnifiedMonthlyActiveUserCount { get; set; }
 #endif
-        /// <summary>Number of users with activity in Chat and Cowork unified in the 7-day rolling window. Omitted from the response on deployments that do not offer Chat and Cowork unified.</summary>
+        /// <summary>Number of users with activity in Chat and Cowork unified in the 7-day rolling window. Omitted from the response where Chat and Cowork unified is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsSingleDayActivitySummary.AnalyticsSingleDayActivitySummary_chat_cowork_unified_weekly_active_user_count? ChatCoworkUnifiedWeeklyActiveUserCount { get; set; }

@@ -40,7 +40,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public UntypedNode CreatedBy { get; set; }
 #endif
-        /// <summary>The manifest&apos;s description; null when it declares none.</summary>
+        /// <summary>The manifest&apos;s description; null when it declares none. The value can be longer than 500 characters, the limit on `description` in an uploaded manifest. A description that the manifest takes from a `SKILL.md` is cut to its first 500 characters. So if the manifest&apos;s description is the first 500 characters of exactly one distinct skill `description` in `components`, that skill `description` is returned instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaPluginVersion.BetaPluginVersion_description? Description { get; set; }

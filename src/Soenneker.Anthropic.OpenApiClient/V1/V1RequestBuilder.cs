@@ -4,7 +4,6 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Anthropic.OpenApiClient.V1.Agents;
 using Soenneker.Anthropic.OpenApiClient.V1.AgentsBetaTrue;
-using Soenneker.Anthropic.OpenApiClient.V1.Complete;
 using Soenneker.Anthropic.OpenApiClient.V1.Deployment_runs;
 using Soenneker.Anthropic.OpenApiClient.V1.Deployment_runsBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Deployments;
@@ -53,12 +52,6 @@ namespace Soenneker.Anthropic.OpenApiClient.V1
         public global::Soenneker.Anthropic.OpenApiClient.V1.AgentsBetaTrue.AgentsBetaTrueRequestBuilder AgentsBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.AgentsBetaTrue.AgentsBetaTrueRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The complete property</summary>
-        [Obsolete("")]
-        public global::Soenneker.Anthropic.OpenApiClient.V1.Complete.CompleteRequestBuilder Complete
-        {
-            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Complete.CompleteRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The deployment_runs property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Deployment_runs.Deployment_runsRequestBuilder Deployment_runs

@@ -23,7 +23,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSkillActivity.BetaAnalyticsSkillActivity_attributed_list_price AttributedListPrice { get; set; }
 #endif
-        /// <summary>Skill use recorded while members had Chat and Cowork unified (Cowork&apos;s features inside claude.ai chat) turned on, split into chat conversations and Cowork sessions. A count is null in date-range mode where it cannot be computed. Omitted from the response on deployments that do not offer Chat and Cowork unified.</summary>
+        /// <summary>Skill use recorded while members had Chat and Cowork unified (Cowork&apos;s features inside claude.ai chat) turned on, split into chat conversations and Cowork sessions. A count is null in date-range mode where it cannot be computed. Omitted from the response where Chat and Cowork unified is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSkillChatCoworkUnifiedMetrics? ChatCoworkUnifiedMetrics { get; set; }

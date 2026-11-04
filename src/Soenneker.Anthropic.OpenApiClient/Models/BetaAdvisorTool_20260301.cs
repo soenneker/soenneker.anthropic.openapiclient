@@ -38,7 +38,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #endif
         /// <summary>If true, tool will not be included in initial system prompt. Only loaded when returned via tool_reference from tool search.</summary>
         public bool? DeferLoading { get; set; }
-        /// <summary>Bounds the advisor&apos;s total output (thinking + text) per call. When the advisor hits this cap, the returned advisor_result or advisor_redacted_result block carries stop_reason=&apos;max_tokens&apos;, and a truncation note is appended to the advice text the worker model sees (inside the encrypted blob in redacted mode). When set, the server also emits a remaining-tokens budget block in the advisor&apos;s prompt so the advisor self-shapes toward the cap. When omitted, the advisor model&apos;s default output cap applies and no budget block is emitted.</summary>
+        /// <summary>Bounds the advisor&apos;s total output (thinking + text) per call. When the advisor hits this cap, the returned advisor_result or advisor_redacted_result block carries stop_reason=&apos;max_tokens&apos;, and a truncation note is appended to the advice text the worker model sees (inside the encrypted blob in redacted mode). When set, the API also passes the advisor its remaining-token budget, so the advisor shapes its output toward the cap. When omitted, the advisor model&apos;s default output cap applies and the API doesn&apos;t pass a budget.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAdvisorTool_20260301.BetaAdvisorTool_20260301_max_tokens? MaxTokens { get; set; }

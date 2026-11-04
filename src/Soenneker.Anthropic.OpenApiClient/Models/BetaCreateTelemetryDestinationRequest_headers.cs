@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// Request headers that the API sends with every delivery, typically your collector&apos;s authentication header (for example `authorization`).The API stores the values encrypted and never returns them. Reads show only `header_names`.At most 20 headers. Names are at most 128 characters. Two names can&apos;t differ only in case. Values are printable ASCII, at most 4,096 characters, and can&apos;t begin or end with a space. Names and values together are at most 16,384 bytes.Reserved names are rejected, for example `host`, `cookie`, `user-agent`, and names that start with `content-`, `proxy-`, `x-forwarded-`, or `anthropic-`. For this check, `_` in a name counts as `-`.
+    /// Request headers that the API sends with every delivery, typically your collector&apos;s authentication header (for example `authorization`).The API never returns the values. Reads show only `header_names`.At most 20 headers. Names are at most 128 characters. Two names can&apos;t differ only in case. Values are printable ASCII, at most 4,096 characters, and can&apos;t begin or end with a space. Names and values together are at most 16,384 bytes.Reserved names are rejected, for example `host`, `cookie`, `user-agent`, and names that start with `content-`, `proxy-`, `x-forwarded-`, or `anthropic-`. For this check, `_` in a name counts as `-`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaCreateTelemetryDestinationRequest_headers : IAdditionalDataHolder, IParsable

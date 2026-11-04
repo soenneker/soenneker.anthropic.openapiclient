@@ -82,18 +82,18 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagApiKeyScopeMissingErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagComplianceConfigurationRestrictedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagWritesNotEnabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.Item.Targets.WithTarget_idBetaTrue.BetaClaudeTagBundleTarget403Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagWritesNotEnabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationLevelScopedApiKeyRequiredErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.Item.Targets.WithTarget_idBetaTrue.BetaClaudeTagBundleTarget403Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaClaudeTagBundleTarget403Error_error_details : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagApiKeyScopeMissingErrorDetails"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagApiKeyScopeMissingErrorDetails? BetaClaudeTagApiKeyScopeMissingErrorDetails { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails? BetaApiKeyScopeMissingErrorDetails { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagApiKeyScopeMissingErrorDetails BetaClaudeTagApiKeyScopeMissingErrorDetails { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails BetaApiKeyScopeMissingErrorDetails { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.Item.Targets.WithTarget_idBetaTrue.BetaClaudeTagBundleTarget403Error_error_detailsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,22 +103,6 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
 #else
             public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.Item.Targets.WithTarget_idBetaTrue.BetaClaudeTagBundleTarget403Error_error_detailsMember1 BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1 { get; set; }
 #endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagComplianceConfigurationRestrictedErrorDetails"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagComplianceConfigurationRestrictedErrorDetails? BetaClaudeTagComplianceConfigurationRestrictedErrorDetails { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagComplianceConfigurationRestrictedErrorDetails BetaClaudeTagComplianceConfigurationRestrictedErrorDetails { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails? BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails { get; set; }
-#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagWritesNotEnabledErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -126,6 +110,22 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
 #nullable restore
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagWritesNotEnabledErrorDetails BetaClaudeTagWritesNotEnabledErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails? BetaComplianceConfigurationRestrictedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails BetaComplianceConfigurationRestrictedErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationLevelScopedApiKeyRequiredErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationLevelScopedApiKeyRequiredErrorDetails? BetaOrganizationLevelScopedApiKeyRequiredErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationLevelScopedApiKeyRequiredErrorDetails BetaOrganizationLevelScopedApiKeyRequiredErrorDetails { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -136,11 +136,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.Item.Targets.WithTarget_idBetaTrue.BetaClaudeTagBundleTarget403Error_error.BetaClaudeTagBundleTarget403Error_error_details();
-                result.BetaClaudeTagApiKeyScopeMissingErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagApiKeyScopeMissingErrorDetails();
+                result.BetaApiKeyScopeMissingErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails();
                 result.BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.Item.Targets.WithTarget_idBetaTrue.BetaClaudeTagBundleTarget403Error_error_detailsMember1();
-                result.BetaClaudeTagComplianceConfigurationRestrictedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagComplianceConfigurationRestrictedErrorDetails();
-                result.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails();
                 result.BetaClaudeTagWritesNotEnabledErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagWritesNotEnabledErrorDetails();
+                result.BetaComplianceConfigurationRestrictedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails();
+                result.BetaOrganizationLevelScopedApiKeyRequiredErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationLevelScopedApiKeyRequiredErrorDetails();
                 return result;
             }
             /// <summary>
@@ -149,9 +149,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaClaudeTagApiKeyScopeMissingErrorDetails != null || BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1 != null || BetaClaudeTagComplianceConfigurationRestrictedErrorDetails != null || BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails != null || BetaClaudeTagWritesNotEnabledErrorDetails != null)
+                if(BetaApiKeyScopeMissingErrorDetails != null || BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1 != null || BetaClaudeTagWritesNotEnabledErrorDetails != null || BetaComplianceConfigurationRestrictedErrorDetails != null || BetaOrganizationLevelScopedApiKeyRequiredErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaClaudeTagApiKeyScopeMissingErrorDetails, BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1, BetaClaudeTagComplianceConfigurationRestrictedErrorDetails, BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails, BetaClaudeTagWritesNotEnabledErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaApiKeyScopeMissingErrorDetails, BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1, BetaClaudeTagWritesNotEnabledErrorDetails, BetaComplianceConfigurationRestrictedErrorDetails, BetaOrganizationLevelScopedApiKeyRequiredErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -162,7 +162,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagApiKeyScopeMissingErrorDetails>(null, BetaClaudeTagApiKeyScopeMissingErrorDetails, BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1, BetaClaudeTagComplianceConfigurationRestrictedErrorDetails, BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails, BetaClaudeTagWritesNotEnabledErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails>(null, BetaApiKeyScopeMissingErrorDetails, BetaClaudeTagBundleTarget403ErrorErrorDetailsMember1, BetaClaudeTagWritesNotEnabledErrorDetails, BetaComplianceConfigurationRestrictedErrorDetails, BetaOrganizationLevelScopedApiKeyRequiredErrorDetails);
             }
         }
     }

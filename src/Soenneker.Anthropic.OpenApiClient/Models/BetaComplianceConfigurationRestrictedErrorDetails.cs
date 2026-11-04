@@ -8,12 +8,12 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The request set the channel up, and something else then changed the channel or removed it. Nothing of `settings` was stored.
+    /// The organization&apos;s compliance configuration does not let Claude Tag store anything new.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BetaClaudeTagSlackChannelSetUpSettingsConflictErrorDetails : IParsable
+    public partial class BetaComplianceConfigurationRestrictedErrorDetails : IParsable
     {
-        /// <summary>A stable code that names the cause.</summary>
+        /// <summary>The error_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ErrorCode { get; set; }
@@ -21,23 +21,15 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string ErrorCode { get; set; }
 #endif
-        /// <summary>The identifier of the channel the request set up, starting with `slch_`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SlackChannelId { get; set; }
-#nullable restore
-#else
-        public string SlackChannelId { get; set; }
-#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsConflictErrorDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsConflictErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsConflictErrorDetails();
+            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceConfigurationRestrictedErrorDetails();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -48,7 +40,6 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "error_code", n => { ErrorCode = n.GetStringValue(); } },
-                { "slack_channel_id", n => { SlackChannelId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -59,7 +50,6 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("error_code", ErrorCode);
-            writer.WriteStringValue("slack_channel_id", SlackChannelId);
         }
     }
 }

@@ -24,7 +24,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsUserActor.BetaAnalyticsUserActor_email_address EmailAddress { get; set; }
 #endif
-        /// <summary>The user&apos;s full name. Null when the user has not set a name. Returns `&quot;Deleted User&quot;` when the account itself has been deleted, or when the user is no longer a member of the organization or its associated organizations and the organization has chosen to hide the names of removed users. Otherwise, the name stays populated for removed users. Rows for system-minted service accounts render the service name (for example, `&quot;Claude Security&quot;` for usage by Anthropic&apos;s security-patching service) or null.</summary>
+        /// <summary>The user&apos;s full name. Null when the user has not set a name. Returns `&quot;Deleted User&quot;` when the account itself has been deleted, or when the user is no longer a member of the organization or its associated organizations and the organization has chosen to hide the names of removed users. Otherwise, the name stays populated for removed users. Rows for system-minted service accounts render the service name (for example, `&quot;Claude Security&quot;`) or null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsUserActor.BetaAnalyticsUserActor_name? Name { get; set; }

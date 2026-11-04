@@ -37,7 +37,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelConfigParams.BetaManagedAgentsModelConfigParams_inference_geo InferenceGeo { get; set; }
 #endif
-        /// <summary>Inference speed mode. Defaults to `standard`.</summary>
+        /// <summary>Inference speed mode. `fast` provides significantly faster output token generation at premium pricing. Defaults to `standard`. Not all models support `fast`; invalid combinations are rejected at create time.</summary>
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsSpeed? Speed { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

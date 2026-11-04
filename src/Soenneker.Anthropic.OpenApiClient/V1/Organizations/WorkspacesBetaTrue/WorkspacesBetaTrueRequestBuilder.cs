@@ -22,7 +22,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkspacesBetaTrueRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/workspaces?beta=true{&after_id*,before_id*,include_archived*,include_default*,limit*}", pathParameters)
+        public WorkspacesBetaTrueRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/workspaces?beta=true{&after_id*,before_id*,ids%5B%5D*,include_archived*,include_default*,limit*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WorkspacesBetaTrueRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/workspaces?beta=true{&after_id*,before_id*,include_archived*,include_default*,limit*}", rawUrl)
+        public WorkspacesBetaTrueRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/workspaces?beta=true{&after_id*,before_id*,ids%5B%5D*,include_archived*,include_default*,limit*}", rawUrl)
         {
         }
         /// <summary>
@@ -216,6 +216,16 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
 #else
             [QueryParameter("before_id")]
             public string BeforeId { get; set; }
+#endif
+            /// <summary>Only the Workspaces with these IDs, at most 100. `include_archived` and `include_default` still apply, and IDs of Workspaces the caller can&apos;t list are left out.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("ids%5B%5D")]
+            public string[]? Ids { get; set; }
+#nullable restore
+#else
+            [QueryParameter("ids%5B%5D")]
+            public string[] Ids { get; set; }
 #endif
             /// <summary>Whether to include Workspaces that have been archived in the response</summary>
             [QueryParameter("include_archived")]

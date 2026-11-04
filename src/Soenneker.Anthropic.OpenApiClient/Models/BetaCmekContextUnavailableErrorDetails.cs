@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The request&apos;s workspace encryption context could not be resolved, so the request was refused. Retry in a few minutes.
+    /// The workspace&apos;s encryption settings could not be read, so the request was refused. Retry in a few minutes.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaCmekContextUnavailableErrorDetails : IAdditionalDataHolder, IParsable

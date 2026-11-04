@@ -33,7 +33,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKey.BetaExternalKey_display_name DisplayName { get; set; }
 #endif
-        /// <summary>Data residency geo. Selects the region that handles this key&apos;s encrypt/decrypt roundtrips.</summary>
+        /// <summary>Data residency geo. Selects the region this key is used in.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Geo { get; set; }

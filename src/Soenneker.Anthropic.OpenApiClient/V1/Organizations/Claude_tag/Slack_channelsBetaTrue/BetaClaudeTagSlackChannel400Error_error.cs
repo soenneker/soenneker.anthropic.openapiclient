@@ -18,10 +18,10 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
         /// <summary>The details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsRefusedErrorDetails? Details { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsRefusedErrorDetails? Details { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsRefusedErrorDetails Details { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsRefusedErrorDetails Details { get; set; }
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsRefusedErrorDetails>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsRefusedErrorDetails.CreateFromDiscriminatorValue); } },
+                { "details", n => { Details = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsRefusedErrorDetails>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsRefusedErrorDetails.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -76,7 +76,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_ch
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpSettingsRefusedErrorDetails>("details", Details);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsRefusedErrorDetails>("details", Details);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

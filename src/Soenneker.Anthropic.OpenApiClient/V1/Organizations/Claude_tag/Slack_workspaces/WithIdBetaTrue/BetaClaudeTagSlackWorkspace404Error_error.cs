@@ -82,27 +82,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_wo
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_workspaces.WithIdBetaTrue.BetaClaudeTagSlackWorkspace404Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_workspaces.WithIdBetaTrue.BetaClaudeTagSlackWorkspace404Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaClaudeTagSlackWorkspace404Error_error_details : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails? BetaClaudeTagEnvironmentNotFoundErrorDetails { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails BetaClaudeTagEnvironmentNotFoundErrorDetails { get; set; }
-#endif
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails? BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails { get; set; }
-#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_workspaces.WithIdBetaTrue.BetaClaudeTagSlackWorkspace404Error_error_detailsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -110,6 +94,22 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_wo
 #nullable restore
 #else
             public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_workspaces.WithIdBetaTrue.BetaClaudeTagSlackWorkspace404Error_error_detailsMember1 BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails? BetaEnvironmentNotFoundErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails BetaEnvironmentNotFoundErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails? BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails { get; set; }
 #endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
@@ -120,9 +120,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_wo
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_workspaces.WithIdBetaTrue.BetaClaudeTagSlackWorkspace404Error_error.BetaClaudeTagSlackWorkspace404Error_error_details();
-                result.BetaClaudeTagEnvironmentNotFoundErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails();
-                result.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails();
                 result.BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_workspaces.WithIdBetaTrue.BetaClaudeTagSlackWorkspace404Error_error_detailsMember1();
+                result.BetaEnvironmentNotFoundErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails();
+                result.BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails();
                 return result;
             }
             /// <summary>
@@ -131,9 +131,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_wo
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaClaudeTagEnvironmentNotFoundErrorDetails != null || BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails != null || BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1 != null)
+                if(BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1 != null || BetaEnvironmentNotFoundErrorDetails != null || BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaClaudeTagEnvironmentNotFoundErrorDetails, BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails, BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1, BetaEnvironmentNotFoundErrorDetails, BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -144,7 +144,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_wo
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails>(null, BetaClaudeTagEnvironmentNotFoundErrorDetails, BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails, BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Slack_workspaces.WithIdBetaTrue.BetaClaudeTagSlackWorkspace404Error_error_detailsMember1>(null, BetaClaudeTagSlackWorkspace404ErrorErrorDetailsMember1, BetaEnvironmentNotFoundErrorDetails, BetaSlackChannelSetUpEnvironmentNotFoundErrorDetails);
             }
         }
     }

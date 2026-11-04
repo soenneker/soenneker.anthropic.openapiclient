@@ -14,7 +14,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Number of output tokens the model generated as internal reasoning, includingthe thinking-block delimiter tokens.Reflects the raw reasoning the model produced, not the (possibly shorter)summarized thinking text returned in the response body. Computed byre-tokenizing the raw reasoning text, so it may differ from the model&apos;s exactgeneration count by a small number of tokens. Always ≤ `output_tokens`;`output_tokens - thinking_tokens` approximates the non-reasoning output.</summary>
+        /// <summary>Number of output tokens the model generated as internal reasoning, includingthe thinking-block delimiter tokens.Reflects the raw reasoning the model produced, not the (possibly shorter)summarized thinking text returned in the response body. It may differ from the model&apos;s exactgeneration count by a small number of tokens. Always ≤ `output_tokens`;`output_tokens - thinking_tokens` approximates the non-reasoning output.</summary>
         public int? ThinkingTokens { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaOutputTokensDetails"/> and sets the default values.

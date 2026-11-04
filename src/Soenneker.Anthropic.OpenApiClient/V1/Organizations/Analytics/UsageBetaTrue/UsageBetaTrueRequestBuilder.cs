@@ -140,7 +140,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("actor_types%5B%5D")]
             public string ActorTypes { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by sessions of specific Claude Managed Agents agents. Use `group_by[]=agent_id` to break out per-agent values. Claude Developer Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by sessions of specific Claude Managed Agents agents. Use `group_by[]=agent_id` to break out per-agent values. Claude Platform organizations only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("agent_ids%5B%5D")]
@@ -150,7 +150,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("agent_ids%5B%5D")]
             public string AgentIds { get; set; }
 #endif
-            /// <summary>Filter to usage authenticated by specific API keys, by tagged API key ID (`apikey_...`), whichever identity the usage is attributed to. Include an empty entry (`api_key_ids[]=`) to also match usage that no API key authenticated. Use `group_by[]=api_key_id` to break out per-key values; usage without a key has a null `api_key_id`. Claude Developer Platform organizations only.</summary>
+            /// <summary>Filter to usage authenticated by specific API keys, by tagged API key ID (`apikey_...`), whichever identity the usage is attributed to. Include an empty entry (`api_key_ids[]=`) to also match usage that no API key authenticated. Use `group_by[]=api_key_id` to break out per-key values; usage without a key has a null `api_key_id`. Claude Platform organizations only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("api_key_ids%5B%5D")]
@@ -160,7 +160,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("api_key_ids%5B%5D")]
             public string ApiKeyIds { get; set; }
 #endif
-            /// <summary>Filter to Claude Tag (Claude in Slack) usage in specific spend categories. Usage with no category never matches. `dm` usage is reported under the user&apos;s product rather than `claude_tag`, so combining this filter with `products[]=claude_tag` excludes it. Use `group_by[]=claude_tag_category` to break out per-category values.</summary>
+            /// <summary>Filter to Claude Tag (Claude in Slack) usage in specific spend categories. Usage with no category never matches. Use `group_by[]=claude_tag_category` to break out per-category values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("claude_tag_categories%5B%5D")]
@@ -190,7 +190,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("context_windows%5B%5D")]
             public string ContextWindows { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that specific deployments started. Use `group_by[]=deployment_id` to break out per-deployment values. Claude Developer Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that specific deployments started. Use `group_by[]=deployment_id` to break out per-deployment values. Claude Platform organizations only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("deployment_ids%5B%5D")]
@@ -210,7 +210,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("ending_at")]
             public string EndingAt { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that ran in specific environments. Use `group_by[]=environment_id` to break out per-environment values. Claude Developer Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that ran in specific environments. Use `group_by[]=environment_id` to break out per-environment values. Claude Platform organizations only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("environment_ids%5B%5D")]
@@ -292,7 +292,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("rbac_group_ids%5B%5D")]
             public string RbacGroupIds { get; set; }
 #endif
-            /// <summary>Filter to specific service tiers. Use `group_by[]=service_tier` to break out per-tier values. Claude Developer Platform organizations only; matches nothing for a Claude Enterprise organization.</summary>
+            /// <summary>Filter to specific service tiers. Use `group_by[]=service_tier` to break out per-tier values. Claude Platform organizations only; matches nothing for a Claude Enterprise organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("service_tiers%5B%5D")]
@@ -302,7 +302,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("service_tiers%5B%5D")]
             public string ServiceTiers { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by specific Claude Managed Agents sessions, by tagged session ID (`sesn_...`). Use `group_by[]=session_id` to break out per-session values. Claude Developer Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by specific Claude Managed Agents sessions, by tagged session ID (`sesn_...`). Use `group_by[]=session_id` to break out per-session values. Claude Platform organizations only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("session_ids%5B%5D")]
@@ -345,7 +345,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("time_bucket_width")]
             public string TimeBucketWidth { get; set; }
 #endif
-            /// <summary>Filter to usage attributed to specific user profiles, by tagged user profile ID (`uprof_...`). Use `group_by[]=user_profile_id` to break out per-profile values. Claude Developer Platform organizations only.</summary>
+            /// <summary>Filter to usage attributed to specific user profiles, by tagged user profile ID (`uprof_...`). Use `group_by[]=user_profile_id` to break out per-profile values. Claude Platform organizations only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_profile_ids%5B%5D")]
@@ -355,7 +355,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("user_profile_ids%5B%5D")]
             public string UserProfileIds { get; set; }
 #endif
-            /// <summary>Filter to usage in specific workspaces, by tagged workspace ID (`wrkspc_...`). Use `group_by[]=workspace_id` to break out per-workspace values. Claude Developer Platform organizations only; matches nothing for a Claude Enterprise organization.</summary>
+            /// <summary>Filter to usage in specific workspaces, by tagged workspace ID (`wrkspc_...`). Use `group_by[]=workspace_id` to break out per-workspace values. Claude Platform organizations only; matches nothing for a Claude Enterprise organization.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("workspace_ids%5B%5D")]

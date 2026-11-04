@@ -8,10 +8,10 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The credential is not a scoped API key that is bound at the organization level.
+    /// The API key lacks the scope the request needs: `read:claude_tag` for a read, `write:claude_tag` for a change.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails : IParsable
+    public partial class BetaApiKeyScopeMissingErrorDetails : IParsable
     {
         /// <summary>The error_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,12 +24,12 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagOrganizationLevelScopedApiKeyRequiredErrorDetails();
+            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaApiKeyScopeMissingErrorDetails();
         }
         /// <summary>
         /// The deserialization information for the current model

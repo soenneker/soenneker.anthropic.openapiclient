@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The API could not finish checking whether an RBAC Group in the request grants owner access (the check reached a fixed limit), so it made no change. Retrying the same request will not help. Make the change in the organization&apos;s admin settings in Claude.
+    /// The API could not finish checking whether an RBAC Group in the request grants owner access, so it made no change. Retrying the same request will not help. Make the change in the organization&apos;s admin settings in Claude.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class RbacGroupOwnerAccessUnconfirmedErrorDetails : IAdditionalDataHolder, IParsable

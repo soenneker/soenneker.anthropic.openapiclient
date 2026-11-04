@@ -123,7 +123,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Usage_rep
             /// <summary>Time bucket granularity.</summary>
             [QueryParameter("bucket_width")]
             public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.Usage_reportBetaTrue.GetBucket_widthQueryParameterType? BucketWidth { get; set; }
-            /// <summary>Filter to Claude Tag (Claude in Slack) usage in specific spend categories. Usage with no category never matches. `dm` usage is reported under the user&apos;s product rather than `claude-tag`, so combining this filter with `products[]=claude-tag` excludes it. Use `group_by[]=claude_tag_category` to break out per-category values.</summary>
+            /// <summary>Filter to Claude Tag (Claude in Slack) usage in specific spend categories. Usage with no category never matches. Use `group_by[]=claude_tag_category` to break out per-category values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("claude_tag_categories%5B%5D")]

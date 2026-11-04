@@ -8,12 +8,12 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// `settings.environment_id` names no Environment within the organization&apos;s reach, and the request had set the channel up by then. The channel stays set up with every setting unset.
+    /// The request set the channel up, and something else then changed the channel or removed it. Nothing of `settings` was stored.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails : IParsable
+    public partial class BetaSlackChannelSetUpSettingsConflictErrorDetails : IParsable
     {
-        /// <summary>The error_code property</summary>
+        /// <summary>A stable code that names the cause.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ErrorCode { get; set; }
@@ -32,12 +32,12 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsConflictErrorDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsConflictErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSlackChannelSetUpEnvironmentNotFoundErrorDetails();
+            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaSlackChannelSetUpSettingsConflictErrorDetails();
         }
         /// <summary>
         /// The deserialization information for the current model

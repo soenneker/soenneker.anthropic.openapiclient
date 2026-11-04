@@ -16,7 +16,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Activity recorded while the member had Chat and Cowork unified (Cowork&apos;s features inside claude.ai chat) turned on, split into `chat` (chat activity) and `sessions` (Cowork activity). Omitted from the response on deployments that do not offer Chat and Cowork unified.</summary>
+        /// <summary>Activity recorded while the member had Chat and Cowork unified (Cowork&apos;s features inside claude.ai chat) turned on, split into `chat` (chat activity) and `sessions` (Cowork activity). Omitted from the response where Chat and Cowork unified is not available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsChatCoworkUnifiedMetrics? ChatCoworkUnifiedMetrics { get; set; }

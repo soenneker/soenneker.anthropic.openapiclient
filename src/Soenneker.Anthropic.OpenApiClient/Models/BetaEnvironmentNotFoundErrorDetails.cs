@@ -11,7 +11,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     /// `settings.environment_id` names no Environment within the organization&apos;s reach.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BetaClaudeTagEnvironmentNotFoundErrorDetails : IParsable
+    public partial class BetaEnvironmentNotFoundErrorDetails : IParsable
     {
         /// <summary>The error_code property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -24,12 +24,12 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagEnvironmentNotFoundErrorDetails();
+            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnvironmentNotFoundErrorDetails();
         }
         /// <summary>
         /// The deserialization information for the current model
