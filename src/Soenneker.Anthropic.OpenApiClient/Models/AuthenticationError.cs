@@ -14,7 +14,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The message property</summary>
+        /// <summary>A human-readable explanation of the error. Its wording can change, so don&apos;t match on it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -22,7 +22,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The broad category of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

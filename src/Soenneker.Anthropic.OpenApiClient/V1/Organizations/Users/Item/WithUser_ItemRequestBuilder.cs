@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.Anthropic.OpenApiClient.Models;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_outBetaTrue;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -17,6 +18,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithUser_ItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The sign_outBetaTrue property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_outBetaTrue.Sign_outBetaTrueRequestBuilder Sign_outBetaTrue
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_outBetaTrue.Sign_outBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.WithUser_ItemRequestBuilder"/> and sets the default values.
         /// </summary>

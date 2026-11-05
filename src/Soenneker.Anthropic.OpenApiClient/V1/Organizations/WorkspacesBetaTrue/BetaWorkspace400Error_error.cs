@@ -23,7 +23,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
 #else
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue.BetaWorkspace400Error_error.BetaWorkspace400Error_error_details Details { get; set; }
 #endif
-        /// <summary>The message property</summary>
+        /// <summary>A human-readable explanation of the error. Its wording can change, so don&apos;t match on it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The broad category of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -84,11 +84,27 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspacePolicyViolationErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue.BetaWorkspace400Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspacePolicyViolationErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue.BetaWorkspace400Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaWorkspace400Error_error_details : IComposedTypeWrapper, IParsable
         {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails? BetaExternalKeyValidationFailedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails BetaExternalKeyValidationFailedErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails? BetaExternalKeyValidationTimedOutErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails BetaExternalKeyValidationTimedOutErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,6 +146,8 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue.BetaWorkspace400Error_error.BetaWorkspace400Error_error_details();
+                result.BetaExternalKeyValidationFailedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails();
+                result.BetaExternalKeyValidationTimedOutErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails();
                 result.BetaKeyProfileMismatchErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails();
                 result.BetaUserProfileNotFoundErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileNotFoundErrorDetails();
                 result.BetaWorkspace400ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue.BetaWorkspace400Error_error_detailsMember1();
@@ -142,9 +160,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaKeyProfileMismatchErrorDetails != null || BetaUserProfileNotFoundErrorDetails != null || BetaWorkspace400ErrorErrorDetailsMember1 != null || BetaWorkspacePolicyViolationErrorDetails != null)
+                if(BetaExternalKeyValidationFailedErrorDetails != null || BetaExternalKeyValidationTimedOutErrorDetails != null || BetaKeyProfileMismatchErrorDetails != null || BetaUserProfileNotFoundErrorDetails != null || BetaWorkspace400ErrorErrorDetailsMember1 != null || BetaWorkspacePolicyViolationErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaKeyProfileMismatchErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaExternalKeyValidationFailedErrorDetails, BetaExternalKeyValidationTimedOutErrorDetails, BetaKeyProfileMismatchErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -155,7 +173,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.WorkspacesBetaTrue
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails>(null, BetaKeyProfileMismatchErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails>(null, BetaExternalKeyValidationFailedErrorDetails, BetaExternalKeyValidationTimedOutErrorDetails, BetaKeyProfileMismatchErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
             }
         }
     }

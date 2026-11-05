@@ -44,7 +44,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #endif
         /// <summary>Inference geo used matching requests&apos; `inference_geo` parameter if set, otherwise the workspace&apos;s `default_inference_geo`.For models that do not support specifying `inference_geo` the value is `&quot;not_available&quot;`. Always `null` if not grouping by inference geo.</summary>
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceGeoFilter? InferenceGeo { get; set; }
-        /// <summary>Model name used. `null` if not grouping by description or for non-token costs.</summary>
+        /// <summary>Model name used. `null` if not grouping by description, for non-token costs, or for token costs with no model ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaCostReportItem.BetaCostReportItem_model? Model { get; set; }

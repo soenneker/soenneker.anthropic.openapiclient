@@ -23,7 +23,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages.Batches
 #else
         public global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Batches.MessageBatch400Error_error.MessageBatch400Error_error_details Details { get; set; }
 #endif
-        /// <summary>The message property</summary>
+        /// <summary>A human-readable explanation of the error. Its wording can change, so don&apos;t match on it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages.Batches
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The broad category of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }

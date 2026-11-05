@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The error returned with HTTP status 409 when you create or rename a memory and the path you give is already used by another memory or overlaps another memory&apos;s path.Two paths overlap when one is an ancestor of the other, such as `/notes` and `/notes/todo.md`. To free the path, rename or delete the memory that `conflicting_memory_id` references, then retry. To change that memory instead of creating a new one, update it.
+    /// The error returned with HTTP status 409 when you create or rename a memory and the path you give is already used by another memory or overlaps another memory&apos;s path.Two paths overlap when one is an ancestor of the other, such as `/notes` and `/notes/todo.md`. To free the path, rename or delete the memory that `conflicting_memory_id` references, then retry. To change that memory instead of creating a new one, update it.To handle the error in code, use `conflicting_path` and `conflicting_memory_id` instead of `message`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaManagedAgentsMemoryPathConflictError : IParsable
@@ -29,7 +29,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string ConflictingPath { get; set; }
 #endif
-        /// <summary>A human-readable explanation of the conflict. To handle the error in code, use `conflicting_path` and `conflicting_memory_id` instead.</summary>
+        /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }

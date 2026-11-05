@@ -13,7 +13,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaTargetStoreHeldError : IParsable
     {
-        /// <summary>A human-readable explanation of why the memory store can&apos;t be used yet, with the ID of the dream that is using it when the server can identify it.</summary>
+        /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }

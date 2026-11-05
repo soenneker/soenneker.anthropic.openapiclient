@@ -23,7 +23,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces
 #else
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Workspace400Error_error.Workspace400Error_error_details Details { get; set; }
 #endif
-        /// <summary>The message property</summary>
+        /// <summary>A human-readable explanation of the error. Its wording can change, so don&apos;t match on it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get; set; }
@@ -31,7 +31,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>The broad category of the error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
@@ -84,11 +84,27 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.KeyProfileMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.UserProfileNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.WorkspacePolicyViolationErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Workspace400Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationFailedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationTimedOutErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.KeyProfileMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.UserProfileNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.WorkspacePolicyViolationErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Workspace400Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Workspace400Error_error_details : IComposedTypeWrapper, IParsable
         {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationFailedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationFailedErrorDetails? ExternalKeyValidationFailedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationFailedErrorDetails ExternalKeyValidationFailedErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationTimedOutErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationTimedOutErrorDetails? ExternalKeyValidationTimedOutErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationTimedOutErrorDetails ExternalKeyValidationTimedOutErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.KeyProfileMismatchErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,6 +146,8 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Workspace400Error_error.Workspace400Error_error_details();
+                result.ExternalKeyValidationFailedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationFailedErrorDetails();
+                result.ExternalKeyValidationTimedOutErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationTimedOutErrorDetails();
                 result.KeyProfileMismatchErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.KeyProfileMismatchErrorDetails();
                 result.UserProfileNotFoundErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.UserProfileNotFoundErrorDetails();
                 result.Workspace400ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Workspace400Error_error_detailsMember1();
@@ -142,9 +160,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(KeyProfileMismatchErrorDetails != null || UserProfileNotFoundErrorDetails != null || Workspace400ErrorErrorDetailsMember1 != null || WorkspacePolicyViolationErrorDetails != null)
+                if(ExternalKeyValidationFailedErrorDetails != null || ExternalKeyValidationTimedOutErrorDetails != null || KeyProfileMismatchErrorDetails != null || UserProfileNotFoundErrorDetails != null || Workspace400ErrorErrorDetailsMember1 != null || WorkspacePolicyViolationErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(KeyProfileMismatchErrorDetails, UserProfileNotFoundErrorDetails, Workspace400ErrorErrorDetailsMember1, WorkspacePolicyViolationErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ExternalKeyValidationFailedErrorDetails, ExternalKeyValidationTimedOutErrorDetails, KeyProfileMismatchErrorDetails, UserProfileNotFoundErrorDetails, Workspace400ErrorErrorDetailsMember1, WorkspacePolicyViolationErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -155,7 +173,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.KeyProfileMismatchErrorDetails>(null, KeyProfileMismatchErrorDetails, UserProfileNotFoundErrorDetails, Workspace400ErrorErrorDetailsMember1, WorkspacePolicyViolationErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKeyValidationFailedErrorDetails>(null, ExternalKeyValidationFailedErrorDetails, ExternalKeyValidationTimedOutErrorDetails, KeyProfileMismatchErrorDetails, UserProfileNotFoundErrorDetails, Workspace400ErrorErrorDetailsMember1, WorkspacePolicyViolationErrorDetails);
             }
         }
     }
