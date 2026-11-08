@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
-    /// <summary>Role to assign to the service account in this workspace.</summary>
+    /// <summary>Role of the new Workspace Member. Cannot be `workspace_billing`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum BetaNoBillingWorkspaceRoleSchema
     {
