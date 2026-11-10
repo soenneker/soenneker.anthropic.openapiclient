@@ -43,7 +43,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRba
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRbac_group_idBetaTrue.BetaDeleteRbacGroupResponse400Error">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRbac_group_idBetaTrue.BetaDeleteRbacGroupResponse403Error">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 409 status code</exception>
@@ -71,7 +71,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRba
             {
                 { "400", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRbac_group_idBetaTrue.BetaDeleteRbacGroupResponse400Error.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRbac_group_idBetaTrue.BetaDeleteRbacGroupResponse403Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
@@ -150,7 +150,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRba
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRbac_group_idBetaTrue.BetaRbacGroup403Error">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 409 status code</exception>
@@ -179,7 +179,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRba
             {
                 { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups.WithRbac_group_idBetaTrue.BetaRbacGroup403Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },

@@ -16,5 +16,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Webhooks.WithWebhoo
         #pragma warning disable CS1591
         User_profileEnforcement_action_resolved,
         #pragma warning restore CS1591
+        [EnumMember(Value = "user_profile.program_status_updated")]
+        #pragma warning disable CS1591
+        User_profileProgram_status_updated,
+        #pragma warning restore CS1591
     }
 }

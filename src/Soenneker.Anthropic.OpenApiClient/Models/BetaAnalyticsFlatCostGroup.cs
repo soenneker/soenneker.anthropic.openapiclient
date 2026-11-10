@@ -81,6 +81,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_model Model { get; set; }
 #endif
+        /// <summary>UUID of the child organization the usage belongs to, on a parent organization&apos;s report across its children. Null unless `organization_id` is in `group_by[]`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id? OrganizationId { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id OrganizationId { get; set; }
+#endif
         /// <summary>Product surface that produced the usage or cost. Null unless product is in `group_by[]`; it can also be null on grouped rows whose usage cannot be attributed to a known surface. Values include `chat`, `claude_code`, `cowork`, `office_agent`, `claude_in_chrome`, `claude_design`, `claude_tag`, and `chat_cowork_unified`. `claude_tag` is Claude Tag, the Claude product in Slack. `chat_cowork_unified` is Chat and Cowork unified, Cowork&apos;s features inside claude.ai chat: chat and Cowork usage by a member who has it turned on is reported under this value instead of `chat` or `cowork`. It is accepted as a filter only where Chat and Cowork unified is available. Some unattributed usage is reported as &quot;other&quot;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -172,6 +180,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "environment_id", n => { EnvironmentId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_environment_id>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_environment_id.CreateFromDiscriminatorValue); } },
                 { "inference_geo", n => { InferenceGeo = n.GetEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsUsageCostInferenceGeo>(); } },
                 { "model", n => { Model = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_model>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_model.CreateFromDiscriminatorValue); } },
+                { "organization_id", n => { OrganizationId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id.CreateFromDiscriminatorValue); } },
                 { "product", n => { Product = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_product>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_product.CreateFromDiscriminatorValue); } },
                 { "rbac_group_id", n => { RbacGroupId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_rbac_group_id>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_rbac_group_id.CreateFromDiscriminatorValue); } },
                 { "service_tier", n => { ServiceTier = n.GetEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaUsageReportServiceTier>(); } },
@@ -202,6 +211,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_environment_id>("environment_id", EnvironmentId);
             writer.WriteEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsUsageCostInferenceGeo>("inference_geo", InferenceGeo);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_model>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id>("organization_id", OrganizationId);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_product>("product", Product);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_rbac_group_id>("rbac_group_id", RbacGroupId);
             writer.WriteEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaUsageReportServiceTier>("service_tier", ServiceTier);
@@ -618,6 +628,74 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 }
                 else {
                     writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup_modelMember1>(null, BetaAnalyticsFlatCostGroupModelMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup_organization_idMember1"/>, <see cref="string"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class BetaAnalyticsFlatCostGroup_organization_id : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup_organization_idMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup_organization_idMember1? BetaAnalyticsFlatCostGroupOrganizationIdMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup_organization_idMember1 BetaAnalyticsFlatCostGroupOrganizationIdMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="string"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public string? String { get; set; }
+#nullable restore
+#else
+            public string String { get; set; }
+#endif
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_organization_id();
+                if(parseNode.GetStringValue() is string stringValue)
+                {
+                    result.String = stringValue;
+                }
+                else {
+                    result.BetaAnalyticsFlatCostGroupOrganizationIdMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup_organization_idMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(BetaAnalyticsFlatCostGroupOrganizationIdMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaAnalyticsFlatCostGroupOrganizationIdMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(String != null)
+                {
+                    writer.WriteStringValue(null, String);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup_organization_idMember1>(null, BetaAnalyticsFlatCostGroupOrganizationIdMember1);
                 }
             }
         }

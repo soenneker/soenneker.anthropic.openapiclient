@@ -84,7 +84,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_out
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutManagedMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutMembershipAdminErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutOwnerErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutPrivilegedMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_outBetaTrue.BetaUser403Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutManagedMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutMembershipAdminErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutOwnerErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutPrivilegedMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_outBetaTrue.BetaUser403Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaUser403Error_error_details : IComposedTypeWrapper, IParsable
@@ -121,6 +121,14 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_out
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutPrivilegedMemberErrorDetails BetaCannotSignOutPrivilegedMemberErrorDetails { get; set; }
 #endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails? BetaSandboxEgressRestrictedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails BetaSandboxEgressRestrictedErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_outBetaTrue.BetaUser403Error_error_detailsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -142,6 +150,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_out
                 result.BetaCannotSignOutMembershipAdminErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutMembershipAdminErrorDetails();
                 result.BetaCannotSignOutOwnerErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutOwnerErrorDetails();
                 result.BetaCannotSignOutPrivilegedMemberErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutPrivilegedMemberErrorDetails();
+                result.BetaSandboxEgressRestrictedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails();
                 result.BetaUser403ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_outBetaTrue.BetaUser403Error_error_detailsMember1();
                 return result;
             }
@@ -151,9 +160,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_out
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaCannotSignOutManagedMemberErrorDetails != null || BetaCannotSignOutMembershipAdminErrorDetails != null || BetaCannotSignOutOwnerErrorDetails != null || BetaCannotSignOutPrivilegedMemberErrorDetails != null || BetaUser403ErrorErrorDetailsMember1 != null)
+                if(BetaCannotSignOutManagedMemberErrorDetails != null || BetaCannotSignOutMembershipAdminErrorDetails != null || BetaCannotSignOutOwnerErrorDetails != null || BetaCannotSignOutPrivilegedMemberErrorDetails != null || BetaSandboxEgressRestrictedErrorDetails != null || BetaUser403ErrorErrorDetailsMember1 != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaCannotSignOutManagedMemberErrorDetails, BetaCannotSignOutMembershipAdminErrorDetails, BetaCannotSignOutOwnerErrorDetails, BetaCannotSignOutPrivilegedMemberErrorDetails, BetaUser403ErrorErrorDetailsMember1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaCannotSignOutManagedMemberErrorDetails, BetaCannotSignOutMembershipAdminErrorDetails, BetaCannotSignOutOwnerErrorDetails, BetaCannotSignOutPrivilegedMemberErrorDetails, BetaSandboxEgressRestrictedErrorDetails, BetaUser403ErrorErrorDetailsMember1);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -164,7 +173,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Users.Item.Sign_out
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutManagedMemberErrorDetails>(null, BetaCannotSignOutManagedMemberErrorDetails, BetaCannotSignOutMembershipAdminErrorDetails, BetaCannotSignOutOwnerErrorDetails, BetaCannotSignOutPrivilegedMemberErrorDetails, BetaUser403ErrorErrorDetailsMember1);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaCannotSignOutManagedMemberErrorDetails>(null, BetaCannotSignOutManagedMemberErrorDetails, BetaCannotSignOutMembershipAdminErrorDetails, BetaCannotSignOutOwnerErrorDetails, BetaCannotSignOutPrivilegedMemberErrorDetails, BetaSandboxEgressRestrictedErrorDetails, BetaUser403ErrorErrorDetailsMember1);
             }
         }
     }

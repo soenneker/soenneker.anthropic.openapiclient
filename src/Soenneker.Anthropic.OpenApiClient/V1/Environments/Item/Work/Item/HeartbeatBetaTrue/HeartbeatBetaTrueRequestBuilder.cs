@@ -123,7 +123,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Environments.Item.Work.Item.Heart
             /// <summary>Desired TTL in seconds</summary>
             [QueryParameter("desired_ttl_seconds")]
             public int? DesiredTtlSeconds { get; set; }
-            /// <summary>Expected last_heartbeat for conditional update (optimistic concurrency). Use literal &apos;NO_HEARTBEAT&apos; to claim an unclaimed lease (first heartbeat). For subsequent heartbeats, echo the server&apos;s previous last_heartbeat value exactly. Returns 412 Precondition Failed if the actual value doesn&apos;t match.</summary>
+            /// <summary>Expected last_heartbeat for conditional update (optimistic concurrency). Use literal &apos;NO_HEARTBEAT&apos; to claim an unclaimed lease (first heartbeat). For subsequent heartbeats, echo the server&apos;s previous last_heartbeat value exactly. Returns 412 Precondition Failed if the actual value doesn&apos;t match. The server does not compare the value when the work item is &apos;stopping&apos; or &apos;stopped&apos;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("expected_last_heartbeat")]

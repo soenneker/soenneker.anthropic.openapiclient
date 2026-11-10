@@ -22,7 +22,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.CostBetaT
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CostBetaTrueRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/analytics/cost?beta=true?starting_at={starting_at}{&actor_ids%5B%5D*,actor_types%5B%5D*,agent_ids%5B%5D*,api_key_ids%5B%5D*,claude_tag_categories%5B%5D*,claude_tag_user_ids%5B%5D*,context_windows%5B%5D*,deployment_ids%5B%5D*,ending_at*,environment_ids%5B%5D*,exclude_deleted_users*,group_by%5B%5D*,inference_geos%5B%5D*,limit*,models%5B%5D*,order*,order_by*,page*,products%5B%5D*,rbac_group_ids%5B%5D*,service_tiers%5B%5D*,session_ids%5B%5D*,slack_channel_ids%5B%5D*,speeds%5B%5D*,time_bucket_width*,user_profile_ids%5B%5D*,workspace_ids%5B%5D*}", pathParameters)
+        public CostBetaTrueRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/analytics/cost?beta=true?starting_at={starting_at}{&actor_ids%5B%5D*,actor_types%5B%5D*,agent_ids%5B%5D*,api_key_ids%5B%5D*,claude_tag_categories%5B%5D*,claude_tag_user_ids%5B%5D*,context_windows%5B%5D*,deployment_ids%5B%5D*,ending_at*,environment_ids%5B%5D*,exclude_deleted_users*,group_by%5B%5D*,inference_geos%5B%5D*,limit*,models%5B%5D*,order*,order_by*,organization_ids%5B%5D*,page*,products%5B%5D*,rbac_group_ids%5B%5D*,service_tiers%5B%5D*,session_ids%5B%5D*,slack_channel_ids%5B%5D*,speeds%5B%5D*,time_bucket_width*,user_profile_ids%5B%5D*,workspace_ids%5B%5D*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.CostBetaT
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CostBetaTrueRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/analytics/cost?beta=true?starting_at={starting_at}{&actor_ids%5B%5D*,actor_types%5B%5D*,agent_ids%5B%5D*,api_key_ids%5B%5D*,claude_tag_categories%5B%5D*,claude_tag_user_ids%5B%5D*,context_windows%5B%5D*,deployment_ids%5B%5D*,ending_at*,environment_ids%5B%5D*,exclude_deleted_users*,group_by%5B%5D*,inference_geos%5B%5D*,limit*,models%5B%5D*,order*,order_by*,page*,products%5B%5D*,rbac_group_ids%5B%5D*,service_tiers%5B%5D*,session_ids%5B%5D*,slack_channel_ids%5B%5D*,speeds%5B%5D*,time_bucket_width*,user_profile_ids%5B%5D*,workspace_ids%5B%5D*}", rawUrl)
+        public CostBetaTrueRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/v1/organizations/analytics/cost?beta=true?starting_at={starting_at}{&actor_ids%5B%5D*,actor_types%5B%5D*,agent_ids%5B%5D*,api_key_ids%5B%5D*,claude_tag_categories%5B%5D*,claude_tag_user_ids%5B%5D*,context_windows%5B%5D*,deployment_ids%5B%5D*,ending_at*,environment_ids%5B%5D*,exclude_deleted_users*,group_by%5B%5D*,inference_geos%5B%5D*,limit*,models%5B%5D*,order*,order_by*,organization_ids%5B%5D*,page*,products%5B%5D*,rbac_group_ids%5B%5D*,service_tiers%5B%5D*,session_ids%5B%5D*,slack_channel_ids%5B%5D*,speeds%5B%5D*,time_bucket_width*,user_profile_ids%5B%5D*,workspace_ids%5B%5D*}", rawUrl)
         {
         }
         /// <summary>
@@ -262,6 +262,16 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.CostBetaT
             /// <summary>Row order. A metric ranks rows by that metric in the `order` direction. `time` orders rows by time bucket in the `order` direction (newest first by default) and, within a bucket, by `amount`, highest first. `time` takes effect only with `time_bucket_width`; without it, `time` is the same as `amount`. Defaults to `amount`.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostOrderBy? OrderBy { get; set; }
+            /// <summary>Filter a parent organization&apos;s report to specific child organizations, by organization UUID or `org_` ID; an ID that is not one of its child organizations matches nothing. Requires an API key created at the parent organization level. Use `group_by[]=organization_id` to break out per-organization values.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("organization_ids%5B%5D")]
+            public string? OrganizationIds { get; set; }
+#nullable restore
+#else
+            [QueryParameter("organization_ids%5B%5D")]
+            public string OrganizationIds { get; set; }
+#endif
             /// <summary>Opaque cursor from a previous response&apos;s `next_page` field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

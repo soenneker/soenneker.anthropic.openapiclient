@@ -84,19 +84,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSp
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingFrozenErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue.BetaDeleteSpendLimitResponse403Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue.BetaDeleteSpendLimitResponse403Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaDeleteSpendLimitResponse403Error_error_details : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingFrozenErrorDetails"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingFrozenErrorDetails? BetaBillingFrozenErrorDetails { get; set; }
-#nullable restore
-#else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingFrozenErrorDetails BetaBillingFrozenErrorDetails { get; set; }
-#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue.BetaDeleteSpendLimitResponse403Error_error_detailsMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -104,6 +96,14 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSp
 #nullable restore
 #else
             public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue.BetaDeleteSpendLimitResponse403Error_error_detailsMember1 BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails? BetaSandboxEgressRestrictedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails BetaSandboxEgressRestrictedErrorDetails { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -122,8 +122,8 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSp
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue.BetaDeleteSpendLimitResponse403Error_error.BetaDeleteSpendLimitResponse403Error_error_details();
-                result.BetaBillingFrozenErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingFrozenErrorDetails();
                 result.BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue.BetaDeleteSpendLimitResponse403Error_error_detailsMember1();
+                result.BetaSandboxEgressRestrictedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaSandboxEgressRestrictedErrorDetails();
                 result.BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails();
                 return result;
             }
@@ -133,9 +133,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSp
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaBillingFrozenErrorDetails != null || BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1 != null || BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails != null)
+                if(BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1 != null || BetaSandboxEgressRestrictedErrorDetails != null || BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaBillingFrozenErrorDetails, BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1, BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1, BetaSandboxEgressRestrictedErrorDetails, BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -146,7 +146,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSp
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingFrozenErrorDetails>(null, BetaBillingFrozenErrorDetails, BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1, BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Spend_limits.WithSpend_limit_idBetaTrue.BetaDeleteSpendLimitResponse403Error_error_detailsMember1>(null, BetaDeleteSpendLimitResponse403ErrorErrorDetailsMember1, BetaSandboxEgressRestrictedErrorDetails, BetaSpendLimitsAdminApiWritesNotEnabledErrorDetails);
             }
         }
     }
