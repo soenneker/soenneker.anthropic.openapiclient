@@ -16,7 +16,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>RFC 3339 datetime string indicating when the RBAC Role was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>Name of the RBAC Role. For a role created by Anthropic, this name can differ from the label claude.ai shows, and Anthropic may change the name. To keep a lasting reference to a role, store its `id`.</summary>
+        /// <summary>Name of the RBAC Role. For a role created by Anthropic, this is Anthropic&apos;s name for the access that the role grants. Anthropic may change this name, so to keep a lasting reference to a role, store its `id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DisplayName { get; set; }

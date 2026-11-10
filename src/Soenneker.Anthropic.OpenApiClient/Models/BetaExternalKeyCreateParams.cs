@@ -36,7 +36,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyCreateParams.BetaExternalKeyCreateParams_provider_config ProviderConfig { get; set; }
 #endif
-        /// <summary>ID of a user profile to bind the key to. Omit this field for a key that isn&apos;t bound to a user profile. Such a key can be attached to a Workspace whatever its user profile. The binding cannot be changed later. A key bound to a user profile can only be attached to a Workspace that has the same user profile.</summary>
+        /// <summary>ID of a user profile to bind the key to. A user profile represents one of your customers: bind a customer&apos;s key to that customer&apos;s user profile. A key bound to a user profile can only be attached to a Workspace that has the same user profile, and the binding cannot be changed later. Omit this field only for your organization&apos;s own key, because a key created without a user profile ID can be attached to any Workspace, including another customer&apos;s.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyCreateParams.BetaExternalKeyCreateParams_user_profile_id? UserProfileId { get; set; }

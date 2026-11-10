@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// Claude Tag settings. Without `include_inherited`, a setting that is null is not set on the settings level and is inherited. With it, `enabled` and `guest_policy` are never null, and `instructions`, `model` and `environment_id` are null when no settings level sets them.
+    /// Claude Tag settings. Without `include_inherited`, a setting that is null is not set on the settings level and is inherited. With it, `enabled` and `guest_policy` are never null, `instructions`, `model` and `environment_id` are null when no settings level sets them, and `reply_mode` is null unless the channel itself stores one.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaClaudeTagSettings : IParsable
@@ -53,6 +53,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings.BetaClaudeTagSettings_model Model { get; set; }
 #endif
+        /// <summary>How Claude takes part in the channel. Only a channel stores one, and no settings level passes one on, so it is always null on a workspace. Null on a channel means the channel stores none yet: Claude then follows the reply mode chosen in Slack, if one was, else `automatic`. A stored reply mode can be changed but never cleared.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode? ReplyMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode ReplyMode { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -76,6 +84,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "guest_policy", n => { GuestPolicy = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagGuestPolicy>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagGuestPolicy.CreateFromDiscriminatorValue); } },
                 { "instructions", n => { Instructions = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings.BetaClaudeTagSettings_instructions>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings.BetaClaudeTagSettings_instructions.CreateFromDiscriminatorValue); } },
                 { "model", n => { Model = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings.BetaClaudeTagSettings_model>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings.BetaClaudeTagSettings_model.CreateFromDiscriminatorValue); } },
+                { "reply_mode", n => { ReplyMode = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagGuestPolicy>("guest_policy", GuestPolicy);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings.BetaClaudeTagSettings_instructions>("instructions", Instructions);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings.BetaClaudeTagSettings_model>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode>("reply_mode", ReplyMode);
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="bool"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettings_enabledMember1"/>

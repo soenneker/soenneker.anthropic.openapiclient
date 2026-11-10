@@ -22,7 +22,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public List<global::Soenneker.Anthropic.OpenApiClient.Models.BetaPluginShare> Data { get; set; }
 #endif
-        /// <summary>Token to provide in as `page` in the subsequent request to retrieve the next page of data.</summary>
+        /// <summary>Token to provide in as `page` in the subsequent request to retrieve the next page of data. A page may hold fewer than `limit` shares, even none, while this is set; keep following it until it is null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaPluginShareList.BetaPluginShareList_next_page? NextPage { get; set; }

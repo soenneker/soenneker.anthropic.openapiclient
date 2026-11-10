@@ -119,6 +119,30 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_weekly_active_user_count ClaudeDesignWeeklyActiveUserCount { get; set; }
 #endif
+        /// <summary>Number of Slack users active in Claude Tag on the requested day. Counts distinct Slack users, including users who have not linked a Claude account, so it can exceed `daily_active_user_count` and `assigned_seat_count`. Null on a day with no measured value, when Claude Tag data cannot be read for the request, and when the response is scoped to an RBAC group, because an unlinked user belongs to no group. Omitted from the response on deployments that do not offer Claude Tag reporting.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count? ClaudeTagDailyActiveUserCount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count ClaudeTagDailyActiveUserCount { get; set; }
+#endif
+        /// <summary>Number of Slack users active in Claude Tag in the 28-day rolling window. Counts distinct Slack users, including users who have not linked a Claude account, so it can exceed `daily_active_user_count` and `assigned_seat_count`. Null on a day with no measured value, when Claude Tag data cannot be read for the request, and when the response is scoped to an RBAC group, because an unlinked user belongs to no group. Omitted from the response on deployments that do not offer Claude Tag reporting.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count? ClaudeTagMonthlyActiveUserCount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count ClaudeTagMonthlyActiveUserCount { get; set; }
+#endif
+        /// <summary>Number of Slack users active in Claude Tag in the 7-day rolling window. Counts distinct Slack users, including users who have not linked a Claude account, so it can exceed `daily_active_user_count` and `assigned_seat_count`. Null on a day with no measured value, when Claude Tag data cannot be read for the request, and when the response is scoped to an RBAC group, because an unlinked user belongs to no group. Omitted from the response on deployments that do not offer Claude Tag reporting.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count? ClaudeTagWeeklyActiveUserCount { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count ClaudeTagWeeklyActiveUserCount { get; set; }
+#endif
         /// <summary>Number of users with Cowork activity on the requested day</summary>
         public int? CoworkDailyActiveUserCount { get; set; }
         /// <summary>Number of users with Cowork activity in the 30-day rolling window</summary>
@@ -261,6 +285,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "claude_design_daily_active_user_count", n => { ClaudeDesignDailyActiveUserCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_daily_active_user_count>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_daily_active_user_count.CreateFromDiscriminatorValue); } },
                 { "claude_design_monthly_active_user_count", n => { ClaudeDesignMonthlyActiveUserCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_monthly_active_user_count>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_monthly_active_user_count.CreateFromDiscriminatorValue); } },
                 { "claude_design_weekly_active_user_count", n => { ClaudeDesignWeeklyActiveUserCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_weekly_active_user_count>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_weekly_active_user_count.CreateFromDiscriminatorValue); } },
+                { "claude_tag_daily_active_user_count", n => { ClaudeTagDailyActiveUserCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count.CreateFromDiscriminatorValue); } },
+                { "claude_tag_monthly_active_user_count", n => { ClaudeTagMonthlyActiveUserCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count.CreateFromDiscriminatorValue); } },
+                { "claude_tag_weekly_active_user_count", n => { ClaudeTagWeeklyActiveUserCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count.CreateFromDiscriminatorValue); } },
                 { "cowork_daily_active_user_count", n => { CoworkDailyActiveUserCount = n.GetIntValue(); } },
                 { "cowork_monthly_active_user_count", n => { CoworkMonthlyActiveUserCount = n.GetIntValue(); } },
                 { "cowork_weekly_active_user_count", n => { CoworkWeeklyActiveUserCount = n.GetIntValue(); } },
@@ -302,6 +329,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_daily_active_user_count>("claude_design_daily_active_user_count", ClaudeDesignDailyActiveUserCount);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_monthly_active_user_count>("claude_design_monthly_active_user_count", ClaudeDesignMonthlyActiveUserCount);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_design_weekly_active_user_count>("claude_design_weekly_active_user_count", ClaudeDesignWeeklyActiveUserCount);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count>("claude_tag_daily_active_user_count", ClaudeTagDailyActiveUserCount);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count>("claude_tag_monthly_active_user_count", ClaudeTagMonthlyActiveUserCount);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count>("claude_tag_weekly_active_user_count", ClaudeTagWeeklyActiveUserCount);
             writer.WriteIntValue("cowork_daily_active_user_count", CoworkDailyActiveUserCount);
             writer.WriteIntValue("cowork_monthly_active_user_count", CoworkMonthlyActiveUserCount);
             writer.WriteIntValue("cowork_weekly_active_user_count", CoworkWeeklyActiveUserCount);
@@ -1126,6 +1156,192 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 }
                 else {
                     writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_design_weekly_active_user_countMember1>(null, BetaAnalyticsSingleDayActivitySummaryClaudeDesignWeeklyActiveUserCountMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_countMember1"/>, <see cref="int"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_countMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_countMember1? BetaAnalyticsSingleDayActivitySummaryClaudeTagDailyActiveUserCountMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_countMember1 BetaAnalyticsSingleDayActivitySummaryClaudeTagDailyActiveUserCountMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_count();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else {
+                    result.BetaAnalyticsSingleDayActivitySummaryClaudeTagDailyActiveUserCountMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_countMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(BetaAnalyticsSingleDayActivitySummaryClaudeTagDailyActiveUserCountMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaAnalyticsSingleDayActivitySummaryClaudeTagDailyActiveUserCountMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_daily_active_user_countMember1>(null, BetaAnalyticsSingleDayActivitySummaryClaudeTagDailyActiveUserCountMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_countMember1"/>, <see cref="int"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_countMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_countMember1? BetaAnalyticsSingleDayActivitySummaryClaudeTagMonthlyActiveUserCountMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_countMember1 BetaAnalyticsSingleDayActivitySummaryClaudeTagMonthlyActiveUserCountMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_count();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else {
+                    result.BetaAnalyticsSingleDayActivitySummaryClaudeTagMonthlyActiveUserCountMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_countMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(BetaAnalyticsSingleDayActivitySummaryClaudeTagMonthlyActiveUserCountMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaAnalyticsSingleDayActivitySummaryClaudeTagMonthlyActiveUserCountMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_monthly_active_user_countMember1>(null, BetaAnalyticsSingleDayActivitySummaryClaudeTagMonthlyActiveUserCountMember1);
+                }
+            }
+        }
+        /// <summary>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_countMember1"/>, <see cref="int"/>
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
+        public partial class BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count : IComposedTypeWrapper, IParsable
+        {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_countMember1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_countMember1? BetaAnalyticsSingleDayActivitySummaryClaudeTagWeeklyActiveUserCountMember1 { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_countMember1 BetaAnalyticsSingleDayActivitySummaryClaudeTagWeeklyActiveUserCountMember1 { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="int"/></summary>
+            public int? Integer { get; set; }
+            /// <summary>
+            /// Creates a new instance of the appropriate class based on discriminator value
+            /// </summary>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count"/></returns>
+            /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count CreateFromDiscriminatorValue(IParseNode parseNode)
+            {
+                if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_count();
+                if(parseNode.GetIntValue() is int integerValue)
+                {
+                    result.Integer = integerValue;
+                }
+                else {
+                    result.BetaAnalyticsSingleDayActivitySummaryClaudeTagWeeklyActiveUserCountMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_countMember1();
+                }
+                return result;
+            }
+            /// <summary>
+            /// The deserialization information for the current model
+            /// </summary>
+            /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
+            public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
+            {
+                if(BetaAnalyticsSingleDayActivitySummaryClaudeTagWeeklyActiveUserCountMember1 != null)
+                {
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaAnalyticsSingleDayActivitySummaryClaudeTagWeeklyActiveUserCountMember1);
+                }
+                return new Dictionary<string, Action<IParseNode>>();
+            }
+            /// <summary>
+            /// Serializes information the current object
+            /// </summary>
+            /// <param name="writer">Serialization writer to use to serialize this model</param>
+            public virtual void Serialize(ISerializationWriter writer)
+            {
+                if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+                if(Integer != null)
+                {
+                    writer.WriteIntValue(null, Integer);
+                }
+                else {
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSingleDayActivitySummary_claude_tag_weekly_active_user_countMember1>(null, BetaAnalyticsSingleDayActivitySummaryClaudeTagWeeklyActiveUserCountMember1);
                 }
             }
         }

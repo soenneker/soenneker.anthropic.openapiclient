@@ -40,6 +40,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeCodeMetrics ClaudeCodeMetrics { get; set; }
 #endif
+        /// <summary>Claude Tag activity in Slack by a user who has linked a Claude account. Activity by Slack users who have not linked an account appears only in the `/summaries` Claude Tag counts, so these rows do not add up to those counts. Omitted from the response on deployments that do not offer Claude Tag reporting.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeTagMetrics? ClaudeTagMetrics { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeTagMetrics ClaudeTagMetrics { get; set; }
+#endif
         /// <summary>Cowork activity metrics for a single user on a given day.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -142,6 +150,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "chat_cowork_unified_metrics", n => { ChatCoworkUnifiedMetrics = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsChatCoworkUnifiedMetrics>(global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsChatCoworkUnifiedMetrics.CreateFromDiscriminatorValue); } },
                 { "chat_metrics", n => { ChatMetrics = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsChatMetrics>(global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsChatMetrics.CreateFromDiscriminatorValue); } },
                 { "claude_code_metrics", n => { ClaudeCodeMetrics = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeCodeMetrics>(global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeCodeMetrics.CreateFromDiscriminatorValue); } },
+                { "claude_tag_metrics", n => { ClaudeTagMetrics = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeTagMetrics>(global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeTagMetrics.CreateFromDiscriminatorValue); } },
                 { "cowork_metrics", n => { CoworkMetrics = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsCoworkMetrics>(global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsCoworkMetrics.CreateFromDiscriminatorValue); } },
                 { "design_metrics", n => { DesignMetrics = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsDesignMetrics>(global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsDesignMetrics.CreateFromDiscriminatorValue); } },
                 { "distinct_user_count", n => { DistinctUserCount = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsUserActivity.AnalyticsUserActivity_distinct_user_count>(global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsUserActivity.AnalyticsUserActivity_distinct_user_count.CreateFromDiscriminatorValue); } },
@@ -164,6 +173,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsChatCoworkUnifiedMetrics>("chat_cowork_unified_metrics", ChatCoworkUnifiedMetrics);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsChatMetrics>("chat_metrics", ChatMetrics);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeCodeMetrics>("claude_code_metrics", ClaudeCodeMetrics);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsClaudeTagMetrics>("claude_tag_metrics", ClaudeTagMetrics);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsCoworkMetrics>("cowork_metrics", CoworkMetrics);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsDesignMetrics>("design_metrics", DesignMetrics);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.AnalyticsUserActivity.AnalyticsUserActivity_distinct_user_count>("distinct_user_count", DistinctUserCount);

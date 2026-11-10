@@ -143,7 +143,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Usage_report.Messag
             /// <summary>Time granularity of the response data.</summary>
             [QueryParameter("bucket_width")]
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaMessagesUsageReportTimeBucketWidth? BucketWidth { get; set; }
-            /// <summary>Restrict usage returned to the specified context window(s).</summary>
+            /// <summary>Restrict usage returned to the specified context window(s). See the `context_window` response field for how a request is classified.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("context_window%5B%5D")]

@@ -53,6 +53,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource Model { get; set; }
 #endif
+        /// <summary>The settings level `reply_mode` comes from: the channel when it stores one. With `include_inherited=true` and no stored mode it is `default`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource? ReplyMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource ReplyMode { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -76,6 +84,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "guest_policy", n => { GuestPolicy = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource.CreateFromDiscriminatorValue); } },
                 { "instructions", n => { Instructions = n.GetCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "model", n => { Model = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource.CreateFromDiscriminatorValue); } },
+                { "reply_mode", n => { ReplyMode = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>("guest_policy", GuestPolicy);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>("instructions", Instructions);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingSource>("reply_mode", ReplyMode);
         }
     }
 }

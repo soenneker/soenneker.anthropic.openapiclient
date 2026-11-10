@@ -21,7 +21,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_enabled Enabled { get; set; }
 #endif
-        /// <summary>The environment Claude&apos;s sessions run in: the identifier of an active environment of the organization, starting with `env_`. Null clears it.</summary>
+        /// <summary>The environment Claude&apos;s sessions run in: the identifier of an active environment of the organization, starting with `env_`, or of a self-hosted runner pool of the organization that every member may use, starting with `ccpool_`. Null clears it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_environment_id? EnvironmentId { get; set; }
@@ -53,6 +53,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_model Model { get; set; }
 #endif
+        /// <summary>How Claude takes part in the channel: `automatic`, `mention_only`, `always_awake` or `thread`. Only a channel takes one: an update of a workspace that sends a value is refused, and one that sends null changes nothing. Null never clears it: sent to a channel that stores none it changes nothing, and sent to a channel that stores one it is refused, because a stored reply mode can be changed but never cleared; a caller that wants Claude&apos;s default behavior sends `automatic`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode? ReplyMode { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode ReplyMode { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -76,6 +84,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "guest_policy", n => { GuestPolicy = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagGuestPolicy>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagGuestPolicy.CreateFromDiscriminatorValue); } },
                 { "instructions", n => { Instructions = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_instructions>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_instructions.CreateFromDiscriminatorValue); } },
                 { "model", n => { Model = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_model>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_model.CreateFromDiscriminatorValue); } },
+                { "reply_mode", n => { ReplyMode = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -90,6 +99,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagGuestPolicy>("guest_policy", GuestPolicy);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_instructions>("instructions", Instructions);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate.BetaClaudeTagSettingsCreate_model>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagReplyMode>("reply_mode", ReplyMode);
         }
         /// <summary>
         /// Composed type wrapper for classes <see cref="bool"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagSettingsCreate_enabledMember1"/>
