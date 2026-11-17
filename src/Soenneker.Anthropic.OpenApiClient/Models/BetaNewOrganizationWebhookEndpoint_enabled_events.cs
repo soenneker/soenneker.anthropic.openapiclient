@@ -8,6 +8,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public enum BetaNewOrganizationWebhookEndpoint_enabled_events
     #pragma warning restore CS1591
     {
+        [EnumMember(Value = "external_key.failed")]
+        #pragma warning disable CS1591
+        External_keyFailed,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "external_key.recovered")]
+        #pragma warning disable CS1591
+        External_keyRecovered,
+        #pragma warning restore CS1591
         [EnumMember(Value = "user_profile.enforcement_action_opened")]
         #pragma warning disable CS1591
         User_profileEnforcement_action_opened,

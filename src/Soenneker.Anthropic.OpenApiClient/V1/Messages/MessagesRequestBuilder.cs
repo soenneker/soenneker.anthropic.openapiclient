@@ -66,7 +66,8 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message400Error">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message402Error">When receiving a 402 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message403Error">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message404Error">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 408 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message409Error">When receiving a 409 status code</exception>
@@ -95,7 +96,8 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             {
                 { "400", global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message400Error.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
-                { "403", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "402", global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message402Error.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message403Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message404Error.CreateFromDiscriminatorValue },
                 { "408", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message409Error.CreateFromDiscriminatorValue },

@@ -84,11 +84,19 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnforcedSpendLimitReachedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRampLimitExceededErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue.BetaMessage429Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaContractSpendLimitReachedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnforcedSpendLimitReachedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRampLimitExceededErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue.BetaMessage429Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaMessage429Error_error_details : IComposedTypeWrapper, IParsable
         {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaContractSpendLimitReachedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaContractSpendLimitReachedErrorDetails? BetaContractSpendLimitReachedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaContractSpendLimitReachedErrorDetails BetaContractSpendLimitReachedErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnforcedSpendLimitReachedErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -122,6 +130,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue.BetaMessage429Error_error.BetaMessage429Error_error_details();
+                result.BetaContractSpendLimitReachedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaContractSpendLimitReachedErrorDetails();
                 result.BetaEnforcedSpendLimitReachedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnforcedSpendLimitReachedErrorDetails();
                 result.BetaMessage429ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue.BetaMessage429Error_error_detailsMember1();
                 result.BetaRampLimitExceededErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRampLimitExceededErrorDetails();
@@ -133,9 +142,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaEnforcedSpendLimitReachedErrorDetails != null || BetaMessage429ErrorErrorDetailsMember1 != null || BetaRampLimitExceededErrorDetails != null)
+                if(BetaContractSpendLimitReachedErrorDetails != null || BetaEnforcedSpendLimitReachedErrorDetails != null || BetaMessage429ErrorErrorDetailsMember1 != null || BetaRampLimitExceededErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaEnforcedSpendLimitReachedErrorDetails, BetaMessage429ErrorErrorDetailsMember1, BetaRampLimitExceededErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaContractSpendLimitReachedErrorDetails, BetaEnforcedSpendLimitReachedErrorDetails, BetaMessage429ErrorErrorDetailsMember1, BetaRampLimitExceededErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -146,7 +155,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.MessagesBetaTrue
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnforcedSpendLimitReachedErrorDetails>(null, BetaEnforcedSpendLimitReachedErrorDetails, BetaMessage429ErrorErrorDetailsMember1, BetaRampLimitExceededErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaContractSpendLimitReachedErrorDetails>(null, BetaContractSpendLimitReachedErrorDetails, BetaEnforcedSpendLimitReachedErrorDetails, BetaMessage429ErrorErrorDetailsMember1, BetaRampLimitExceededErrorDetails);
             }
         }
     }

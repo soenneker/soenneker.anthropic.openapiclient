@@ -13,6 +13,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaCreateMessageParams : IParsable
     {
+        /// <summary>Declares which organization is billed for this request. `{&quot;type&quot;: &quot;billing_policy&quot;, &quot;bill_to&quot;: &quot;user_profile&quot;}` bills the customer behind the user profile named in the `anthropic-user-profile-id` header, instead of your organization. If that customer has not linked an Anthropic organization to the profile, or has not allowed your organization to bill it, the request is rejected rather than billed to you. Omit the field, or send `&quot;bill_to&quot;: &quot;self&quot;` (the default), to be billed as usual.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingPolicy? BillingPolicy { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingPolicy BillingPolicy { get; set; }
+#endif
         /// <summary>Top-level cache control automatically applies a cache_control marker to the last cacheable block in the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -200,6 +208,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "billing_policy", n => { BillingPolicy = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingPolicy>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingPolicy.CreateFromDiscriminatorValue); } },
                 { "cache_control", n => { CacheControl = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "compaction", n => { Compaction = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaCompactionConfig>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaCompactionConfig.CreateFromDiscriminatorValue); } },
                 { "container", n => { Container = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaCreateMessageParams.BetaCreateMessageParams_container>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaCreateMessageParams.BetaCreateMessageParams_container.CreateFromDiscriminatorValue); } },
@@ -233,6 +242,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaBillingPolicy>("billing_policy", BillingPolicy);
             writer.WriteObjectValue<UntypedNode>("cache_control", CacheControl);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaCompactionConfig>("compaction", Compaction);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaCreateMessageParams.BetaCreateMessageParams_container>("container", Container);

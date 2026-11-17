@@ -134,6 +134,9 @@
                               "$ref": "#/components/schemas/ToolReferenceUnresolvedErrorDetails"
                             },
                             {
+                              "$ref": "#/components/schemas/UserProfileRequiredErrorDetails"
+                            },
+                            {
                               "type": "null"
                             }
                           ],
@@ -200,12 +203,148 @@
               }
             }
           },
+          "402": {
+            "description": "Payment required - The organization that the request is billed to has a billing issue that blocks the request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "properties": {
+                        "details": {
+                          "anyOf": [
+                            {
+                              "$ref": "#/components/schemas/LinkedOrganizationBillingUnavailableErrorDetails"
+                            },
+                            {
+                              "$ref": "#/components/schemas/LinkedOrganizationSpendLimitReachedErrorDetails"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Details",
+                          "description": "Machine-readable detail about the cause of the error. \u0060error_code\u0060 names the cause; branch on it rather than on \u0060message\u0060. Absent when the error has no code. Treat an unrecognized \u0060error_code\u0060 as the bare \u0060type\u0060."
+                        },
+                        "message": {
+                          "type": "string",
+                          "title": "Message",
+                          "description": "A human-readable explanation of the error. Its wording can change, so don\u0027t match on it.",
+                          "default": "Billing error"
+                        },
+                        "type": {
+                          "type": "string",
+                          "const": "billing_error",
+                          "title": "Type",
+                          "description": "The broad category of the error.",
+                          "default": "billing_error"
+                        }
+                      },
+                      "type": "object",
+                      "required": [
+                        "message",
+                        "type"
+                      ],
+                      "title": "BillingError"
+                    },
+                    "request_id": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Request Id"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "error",
+                      "title": "Type",
+                      "default": "error"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "error",
+                    "request_id",
+                    "type"
+                  ],
+                  "title": "ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Permission denied - The caller does not have permission to execute the specified operation",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
+                  "properties": {
+                    "error": {
+                      "properties": {
+                        "details": {
+                          "anyOf": [
+                            {
+                              "$ref": "#/components/schemas/UserProfileBillingNotAuthorizedErrorDetails"
+                            },
+                            {
+                              "$ref": "#/components/schemas/UserProfileNotBillableErrorDetails"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Details",
+                          "description": "Machine-readable detail about the cause of the error. \u0060error_code\u0060 names the cause; branch on it rather than on \u0060message\u0060. Absent when the error has no code. Treat an unrecognized \u0060error_code\u0060 as the bare \u0060type\u0060."
+                        },
+                        "message": {
+                          "type": "string",
+                          "title": "Message",
+                          "description": "A human-readable explanation of the error. Its wording can change, so don\u0027t match on it.",
+                          "default": "Permission denied"
+                        },
+                        "type": {
+                          "type": "string",
+                          "const": "permission_error",
+                          "title": "Type",
+                          "description": "The broad category of the error.",
+                          "default": "permission_error"
+                        }
+                      },
+                      "type": "object",
+                      "required": [
+                        "message",
+                        "type"
+                      ],
+                      "title": "PermissionError"
+                    },
+                    "request_id": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Request Id"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "error",
+                      "title": "Type",
+                      "default": "error"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "error",
+                    "request_id",
+                    "type"
+                  ],
+                  "title": "ErrorResponse"
                 }
               }
             }
@@ -447,6 +586,9 @@
                       "properties": {
                         "details": {
                           "anyOf": [
+                            {
+                              "$ref": "#/components/schemas/ContractSpendLimitReachedErrorDetails"
+                            },
                             {
                               "$ref": "#/components/schemas/EnforcedSpendLimitReachedErrorDetails"
                             },
@@ -7685,6 +7827,9 @@
                               "$ref": "#/components/schemas/BetaToolReferenceUnresolvedErrorDetails"
                             },
                             {
+                              "$ref": "#/components/schemas/BetaUserProfileRequiredErrorDetails"
+                            },
+                            {
                               "type": "null"
                             }
                           ],
@@ -7751,12 +7896,148 @@
               }
             }
           },
+          "402": {
+            "description": "Payment required - The organization that the request is billed to has a billing issue that blocks the request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "error": {
+                      "properties": {
+                        "details": {
+                          "anyOf": [
+                            {
+                              "$ref": "#/components/schemas/BetaLinkedOrganizationBillingUnavailableErrorDetails"
+                            },
+                            {
+                              "$ref": "#/components/schemas/BetaLinkedOrganizationSpendLimitReachedErrorDetails"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Details",
+                          "description": "Machine-readable detail about the cause of the error. \u0060error_code\u0060 names the cause; branch on it rather than on \u0060message\u0060. Absent when the error has no code. Treat an unrecognized \u0060error_code\u0060 as the bare \u0060type\u0060."
+                        },
+                        "message": {
+                          "type": "string",
+                          "title": "Message",
+                          "description": "A human-readable explanation of the error. Its wording can change, so don\u0027t match on it.",
+                          "default": "Billing error"
+                        },
+                        "type": {
+                          "type": "string",
+                          "const": "billing_error",
+                          "title": "Type",
+                          "description": "The broad category of the error.",
+                          "default": "billing_error"
+                        }
+                      },
+                      "type": "object",
+                      "required": [
+                        "message",
+                        "type"
+                      ],
+                      "title": "BillingError"
+                    },
+                    "request_id": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Request Id"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "error",
+                      "title": "Type",
+                      "default": "error"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "error",
+                    "request_id",
+                    "type"
+                  ],
+                  "title": "ErrorResponse"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Permission denied - The caller does not have permission to execute the specified operation",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BetaErrorResponse"
+                  "properties": {
+                    "error": {
+                      "properties": {
+                        "details": {
+                          "anyOf": [
+                            {
+                              "$ref": "#/components/schemas/BetaUserProfileBillingNotAuthorizedErrorDetails"
+                            },
+                            {
+                              "$ref": "#/components/schemas/BetaUserProfileNotBillableErrorDetails"
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ],
+                          "title": "Details",
+                          "description": "Machine-readable detail about the cause of the error. \u0060error_code\u0060 names the cause; branch on it rather than on \u0060message\u0060. Absent when the error has no code. Treat an unrecognized \u0060error_code\u0060 as the bare \u0060type\u0060."
+                        },
+                        "message": {
+                          "type": "string",
+                          "title": "Message",
+                          "description": "A human-readable explanation of the error. Its wording can change, so don\u0027t match on it.",
+                          "default": "Permission denied"
+                        },
+                        "type": {
+                          "type": "string",
+                          "const": "permission_error",
+                          "title": "Type",
+                          "description": "The broad category of the error.",
+                          "default": "permission_error"
+                        }
+                      },
+                      "type": "object",
+                      "required": [
+                        "message",
+                        "type"
+                      ],
+                      "title": "PermissionError"
+                    },
+                    "request_id": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ],
+                      "title": "Request Id"
+                    },
+                    "type": {
+                      "type": "string",
+                      "const": "error",
+                      "title": "Type",
+                      "default": "error"
+                    }
+                  },
+                  "type": "object",
+                  "required": [
+                    "error",
+                    "request_id",
+                    "type"
+                  ],
+                  "title": "ErrorResponse"
                 }
               }
             }
@@ -7998,6 +8279,9 @@
                       "properties": {
                         "details": {
                           "anyOf": [
+                            {
+                              "$ref": "#/components/schemas/BetaContractSpendLimitReachedErrorDetails"
+                            },
                             {
                               "$ref": "#/components/schemas/BetaEnforcedSpendLimitReachedErrorDetails"
                             },
@@ -18813,7 +19097,7 @@
     "/v1/environments/{environment_id}/work/{work_id}/stop?beta=true": {
       "post": {
         "summary": "Stop Work",
-        "description": "Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.\n\nStop a work item, initiating graceful or forced shutdown.",
+        "description": "Stop a work item, initiating graceful or forced shutdown.",
         "operationId": "beta_stop_work_v1_environments__environment_id__work__work_id__stop_post",
         "parameters": [
           {
@@ -19140,7 +19424,7 @@
     "/v1/environments/{environment_id}/work/{work_id}?beta=true": {
       "get": {
         "summary": "Get Work Item",
-        "description": "Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.\n\nRetrieve detailed information about a specific work item.",
+        "description": "Retrieve detailed information about a specific work item.\n\nThis endpoint accepts a Claude API key. It rejects the environment key and the work item\u0027s \u0060secret\u0060. On [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) or [Claude Models on Google Cloud (Anthropic managed)](https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed), use that platform\u0027s credentials instead.",
         "operationId": "beta_get_work_v1_environments__environment_id__work__work_id__get",
         "parameters": [
           {
@@ -19439,7 +19723,7 @@
       },
       "post": {
         "summary": "Update Work Item",
-        "description": "Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.\n\nUpdate work item metadata with merge semantics.",
+        "description": "Update work item metadata with merge semantics.\n\nThis endpoint accepts a Claude API key. It rejects the environment key and the work item\u0027s \u0060secret\u0060. On [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) or [Claude Models on Google Cloud (Anthropic managed)](https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed), use that platform\u0027s credentials instead.",
         "operationId": "beta_update_work_v1_environments__environment_id__work__work_id__post",
         "parameters": [
           {
@@ -19753,7 +20037,7 @@
     "/v1/environments/{environment_id}/work?beta=true": {
       "get": {
         "summary": "List Work Items",
-        "description": "Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.\n\nList work items in an environment.",
+        "description": "List work items in an environment.\n\nThis endpoint accepts the environment key as a bearer token. It rejects a Claude API key. On [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) or [Claude Models on Google Cloud (Anthropic managed)](https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed), use that platform\u0027s credentials instead.",
         "operationId": "beta_list_work_v1_environments__environment_id__work_get",
         "parameters": [
           {
@@ -74034,7 +74318,7 @@
       },
       "post": {
         "summary": "Update Plugin",
-        "description": "Change which stored version of an organization-owned Plugin is served to members,\nfor example to roll back to an earlier one. This pins the served version: later\nuploads are stored but no longer change what is served, and pinning cannot currently\nbe undone, here or in claude.ai.\n\nPass the version as \u0060served_version_id\u0060: an earlier one to roll back, a later one to\nstart serving a version that was stored without being served, or the one already\nserved to pin it without changing what is served. No new version is created.\n\nWhen the organization has content scanning enabled, a version whose\n\u0060content_scan.status\u0060 is \u0060processing\u0060 is refused with a 409 (\u0060error_code\u0060\n\u0060scan_pending\u0060; retry once the scan finishes). A version whose \u0060content_scan.status\u0060\nis \u0060errored\u0060, or whose \u0060content_scan.assessment\u0060 is \u0060fail\u0060 or \u0060unknown\u0060, is refused\nwith a 400 (\u0060error_code\u0060 \u0060scan_failed\u0060); a \u0060warn\u0060 is accepted. If the scan outcome\ncannot be read at that moment, the request fails with a retryable 503 instead.\nWhen the Plugin is in the organization\u0027s\nlibrary marketplace, a version other than the one served is also refused with a 409\nwhen an organization skill that this API does not list has since taken the name of\none of its skills: \u0060error_code\u0060 \u0060skill_name_taken\u0060, with that name in\n\u0060details.skill_name\u0060. A member-owned Plugin cannot be updated here (403).\n\nThis endpoint does not write installation settings; they are written at\n\u0060/v1/organizations/plugins/{plugin_id}/installation_settings/{target}\u0060.\n\n**Accepted credentials:** an Admin API key with the \u0060write:plugins\u0060 scope.\n\nEvery request must include the beta header \u0060anthropic-beta: ce-plugins-2026-09-01\u0060. A request without it returns \u0060404\u0060, exactly as if the endpoint did not exist. The Plugins API is in beta and is available to Claude Enterprise organizations only. It is not available to Claude Platform (Claude Console) organizations, or to organizations with HIPAA readiness enabled.",
+        "description": "Change which stored version of an organization-owned Plugin is served to members,\nfor example to roll back to an earlier one. This pins the served version: later\nuploads through this API are stored but no longer change what is served, and pinning\ncannot currently be undone, here or in claude.ai.\n\nA version from claude.ai might still change what is served: see [Versions and the served version](/docs/en/manage-claude/plugins-api#versions-and-the-served-version)\nin the Plugins API guide.\n\nPass the version as \u0060served_version_id\u0060: an earlier one to roll back, a later one to\nstart serving a version that was stored without being served, or the one already\nserved to pin it without changing what is served. No new version is created.\n\nWhen the organization has content scanning enabled, a version whose\n\u0060content_scan.status\u0060 is \u0060processing\u0060 is refused with a 409 (\u0060error_code\u0060\n\u0060scan_pending\u0060; retry once the scan finishes). A version whose \u0060content_scan.status\u0060\nis \u0060errored\u0060, or whose \u0060content_scan.assessment\u0060 is \u0060fail\u0060 or \u0060unknown\u0060, is refused\nwith a 400 (\u0060error_code\u0060 \u0060scan_failed\u0060); a \u0060warn\u0060 is accepted. If the scan outcome\ncannot be read at that moment, the request fails with a retryable 503 instead.\nWhen the Plugin is in the organization\u0027s\nlibrary marketplace, a version other than the one served is also refused with a 409\nwhen an organization skill that this API does not list has since taken the name of\none of its skills: \u0060error_code\u0060 \u0060skill_name_taken\u0060, with that name in\n\u0060details.skill_name\u0060. A member-owned Plugin cannot be updated here (403).\n\nThis endpoint does not write installation settings; they are written at\n\u0060/v1/organizations/plugins/{plugin_id}/installation_settings/{target}\u0060.\n\n**Accepted credentials:** an Admin API key with the \u0060write:plugins\u0060 scope.\n\nEvery request must include the beta header \u0060anthropic-beta: ce-plugins-2026-09-01\u0060. A request without it returns \u0060404\u0060, exactly as if the endpoint did not exist. The Plugins API is in beta and is available to Claude Enterprise organizations only. It is not available to Claude Platform (Claude Console) organizations, or to organizations with HIPAA readiness enabled.",
         "operationId": "beta_update_plugin_v1_organizations_plugins__plugin_id__post",
         "parameters": [
           {
@@ -78723,6 +79007,8 @@
                     ],
                     "items": {
                       "enum": [
+                        "external_key.failed",
+                        "external_key.recovered",
                         "user_profile.enforcement_action_opened",
                         "user_profile.enforcement_action_resolved",
                         "user_profile.program_status_updated"
@@ -79217,6 +79503,8 @@
                     "description": "The event types to deliver to the endpoint. Replaces the whole set; an empty list leaves it unchanged.",
                     "items": {
                       "enum": [
+                        "external_key.failed",
+                        "external_key.recovered",
                         "user_profile.enforcement_action_opened",
                         "user_profile.enforcement_action_resolved",
                         "user_profile.program_status_updated"
@@ -108981,7 +109269,8 @@
               "extended-cache-ttl-2025-04-11",
               "skills-2025-10-02",
               "cache-diagnosis-2026-04-07",
-              "ce-user-management-2026-07-13"
+              "ce-user-management-2026-07-13",
+              "user-profiles-billing-2026-10-01"
             ],
             "x-stainless-enum-deprecations": [
               false,
@@ -109085,7 +109374,15 @@
           "type"
         ],
         "title": "AuthenticationError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "AuthenticationError"
+          },
+          "java": {
+            "model_name": "AuthenticationError"
+          }
+        }
       },
       "AvailableToolsLimitExceededErrorDetails": {
         "properties": {
@@ -109264,7 +109561,15 @@
           "type"
         ],
         "title": "APIError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaAPIError"
+          },
+          "java": {
+            "model_name": "BetaAPIError"
+          }
+        }
       },
       "BetaAdvisorMessageIterationUsage": {
         "description": "Token usage for an advisor sub-inference iteration.",
@@ -109536,7 +109841,15 @@
           "type"
         ],
         "title": "AuthenticationError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaAuthenticationError"
+          },
+          "java": {
+            "model_name": "BetaAuthenticationError"
+          }
+        }
       },
       "BetaAvailableToolsLimitExceededErrorDetails": {
         "properties": {
@@ -109765,6 +110078,15 @@
         "title": "BashTool_20250124",
         "type": "object"
       },
+      "BetaBillTo": {
+        "description": "Who is billed for a request.",
+        "enum": [
+          "self",
+          "user_profile"
+        ],
+        "title": "BillTo",
+        "type": "string"
+      },
       "BetaBillingError": {
         "properties": {
           "message": {
@@ -109786,6 +110108,34 @@
           "type"
         ],
         "title": "BillingError",
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaBillingError"
+          },
+          "java": {
+            "model_name": "BetaBillingError"
+          }
+        }
+      },
+      "BetaBillingPolicy": {
+        "additionalProperties": false,
+        "description": "Declares which organization is billed for the request.",
+        "properties": {
+          "bill_to": {
+            "$ref": "#/components/schemas/BetaBillTo",
+            "description": "Who is billed. \u0060self\u0060, the default, bills your organization, as if \u0060billing_policy\u0060 were omitted. \u0060user_profile\u0060 bills the customer behind the user profile the request names; if that customer has not linked an Anthropic organization to the profile, or has not allowed your organization to bill it, the request is rejected rather than billed to you."
+          },
+          "type": {
+            "const": "billing_policy",
+            "title": "Type",
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ],
+        "title": "BillingPolicy",
         "type": "object"
       },
       "BetaBody_create_skill_v1_skills_post": {
@@ -117279,6 +117629,21 @@
         ],
         "title": "ContextManagementResponse"
       },
+      "BetaContractSpendLimitReachedErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "contract_spend_limit_reached",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "ContractSpendLimitReachedErrorDetails",
+        "description": "The organization has reached the spend limit of its contract."
+      },
       "BetaCountMessageTokensParams": {
         "additionalProperties": false,
         "examples": [
@@ -117293,6 +117658,20 @@
           }
         ],
         "properties": {
+          "billing_policy": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BetaBillingPolicy"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Declares which organization is billed when this body is sent to \u0060/v1/messages\u0060. Accepted here so that you can count the tokens of the exact body you will send, and otherwise ignored: counting tokens bills nobody, so no user profile is required.",
+            "x-anthropic-beta-required": [
+              "user-profiles-billing-2026-10-01"
+            ]
+          },
           "cache_control": {
             "anyOf": [
               {
@@ -117696,6 +118075,20 @@
             },
             "title": "Messages",
             "type": "array"
+          },
+          "billing_policy": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BetaBillingPolicy"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "description": "Declares which organization is billed for this request. \u0060{\u0022type\u0022: \u0022billing_policy\u0022, \u0022bill_to\u0022: \u0022user_profile\u0022}\u0060 bills the customer behind the user profile named in the \u0060anthropic-user-profile-id\u0060 header, instead of your organization. If that customer has not linked an Anthropic organization to the profile, or has not allowed your organization to bill it, the request is rejected rather than billed to you. Omit the field, or send \u0060\u0022bill_to\u0022: \u0022self\u0022\u0060 (the default), to be billed as usual.",
+            "x-anthropic-beta-required": [
+              "user-profiles-billing-2026-10-01"
+            ]
           },
           "cache_control": {
             "anyOf": [
@@ -118565,6 +118958,14 @@
       },
       "BetaDreamError": {
         "description": "Failure detail for a Dream whose \u0060status\u0060 is \u0060failed\u0060.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaDreamError"
+          },
+          "java": {
+            "model_name": "BetaDreamError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -118840,7 +119241,15 @@
           {
             "$ref": "#/components/schemas/BetaTargetStoreHeldError"
           }
-        ]
+        ],
+        "x-stainless-naming": {
+          "java": {
+            "model_name": "BetaDreamingError"
+          },
+          "csharp": {
+            "model_name": "BetaDreamingError"
+          }
+        }
       },
       "BetaDreamingErrorResponse": {
         "type": "object",
@@ -119365,7 +119774,15 @@
                 "$ref": "#/components/schemas/BetaOverloadedError"
               }
             ],
-            "title": "Error"
+            "title": "Error",
+            "x-stainless-naming": {
+              "csharp": {
+                "model_name": "BetaError"
+              },
+              "java": {
+                "model_name": "BetaError"
+              }
+            }
           },
           "request_id": {
             "anyOf": [
@@ -120016,7 +120433,15 @@
           "type"
         ],
         "title": "GatewayTimeoutError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaGatewayTimeoutError"
+          },
+          "java": {
+            "model_name": "BetaGatewayTimeoutError"
+          }
+        }
       },
       "BetaHeartbeatPreconditionFailedErrorDetails": {
         "properties": {
@@ -120409,7 +120834,15 @@
           "type"
         ],
         "title": "InvalidRequestError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaInvalidRequestError"
+          },
+          "java": {
+            "model_name": "BetaInvalidRequestError"
+          }
+        }
       },
       "BetaIterationsUsage": {
         "anyOf": [
@@ -120578,6 +121011,36 @@
         ],
         "title": "LimitedNetworkParams",
         "description": "Limited network request params.\n\nFields default to null; on update, omitted fields preserve the\nexisting value."
+      },
+      "BetaLinkedOrganizationBillingUnavailableErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "linked_organization_billing_unavailable",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "LinkedOrganizationBillingUnavailableErrorDetails",
+        "description": "Anthropic cannot currently bill the organization linked to the request\u0027s user profile, for a reason that lies with that organization\u0027s own account. The response does not say what the reason is."
+      },
+      "BetaLinkedOrganizationSpendLimitReachedErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "linked_organization_spend_limit_reached",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "LinkedOrganizationSpendLimitReachedErrorDetails",
+        "description": "The organization linked to the request\u0027s user profile has reached a spend limit that it set, or lacks credit for the request. The response does not say which applies."
       },
       "BetaListDreamsResponse": {
         "description": "A page of dreams, newest first.",
@@ -121503,6 +121966,14 @@
       },
       "BetaManagedAgentsAgentArchivedDeploymentPausedReasonError": {
         "description": "The deployment\u0027s agent was archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsAgentArchivedDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsAgentArchivedDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -121517,6 +121988,14 @@
       },
       "BetaManagedAgentsAgentArchivedRunError": {
         "description": "The deployment\u0027s agent was archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsAgentArchivedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsAgentArchivedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -123100,6 +123579,14 @@
       },
       "BetaManagedAgentsBillingError": {
         "description": "The caller\u0027s organization or workspace cannot make model requests \u2014 out of credits or spend limit reached. Retrying with the same credentials will not succeed; the caller must resolve the billing state.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsBillingError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsBillingError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -123234,6 +123721,14 @@
       },
       "BetaManagedAgentsCompactionLimitReachedError": {
         "description": "The turn stopped because the context was compacted the maximum number of times in a row without the model producing a message or a tool call, not because a request failed. The thread goes idle with \u0060stop_reason: retries_exhausted\u0060 (a child thread then terminates); the next \u0060user.message\u0060 starts a new turn.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsCompactionLimitReachedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsCompactionLimitReachedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -124035,6 +124530,14 @@
       },
       "BetaManagedAgentsCredentialHostUnreachableError": {
         "description": "An \u0060environment_variable\u0060 credential\u0027s \u0060auth.networking.allowed_hosts\u0060 includes a host the environment\u0027s network policy does not permit.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsCredentialHostUnreachableError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsCredentialHostUnreachableError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -125101,6 +125604,14 @@
       },
       "BetaManagedAgentsDeploymentPausedReasonError": {
         "description": "The error that triggered an auto-pause. Matches the failed run\u0027s \u0060error.type\u0060.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "discriminator": {
           "propertyName": "type",
@@ -125626,6 +126137,14 @@
       },
       "BetaManagedAgentsEnvironmentArchivedDeploymentPausedReasonError": {
         "description": "The deployment\u0027s environment was archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsEnvironmentArchivedDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsEnvironmentArchivedDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -125640,6 +126159,14 @@
       },
       "BetaManagedAgentsEnvironmentArchivedRunError": {
         "description": "The deployment\u0027s environment was archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsEnvironmentArchivedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsEnvironmentArchivedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -125659,6 +126186,14 @@
       },
       "BetaManagedAgentsEnvironmentNotFoundDeploymentPausedReasonError": {
         "description": "The deployment\u0027s environment no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsEnvironmentNotFoundDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsEnvironmentNotFoundDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -125673,6 +126208,14 @@
       },
       "BetaManagedAgentsEnvironmentNotFoundRunError": {
         "description": "The deployment\u0027s environment no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsEnvironmentNotFoundRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsEnvironmentNotFoundRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -125885,7 +126428,15 @@
           {
             "$ref": "#/components/schemas/BetaManagedAgentsConflictError"
           }
-        ]
+        ],
+        "x-stainless-naming": {
+          "java": {
+            "model_name": "BetaManagedAgentsError"
+          },
+          "csharp": {
+            "model_name": "BetaManagedAgentsError"
+          }
+        }
       },
       "BetaManagedAgentsErrorDeploymentPausedReason": {
         "description": "A scheduled fire recorded a failed run whose error auto-pauses the deployment.",
@@ -126209,6 +126760,14 @@
       },
       "BetaManagedAgentsFileNotFoundDeploymentPausedReasonError": {
         "description": "A file resource referenced by the deployment no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsFileNotFoundDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsFileNotFoundDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -126223,6 +126782,14 @@
       },
       "BetaManagedAgentsFileNotFoundRunError": {
         "description": "A file resource referenced by the deployment no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsFileNotFoundRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsFileNotFoundRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -128627,6 +129194,14 @@
       },
       "BetaManagedAgentsMaxWorkflowRunsWorkflowRunError": {
         "description": "No run was created, because the session was at its limit of open workflow runs, which are runs that have not ended. Only \u0060workflow_run.error\u0060 carries this type.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMaxWorkflowRunsWorkflowRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMaxWorkflowRunsWorkflowRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -128656,6 +129231,14 @@
       },
       "BetaManagedAgentsMcpAuthenticationFailedError": {
         "description": "Authentication to an MCP server failed.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMcpAuthenticationFailedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMcpAuthenticationFailedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -128689,6 +129272,14 @@
       },
       "BetaManagedAgentsMcpConnectionFailedError": {
         "description": "Failed to connect to an MCP server.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMcpConnectionFailedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMcpConnectionFailedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -128722,6 +129313,14 @@
       },
       "BetaManagedAgentsMcpEgressBlockedDeploymentPausedReasonError": {
         "description": "An MCP server host used by the deployment\u0027s agent is blocked by the environment\u0027s network policy.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMcpEgressBlockedDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMcpEgressBlockedDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -128736,6 +129335,14 @@
       },
       "BetaManagedAgentsMcpEgressBlockedRunError": {
         "description": "An MCP server host used by the deployment\u0027s agent is blocked by the environment\u0027s network policy.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMcpEgressBlockedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMcpEgressBlockedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -129209,6 +129816,14 @@
       },
       "BetaManagedAgentsMemoryPathConflictError": {
         "description": "The error returned with HTTP status 409 when you create or rename a memory and the path you give is already used by another memory or overlaps another memory\u0027s path.\n\nTwo paths overlap when one is an ancestor of the other, such as \u0060/notes\u0060 and \u0060/notes/todo.md\u0060. To free the path, rename or delete the memory that \u0060conflicting_memory_id\u0060 references, then retry. To change that memory instead of creating a new one, update it.\n\nTo handle the error in code, use \u0060conflicting_path\u0060 and \u0060conflicting_memory_id\u0060 instead of \u0060message\u0060.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMemoryPathConflictError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMemoryPathConflictError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -129234,6 +129849,14 @@
       },
       "BetaManagedAgentsMemoryPreconditionFailedError": {
         "description": "The error returned with HTTP status 409 when a request\u0027s precondition doesn\u0027t hold for the memory\u0027s current state, such as \u0060precondition\u0060 on an update or \u0060expected_content_sha256\u0060 on a delete.\n\nThe error doesn\u0027t include the memory\u0027s current state. Retrieve the memory to see its current content and \u0060content_sha256\u0060 before you retry.\n\nSee the [memory guide](https://platform.claude.com/docs/en/managed-agents/memory#safe-content-edits-optimistic-concurrency) to learn more about safe content edits with content hash preconditions.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMemoryPreconditionFailedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMemoryPreconditionFailedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -129337,6 +129960,14 @@
       },
       "BetaManagedAgentsMemoryStoreArchivedDeploymentPausedReasonError": {
         "description": "A memory store referenced by the deployment is archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMemoryStoreArchivedDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMemoryStoreArchivedDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -129351,6 +129982,14 @@
       },
       "BetaManagedAgentsMemoryStoreArchivedRunError": {
         "description": "A memory store referenced by the deployment is archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsMemoryStoreArchivedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsMemoryStoreArchivedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -129916,6 +130555,14 @@
       },
       "BetaManagedAgentsModelOverloadedError": {
         "description": "The model is currently overloaded. Emitted after automatic retries are exhausted.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsModelOverloadedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsModelOverloadedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -129957,6 +130604,14 @@
       },
       "BetaManagedAgentsModelRateLimitedError": {
         "description": "The model request was rate-limited.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsModelRateLimitedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsModelRateLimitedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -129985,6 +130640,14 @@
       },
       "BetaManagedAgentsModelRequestFailedError": {
         "description": "A model request failed for a reason other than overload or rate-limiting.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsModelRequestFailedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsModelRequestFailedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -130984,6 +131647,14 @@
       },
       "BetaManagedAgentsOrganizationDisabledDeploymentPausedReasonError": {
         "description": "The deployment\u0027s organization is disabled.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsOrganizationDisabledDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsOrganizationDisabledDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -130998,6 +131669,14 @@
       },
       "BetaManagedAgentsOrganizationDisabledRunError": {
         "description": "The deployment\u0027s organization is disabled.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsOrganizationDisabledRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsOrganizationDisabledRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131170,6 +131849,14 @@
       },
       "BetaManagedAgentsProgramWorkflowRunError": {
         "description": "The plan, a program that the agent wrote, failed, or the server refused it.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsProgramWorkflowRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsProgramWorkflowRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131341,6 +132028,14 @@
       },
       "BetaManagedAgentsRepositoryAuthenticationError": {
         "description": "The repository host rejected the credentials, or required credentials and received none.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsRepositoryAuthenticationError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsRepositoryAuthenticationError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131421,6 +132116,14 @@
       },
       "BetaManagedAgentsRepositoryCheckoutError": {
         "description": "The requested branch or commit does not exist in the repository.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsRepositoryCheckoutError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsRepositoryCheckoutError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131483,6 +132186,14 @@
       },
       "BetaManagedAgentsRepositoryCloneError": {
         "description": "The repository could not be cloned.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsRepositoryCloneError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsRepositoryCloneError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131545,6 +132256,14 @@
       },
       "BetaManagedAgentsRepositoryForbiddenError": {
         "description": "The repository host refused access to the repository.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsRepositoryForbiddenError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsRepositoryForbiddenError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131607,6 +132326,14 @@
       },
       "BetaManagedAgentsRepositoryNotFoundError": {
         "description": "The repository host reported the repository as not found.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsRepositoryNotFoundError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsRepositoryNotFoundError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131975,6 +132702,14 @@
       },
       "BetaManagedAgentsSelfHostedResourcesUnsupportedDeploymentPausedReasonError": {
         "description": "The deployment configures resources, but its environment is self-hosted and cannot mount them.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSelfHostedResourcesUnsupportedDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSelfHostedResourcesUnsupportedDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -131989,6 +132724,14 @@
       },
       "BetaManagedAgentsSelfHostedResourcesUnsupportedRunError": {
         "description": "The deployment configures resources, but its environment is self-hosted and cannot mount them.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSelfHostedResourcesUnsupportedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSelfHostedResourcesUnsupportedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -132791,6 +133534,14 @@
       },
       "BetaManagedAgentsSessionCreationRejectedRunError": {
         "description": "The session create request was rejected with a non-retryable validation error.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSessionCreationRejectedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSessionCreationRejectedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -133328,6 +134079,14 @@
       },
       "BetaManagedAgentsSessionRateLimitedRunError": {
         "description": "Session creation was rejected due to rate limiting. The schedule keeps firing; subsequent runs may succeed.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSessionRateLimitedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSessionRateLimitedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -133473,6 +134232,14 @@
       },
       "BetaManagedAgentsSessionResourceNotFoundDeploymentPausedReasonError": {
         "description": "A referenced resource no longer exists and its kind was not reported.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSessionResourceNotFoundDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSessionResourceNotFoundDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -133487,6 +134254,14 @@
       },
       "BetaManagedAgentsSessionResourceNotFoundRunError": {
         "description": "A referenced resource no longer exists and its kind was not reported.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSessionResourceNotFoundRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSessionResourceNotFoundRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -134868,6 +135643,14 @@
       },
       "BetaManagedAgentsSkillNotFoundDeploymentPausedReasonError": {
         "description": "A skill referenced by the deployment\u0027s agent no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSkillNotFoundDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSkillNotFoundDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -134882,6 +135665,14 @@
       },
       "BetaManagedAgentsSkillNotFoundRunError": {
         "description": "A skill referenced by the deployment\u0027s agent no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsSkillNotFoundRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsSkillNotFoundRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -135920,6 +136711,14 @@
       },
       "BetaManagedAgentsThreadLimitWorkflowRunError": {
         "description": "The run exceeded the limit on the number of threads that a run can create.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsThreadLimitWorkflowRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsThreadLimitWorkflowRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -135949,6 +136748,14 @@
       },
       "BetaManagedAgentsTimeoutWorkflowRunError": {
         "description": "The run reached its time limit.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsTimeoutWorkflowRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsTimeoutWorkflowRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -136157,6 +136964,14 @@
       },
       "BetaManagedAgentsToolUseLimitReachedError": {
         "description": "The turn stopped because the agent loop reached its limit on tool-use rounds (one model response that calls tools, plus running those tools, is one round), not because a request failed. The thread goes idle with \u0060stop_reason: retries_exhausted\u0060 (a child thread then terminates); the next \u0060user.message\u0060 starts a new turn.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsToolUseLimitReachedError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsToolUseLimitReachedError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -136315,6 +137130,14 @@
       },
       "BetaManagedAgentsUnknownDeploymentPausedReasonError": {
         "description": "An unrecognized error auto-paused the deployment. A fallback variant; matches a run whose \u0060error.type\u0060 is \u0060unknown_error\u0060.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsUnknownDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsUnknownDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -136329,6 +137152,14 @@
       },
       "BetaManagedAgentsUnknownError": {
         "description": "An unknown or unexpected error occurred during session execution. A fallback variant; clients that don\u0027t recognize a new error code can match on \u0060retry_status\u0060 and \u0060message\u0060 alone.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsUnknownError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsUnknownError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -136357,6 +137188,14 @@
       },
       "BetaManagedAgentsUnknownRunError": {
         "description": "An unknown or unexpected error caused the run to fail. A fallback variant; clients that do not recognize a new error type can match on message alone.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsUnknownRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsUnknownRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -136376,6 +137215,14 @@
       },
       "BetaManagedAgentsUnknownWorkflowRunError": {
         "description": "A failure that has no type of its own.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsUnknownWorkflowRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsUnknownWorkflowRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -137918,6 +138765,14 @@
       },
       "BetaManagedAgentsVaultArchivedDeploymentPausedReasonError": {
         "description": "A vault referenced by the deployment is archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsVaultArchivedDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsVaultArchivedDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -137932,6 +138787,14 @@
       },
       "BetaManagedAgentsVaultArchivedRunError": {
         "description": "A vault referenced by the deployment is archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsVaultArchivedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsVaultArchivedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -137951,6 +138814,14 @@
       },
       "BetaManagedAgentsVaultNotFoundDeploymentPausedReasonError": {
         "description": "A vault referenced by the deployment no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsVaultNotFoundDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsVaultNotFoundDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -137965,6 +138836,14 @@
       },
       "BetaManagedAgentsVaultNotFoundRunError": {
         "description": "A vault referenced by the deployment no longer exists.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsVaultNotFoundRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsVaultNotFoundRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -138600,6 +139479,14 @@
       },
       "BetaManagedAgentsWorkflowRunError": {
         "description": "Why a workflow run did not finish, or was not created. More types may be added. On \u0060workflow_run.status_ended\u0060, for a \u0060type\u0060 you do not recognize, rely on the event\u0027s \u0060result.type\u0060.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsWorkflowRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsWorkflowRunError"
+          }
+        },
         "type": "object",
         "discriminator": {
           "propertyName": "type",
@@ -138919,6 +139806,14 @@
       },
       "BetaManagedAgentsWorkflowRunResultError": {
         "description": "The run failed or reached its time limit.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsWorkflowRunResultError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsWorkflowRunResultError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -139126,6 +140021,14 @@
       },
       "BetaManagedAgentsWorkspaceArchivedDeploymentPausedReasonError": {
         "description": "The deployment\u0027s workspace was archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsWorkspaceArchivedDeploymentPausedReasonError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsWorkspaceArchivedDeploymentPausedReasonError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -139140,6 +140043,14 @@
       },
       "BetaManagedAgentsWorkspaceArchivedRunError": {
         "description": "The deployment\u0027s workspace was archived.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaManagedAgentsWorkspaceArchivedRunError"
+          },
+          "java": {
+            "model_name": "BetaManagedAgentsWorkspaceArchivedRunError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -140629,7 +141540,15 @@
           "type"
         ],
         "title": "NotFoundError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaNotFoundError"
+          },
+          "java": {
+            "model_name": "BetaNotFoundError"
+          }
+        }
       },
       "BetaOrganizationLevelScopedApiKeyRequiredErrorDetails": {
         "description": "The credential is not a scoped API key that is bound at the organization level.",
@@ -140805,7 +141724,15 @@
           "type"
         ],
         "title": "OverloadedError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaOverloadedError"
+          },
+          "java": {
+            "model_name": "BetaOverloadedError"
+          }
+        }
       },
       "BetaPackages": {
         "properties": {
@@ -141003,7 +141930,15 @@
           "type"
         ],
         "title": "PermissionError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaPermissionError"
+          },
+          "java": {
+            "model_name": "BetaPermissionError"
+          }
+        }
       },
       "BetaPlainTextSource": {
         "additionalProperties": false,
@@ -141302,7 +142237,15 @@
           "type"
         ],
         "title": "RateLimitError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaRateLimitError"
+          },
+          "java": {
+            "model_name": "BetaRateLimitError"
+          }
+        }
       },
       "BetaRefusalCategory": {
         "anyOf": [
@@ -144315,7 +145258,15 @@
           "type"
         ],
         "title": "Error",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaWebSearchToolRequestError"
+          },
+          "java": {
+            "model_name": "BetaWebSearchToolRequestError"
+          }
+        }
       },
       "BetaResponseAdvisorRedactedResultBlock": {
         "properties": {
@@ -144439,7 +145390,15 @@
           "type"
         ],
         "title": "ResponseAdvisorToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaAdvisorToolResultError"
+          },
+          "java": {
+            "model_name": "BetaAdvisorToolResultError"
+          }
+        }
       },
       "BetaResponseBashCodeExecutionOutputBlock": {
         "properties": {
@@ -144549,7 +145508,15 @@
           "type"
         ],
         "title": "ResponseBashCodeExecutionToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaBashCodeExecutionToolResultError"
+          },
+          "java": {
+            "model_name": "BetaBashCodeExecutionToolResultError"
+          }
+        }
       },
       "BetaResponseBrowserCloseTabToolUseBlock": {
         "properties": {
@@ -146188,7 +147155,15 @@
           "type"
         ],
         "title": "ResponseCodeExecutionToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaCodeExecutionToolResultError"
+          },
+          "java": {
+            "model_name": "BetaCodeExecutionToolResultError"
+          }
+        }
       },
       "BetaResponseCompactionBlock": {
         "description": "A compaction block returned when autocompact is triggered.\n\nWhen content is None, it indicates the compaction failed to produce a valid\nsummary (e.g., malformed output from the model). Clients may round-trip\ncompaction blocks with null content; the server treats them as no-ops.",
@@ -147917,7 +148892,15 @@
           "type"
         ],
         "title": "ResponseTextEditorCodeExecutionToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaTextEditorCodeExecutionToolResultError"
+          },
+          "java": {
+            "model_name": "BetaTextEditorCodeExecutionToolResultError"
+          }
+        }
       },
       "BetaResponseTextEditorCodeExecutionViewResultBlock": {
         "properties": {
@@ -148411,7 +149394,15 @@
           "type"
         ],
         "title": "ResponseToolSearchToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaToolSearchToolResultError"
+          },
+          "java": {
+            "model_name": "BetaToolSearchToolResultError"
+          }
+        }
       },
       "BetaResponseToolSearchToolSearchResultBlock": {
         "properties": {
@@ -148906,7 +149897,15 @@
           "type"
         ],
         "title": "ResponseWebSearchToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaWebSearchToolResultError"
+          },
+          "java": {
+            "model_name": "BetaWebSearchToolResultError"
+          }
+        }
       },
       "BetaRotateTunnelTokenRequestBody": {
         "type": "object",
@@ -149872,6 +150871,14 @@
       },
       "BetaTargetStoreHeldError": {
         "description": "Returned with status 409 when a request to create a dream sets \u0060output_behavior\u0060 to \u0060update_existing\u0060 and another dream that writes into the same memory store hasn\u0027t fully stopped.\n\nThe other dream is \u0060pending\u0060 or \u0060running\u0060, or it has just stopped and is still finishing its last writes. \u0060message\u0060 gives the ID of the other dream when the server can identify it. If that dream has already reached \u0060completed\u0060, \u0060failed\u0060, or \u0060canceled\u0060, retry after a short wait. Otherwise, wait for the other dream to end or cancel it, then retry. The response sets the \u0060x-should-retry\u0060 header to \u0060false\u0060.",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaTargetStoreHeldError"
+          },
+          "java": {
+            "model_name": "BetaTargetStoreHeldError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -153031,6 +154038,21 @@
           "expires_at": "2026-03-15T10:15:00Z"
         }
       },
+      "BetaUserProfileBillingNotAuthorizedErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "user_profile_billing_not_authorized",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "UserProfileBillingNotAuthorizedErrorDetails",
+        "description": "The customer that the named user profile represents has not authorized the caller to bill them, or the authorization that the request\u0027s credential uses has ended. The response does not say which applies."
+      },
       "BetaUserProfileEnrollEndUserAction": {
         "description": "The end-user that the profile represents enrolls in a program.",
         "type": "object",
@@ -153272,6 +154294,36 @@
           "Sort by when each user profile was created. This is the default.",
           "Sort by \u0060name\u0060, ignoring the case of ASCII letters. Profiles without a name come last in either direction."
         ]
+      },
+      "BetaUserProfileNotBillableErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "user_profile_not_billable",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "UserProfileNotBillableErrorDetails",
+        "description": "The caller is not allowed to bill the user profile that the request names. The response gives no more specific error code and does not say what the reason is."
+      },
+      "BetaUserProfileRequiredErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "user_profile_required",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "UserProfileRequiredErrorDetails",
+        "description": "The request sets \u0060billing_policy.bill_to\u0060 to \u0060\u0022user_profile\u0022\u0060 but names no user profile. Name the profile to bill in the \u0060anthropic-user-profile-id\u0060 header."
       },
       "BetaUserProfileTrustGrant": {
         "description": "The status of one trust grant on a user profile, listed in the profile\u0027s \u0060trust_grants\u0060 map under the grant\u0027s name.",
@@ -155094,6 +156146,12 @@
           },
           {
             "$ref": "#/components/schemas/BetaWebhookUserProfileProgramStatusUpdatedEventData"
+          },
+          {
+            "$ref": "#/components/schemas/BetaWebhookExternalKeyFailedEventData"
+          },
+          {
+            "$ref": "#/components/schemas/BetaWebhookExternalKeyRecoveredEventData"
           }
         ],
         "discriminator": {
@@ -155145,7 +156203,53 @@
             "session.budget_reached": "#/components/schemas/BetaWebhookSessionBudgetReachedEventData",
             "user_profile.enforcement_action_opened": "#/components/schemas/BetaWebhookUserProfileEnforcementActionOpenedEventData",
             "user_profile.enforcement_action_resolved": "#/components/schemas/BetaWebhookUserProfileEnforcementActionResolvedEventData",
-            "user_profile.program_status_updated": "#/components/schemas/BetaWebhookUserProfileProgramStatusUpdatedEventData"
+            "user_profile.program_status_updated": "#/components/schemas/BetaWebhookUserProfileProgramStatusUpdatedEventData",
+            "external_key.failed": "#/components/schemas/BetaWebhookExternalKeyFailedEventData",
+            "external_key.recovered": "#/components/schemas/BetaWebhookExternalKeyRecoveredEventData"
+          }
+        }
+      },
+      "BetaWebhookExternalKeyFailedEventData": {
+        "type": "object",
+        "title": "BetaWebhookExternalKeyFailedEventData",
+        "required": [
+          "type",
+          "id",
+          "organization_id"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "external_key.failed"
+          },
+          "id": {
+            "type": "string",
+            "description": "ID (\u0060ekey_...\u0060) of the external key that stopped working or works again."
+          },
+          "organization_id": {
+            "type": "string"
+          }
+        }
+      },
+      "BetaWebhookExternalKeyRecoveredEventData": {
+        "type": "object",
+        "title": "BetaWebhookExternalKeyRecoveredEventData",
+        "required": [
+          "type",
+          "id",
+          "organization_id"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "const": "external_key.recovered"
+          },
+          "id": {
+            "type": "string",
+            "description": "ID (\u0060ekey_...\u0060) of the external key that stopped working or works again."
+          },
+          "organization_id": {
+            "type": "string"
           }
         }
       },
@@ -156066,7 +157170,15 @@
           "type"
         ],
         "title": "BillingError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BillingError"
+          },
+          "java": {
+            "model_name": "BillingError"
+          }
+        }
       },
       "Body_create_skill_v1_skills_post": {
         "properties": {
@@ -161333,6 +162445,21 @@
         "title": "ContextManagementCapability",
         "description": "Context management capability details."
       },
+      "ContractSpendLimitReachedErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "contract_spend_limit_reached",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "ContractSpendLimitReachedErrorDetails",
+        "description": "The organization has reached the spend limit of its contract."
+      },
       "CountMessageTokensParams": {
         "additionalProperties": false,
         "examples": [
@@ -162521,7 +163648,15 @@
           "type"
         ],
         "title": "GatewayTimeoutError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "GatewayTimeoutError"
+          },
+          "java": {
+            "model_name": "GatewayTimeoutError"
+          }
+        }
       },
       "InputContentBlock": {
         "discriminator": {
@@ -162745,7 +163880,15 @@
           "type"
         ],
         "title": "InvalidRequestError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "InvalidRequestError"
+          },
+          "java": {
+            "model_name": "InvalidRequestError"
+          }
+        }
       },
       "JsonOutputFormat": {
         "additionalProperties": false,
@@ -162770,6 +163913,36 @@
         "type": "object"
       },
       "JsonValue": {},
+      "LinkedOrganizationBillingUnavailableErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "linked_organization_billing_unavailable",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "LinkedOrganizationBillingUnavailableErrorDetails",
+        "description": "Anthropic cannot currently bill the organization linked to the request\u0027s user profile, for a reason that lies with that organization\u0027s own account. The response does not say what the reason is."
+      },
+      "LinkedOrganizationSpendLimitReachedErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "linked_organization_spend_limit_reached",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "LinkedOrganizationSpendLimitReachedErrorDetails",
+        "description": "The organization linked to the request\u0027s user profile has reached a spend limit that it set, or lacks credit for the request. The response does not say which applies."
+      },
       "ListResponse_MessageBatch_": {
         "properties": {
           "data": {
@@ -164106,7 +165279,15 @@
           "type"
         ],
         "title": "NotFoundError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "NotFoundError"
+          },
+          "java": {
+            "model_name": "NotFoundError"
+          }
+        }
       },
       "OrganizationOnHoldErrorDetails": {
         "properties": {
@@ -164201,7 +165382,15 @@
           "type"
         ],
         "title": "OverloadedError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "OverloadedError"
+          },
+          "java": {
+            "model_name": "OverloadedError"
+          }
+        }
       },
       "PermissionError": {
         "properties": {
@@ -164224,7 +165413,15 @@
           "type"
         ],
         "title": "PermissionError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "PermissionError"
+          },
+          "java": {
+            "model_name": "PermissionError"
+          }
+        }
       },
       "PlainTextSource": {
         "additionalProperties": false,
@@ -164288,7 +165485,15 @@
           "type"
         ],
         "title": "RateLimitError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "RateLimitError"
+          },
+          "java": {
+            "model_name": "RateLimitError"
+          }
+        }
       },
       "RefusalCategory": {
         "anyOf": [
@@ -166549,7 +167754,15 @@
           "type"
         ],
         "title": "RequestWebSearchToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "WebSearchToolRequestError"
+          },
+          "java": {
+            "model_name": "WebSearchToolRequestError"
+          }
+        }
       },
       "ResponseBashCodeExecutionOutputBlock": {
         "properties": {
@@ -166659,7 +167872,15 @@
           "type"
         ],
         "title": "ResponseBashCodeExecutionToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BashCodeExecutionToolResultError"
+          },
+          "java": {
+            "model_name": "BashCodeExecutionToolResultError"
+          }
+        }
       },
       "ResponseBrowserCloseTabToolUseBlock": {
         "properties": {
@@ -168362,7 +169583,15 @@
           "type"
         ],
         "title": "ResponseCodeExecutionToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "CodeExecutionToolResultError"
+          },
+          "java": {
+            "model_name": "CodeExecutionToolResultError"
+          }
+        }
       },
       "ResponseComputerCursorPositionToolUseBlock": {
         "properties": {
@@ -169848,7 +171077,15 @@
           "type"
         ],
         "title": "ResponseTextEditorCodeExecutionToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "TextEditorCodeExecutionToolResultError"
+          },
+          "java": {
+            "model_name": "TextEditorCodeExecutionToolResultError"
+          }
+        }
       },
       "ResponseTextEditorCodeExecutionViewResultBlock": {
         "properties": {
@@ -170032,7 +171269,15 @@
           "type"
         ],
         "title": "ResponseToolSearchToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "ToolSearchToolResultError"
+          },
+          "java": {
+            "model_name": "ToolSearchToolResultError"
+          }
+        }
       },
       "ResponseToolSearchToolSearchResultBlock": {
         "properties": {
@@ -170430,7 +171675,15 @@
           "type"
         ],
         "title": "ResponseWebSearchToolResultError",
-        "type": "object"
+        "type": "object",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "WebSearchToolResultError"
+          },
+          "java": {
+            "model_name": "WebSearchToolResultError"
+          }
+        }
       },
       "ServerToolCaller": {
         "additionalProperties": false,
@@ -172460,6 +173713,21 @@
           "expires_at": "2026-03-15T10:15:00Z"
         }
       },
+      "UserProfileBillingNotAuthorizedErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "user_profile_billing_not_authorized",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "UserProfileBillingNotAuthorizedErrorDetails",
+        "description": "The customer that the named user profile represents has not authorized the caller to bill them, or the authorization that the request\u0027s credential uses has ended. The response does not say which applies."
+      },
       "UserProfileCyberProgram": {
         "description": "A user profile\u0027s standing in the Cyber Verification Program, which relaxes cyber safeguards for requests that name the profile.",
         "type": "object",
@@ -173134,6 +174402,21 @@
           "Sort by \u0060name\u0060, ignoring the case of ASCII letters. Profiles without a name come last in either direction."
         ]
       },
+      "UserProfileNotBillableErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "user_profile_not_billable",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "UserProfileNotBillableErrorDetails",
+        "description": "The caller is not allowed to bill the user profile that the request names. The response gives no more specific error code and does not say what the reason is."
+      },
       "UserProfileProgramStatus": {
         "type": "string",
         "description": "A user profile\u0027s status in a program. Each program\u0027s \u0060status\u0060 field says what the values mean there.",
@@ -173250,6 +174533,21 @@
             }
           }
         }
+      },
+      "UserProfileRequiredErrorDetails": {
+        "properties": {
+          "error_code": {
+            "type": "string",
+            "const": "user_profile_required",
+            "title": "Error Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "error_code"
+        ],
+        "title": "UserProfileRequiredErrorDetails",
+        "description": "The request sets \u0060billing_policy.bill_to\u0060 to \u0060\u0022user_profile\u0022\u0060 but names no user profile. Name the profile to bill in the \u0060anthropic-user-profile-id\u0060 header."
       },
       "WebFetchToolResultErrorCode": {
         "enum": [
@@ -180796,7 +182094,7 @@
             "type": "string",
             "maxLength": 2048,
             "title": "Kms Arn",
-            "description": "Full ARN of the AWS KMS key. On Claude Platform on AWS, alias ARNs are rejected, and your organization\u0027s own key must be a single-Region key in your organization\u0027s AWS account.",
+            "description": "Full ARN of the AWS KMS key. On Claude Platform on AWS, alias ARNs are rejected, and your organization\u0027s own key must be a single-Region key.",
             "examples": [
               "arn:aws:kms:us-east-1:111122223333:key/abcd1234-5678-90ab-cdef-000011112222"
             ]
@@ -184757,6 +186055,8 @@
             "items": {
               "type": "string",
               "enum": [
+                "external_key.failed",
+                "external_key.recovered",
                 "user_profile.enforcement_action_opened",
                 "user_profile.enforcement_action_resolved",
                 "user_profile.program_status_updated"
@@ -185017,6 +186317,8 @@
             "items": {
               "type": "string",
               "enum": [
+                "external_key.failed",
+                "external_key.recovered",
                 "user_profile.enforcement_action_opened",
                 "user_profile.enforcement_action_resolved",
                 "user_profile.program_status_updated"
@@ -185522,7 +186824,7 @@
               }
             ],
             "title": "Reason",
-            "description": "The primary mechanism behind a \u0060warn\u0060 or \u0060fail\u0060, such as \u0060credential-exposure\u0060 or \u0060guardrail-tampering\u0060; a mechanism this API does not yet name reads as \u0060other\u0060. Null on a \u0060pass\u0060, whenever \u0060assessment\u0060 is null, and when no mechanism is reported for the verdict.",
+            "description": "The primary mechanism behind a \u0060warn\u0060 or \u0060fail\u0060, such as \u0060credential-exposure\u0060 or \u0060guardrail-tampering\u0060; a mechanism this API does not yet name reads as \u0060other\u0060. Read \u0060status\u0060 first: on an \u0060errored\u0060 scan it is not a finding but why there is no verdict: \u0060scan-invalid-archive\u0060, the scan refused the version\u0027s archive, or could not process it, before checking what its files say, and running it again will not help, so change the files and store a new version; \u0060scan-did-not-finish\u0060, the scan did not finish or its result is no longer available, so retry the scan in claude.ai if it offers a retry; \u0060scan-unavailable\u0060, the scan could not run or its result cannot be read right now, so read the version again later, then retry the scan in claude.ai if it offers a retry. If these steps do not help, contact support. Null on a \u0060pass\u0060, while a scan runs, and when no mechanism is reported for the verdict. On an errored scan, null means that a compliance configuration ruled out the scan.",
             "examples": [
               "credential-exposure"
             ]
@@ -185997,7 +187299,15 @@
           "error_code",
           "name"
         ],
-        "title": "PluginMarketplaceValidationPluginError"
+        "title": "PluginMarketplaceValidationPluginError",
+        "x-stainless-naming": {
+          "csharp": {
+            "model_name": "BetaPluginMarketplaceValidationPluginError"
+          },
+          "java": {
+            "model_name": "BetaPluginMarketplaceValidationPluginError"
+          }
+        }
       },
       "BetaPluginMarketplaceValidationPluginWarning": {
         "properties": {
@@ -189373,7 +190683,7 @@
               }
             ],
             "title": "External Key Id",
-            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same AWS account and\nRegion as the Workspace. On that platform the key is validated against this\nWorkspace when it is attached, so a key-policy problem is reported as an error\non this request. This field is write-once: once a key is attached to a Workspace\nit cannot be detached or replaced. To rotate key material, rotate the underlying\nkey on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
+            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same Region as the\nWorkspace. If that key is outside the Workspace\u0027s AWS account, it can be attached\nonly by updating an active Workspace. On that platform the key is validated\nagainst this Workspace when it is attached, so a key-policy problem is reported\nas an error on this request. This field is write-once: once a key is attached to\na Workspace it cannot be detached or replaced. To rotate key material, rotate\nthe underlying key on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
             "examples": [
               "ekey_01SDCCSbTxrXDpWc1phhtcfK"
             ]
@@ -189502,7 +190812,7 @@
                 "type": "null"
               }
             ],
-            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same AWS account and\nRegion as the Workspace. On that platform the key is validated against this\nWorkspace when it is attached, so a key-policy problem is reported as an error\non this request. This field is write-once: once a key is attached to a Workspace\nit cannot be detached or replaced. To rotate key material, rotate the underlying\nkey on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
+            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same Region as the\nWorkspace. If that key is outside the Workspace\u0027s AWS account, it can be attached\nonly by updating an active Workspace. On that platform the key is validated\nagainst this Workspace when it is attached, so a key-policy problem is reported\nas an error on this request. This field is write-once: once a key is attached to\na Workspace it cannot be detached or replaced. To rotate key material, rotate\nthe underlying key on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
             "examples": [
               "ekey_01SDCCSbTxrXDpWc1phhtcfK"
             ],
@@ -189988,7 +191298,7 @@
             "type": "string"
           },
           "external_key_id": {
-            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same AWS account and\nRegion as the Workspace. On that platform the key is validated against this\nWorkspace when it is attached, so a key-policy problem is reported as an error\non this request. This field is write-once: once a key is attached to a Workspace\nit cannot be detached or replaced. To rotate key material, rotate the underlying\nkey on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
+            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same Region as the\nWorkspace. If that key is outside the Workspace\u0027s AWS account, it can be attached\nonly by updating an active Workspace. On that platform the key is validated\nagainst this Workspace when it is attached, so a key-policy problem is reported\nas an error on this request. This field is write-once: once a key is attached to\na Workspace it cannot be detached or replaced. To rotate key material, rotate\nthe underlying key on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
             "examples": [
               "ekey_01SDCCSbTxrXDpWc1phhtcfK"
             ],
@@ -193452,7 +194762,7 @@
             "type": "string",
             "maxLength": 2048,
             "title": "Kms Arn",
-            "description": "Full ARN of the AWS KMS key. On Claude Platform on AWS, alias ARNs are rejected, and your organization\u0027s own key must be a single-Region key in your organization\u0027s AWS account.",
+            "description": "Full ARN of the AWS KMS key. On Claude Platform on AWS, alias ARNs are rejected, and your organization\u0027s own key must be a single-Region key.",
             "examples": [
               "arn:aws:kms:us-east-1:111122223333:key/abcd1234-5678-90ab-cdef-000011112222"
             ]
@@ -198572,7 +199882,7 @@
               }
             ],
             "title": "External Key Id",
-            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same AWS account and\nRegion as the Workspace. On that platform the key is validated against this\nWorkspace when it is attached, so a key-policy problem is reported as an error\non this request. This field is write-once: once a key is attached to a Workspace\nit cannot be detached or replaced. To rotate key material, rotate the underlying\nkey on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
+            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same Region as the\nWorkspace. If that key is outside the Workspace\u0027s AWS account, it can be attached\nonly by updating an active Workspace. On that platform the key is validated\nagainst this Workspace when it is attached, so a key-policy problem is reported\nas an error on this request. This field is write-once: once a key is attached to\na Workspace it cannot be detached or replaced. To rotate key material, rotate\nthe underlying key on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
             "examples": [
               "ekey_01SDCCSbTxrXDpWc1phhtcfK"
             ]
@@ -198701,7 +200011,7 @@
                 "type": "null"
               }
             ],
-            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same AWS account and\nRegion as the Workspace. On that platform the key is validated against this\nWorkspace when it is attached, so a key-policy problem is reported as an error\non this request. This field is write-once: once a key is attached to a Workspace\nit cannot be detached or replaced. To rotate key material, rotate the underlying\nkey on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
+            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same Region as the\nWorkspace. If that key is outside the Workspace\u0027s AWS account, it can be attached\nonly by updating an active Workspace. On that platform the key is validated\nagainst this Workspace when it is attached, so a key-policy problem is reported\nas an error on this request. This field is write-once: once a key is attached to\na Workspace it cannot be detached or replaced. To rotate key material, rotate\nthe underlying key on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
             "examples": [
               "ekey_01SDCCSbTxrXDpWc1phhtcfK"
             ],
@@ -199187,7 +200497,7 @@
             "type": "string"
           },
           "external_key_id": {
-            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same AWS account and\nRegion as the Workspace. On that platform the key is validated against this\nWorkspace when it is attached, so a key-policy problem is reported as an error\non this request. This field is write-once: once a key is attached to a Workspace\nit cannot be detached or replaced. To rotate key material, rotate the underlying\nkey on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
+            "description": "ID of the customer-managed encryption key (CMEK) configuration to use for this\nWorkspace. Setting this field requires CMEK to be enabled for your\norganization. When set, data stored for this Workspace is encrypted with the\nreferenced key. Create key configurations with the External Keys API. On\nClaude Platform on AWS the value for an AWS KMS key is the key\u0027s ARN, and your\norganization\u0027s own key must be a single-Region key in the same Region as the\nWorkspace. If that key is outside the Workspace\u0027s AWS account, it can be attached\nonly by updating an active Workspace. On that platform the key is validated\nagainst this Workspace when it is attached, so a key-policy problem is reported\nas an error on this request. This field is write-once: once a key is attached to\na Workspace it cannot be detached or replaced. To rotate key material, rotate\nthe underlying key on your cloud KMS; the \u0060external_key_id\u0060 stays the same.",
             "examples": [
               "ekey_01SDCCSbTxrXDpWc1phhtcfK"
             ],
@@ -199245,6 +200555,14 @@
         "type": "object"
       },
       "BetaManagedAgentsConflictError": {
+        "x-stainless-naming": {
+          "java": {
+            "model_name": "BetaManagedAgentsConflictError"
+          },
+          "csharp": {
+            "model_name": "BetaManagedAgentsConflictError"
+          }
+        },
         "type": "object",
         "additionalProperties": false,
         "required": [
@@ -200238,6 +201556,48 @@
       "post": {
         "operationId": "BetaUserProfileProgramStatusUpdatedWebhook",
         "summary": "user_profile.program_status_updated webhook",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BetaWebhookEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Return any 2xx status to acknowledge receipt."
+          }
+        }
+      }
+    },
+    "external_key.failed": {
+      "post": {
+        "operationId": "BetaExternalKeyFailedWebhook",
+        "summary": "external_key.failed webhook",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BetaWebhookEvent"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Return any 2xx status to acknowledge receipt."
+          }
+        }
+      }
+    },
+    "external_key.recovered": {
+      "post": {
+        "operationId": "BetaExternalKeyRecoveredWebhook",
+        "summary": "external_key.recovered webhook",
         "requestBody": {
           "required": true,
           "content": {

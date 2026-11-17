@@ -34,7 +34,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Environments.Item.Work.Item.StopB
         {
         }
         /// <summary>
-        /// Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.Stop a work item, initiating graceful or forced shutdown.
+        /// Stop a work item, initiating graceful or forced shutdown.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork"/></returns>
         /// <param name="body">Request to stop a work item.</param>
@@ -89,7 +89,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Environments.Item.Work.Item.StopB
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.Stop a work item, initiating graceful or forced shutdown.
+        /// Stop a work item, initiating graceful or forced shutdown.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request to stop a work item.</param>

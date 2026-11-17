@@ -36,7 +36,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Environments.Item.Work.WithWork_i
         {
         }
         /// <summary>
-        /// Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.Retrieve detailed information about a specific work item.
+        /// Retrieve detailed information about a specific work item.This endpoint accepts a Claude API key. It rejects the environment key and the work item&apos;s `secret`. On [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) or [Claude Models on Google Cloud (Anthropic managed)](https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed), use that platform&apos;s credentials instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -89,7 +89,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Environments.Item.Work.WithWork_i
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.Update work item metadata with merge semantics.
+        /// Update work item metadata with merge semantics.This endpoint accepts a Claude API key. It rejects the environment key and the work item&apos;s `secret`. On [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) or [Claude Models on Google Cloud (Anthropic managed)](https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed), use that platform&apos;s credentials instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork"/></returns>
         /// <param name="body">Request to update work item metadata.</param>
@@ -144,7 +144,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Environments.Item.Work.WithWork_i
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaSelfHostedWork.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.Retrieve detailed information about a specific work item.
+        /// Retrieve detailed information about a specific work item.This endpoint accepts a Claude API key. It rejects the environment key and the work item&apos;s `secret`. On [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) or [Claude Models on Google Cloud (Anthropic managed)](https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed), use that platform&apos;s credentials instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -163,7 +163,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Environments.Item.Work.WithWork_i
             return requestInfo;
         }
         /// <summary>
-        /// Note: these endpoints are called automatically by the pre-built environment worker provided in the SDKs and CLI, for orchestrating sessions with self-hosted sandbox environments. They are included here as a reference; you do not need to invoke them directly.Update work item metadata with merge semantics.
+        /// Update work item metadata with merge semantics.This endpoint accepts a Claude API key. It rejects the environment key and the work item&apos;s `secret`. On [Claude Platform on AWS](https://platform.claude.com/docs/en/build-with-claude/claude-platform-on-aws) or [Claude Models on Google Cloud (Anthropic managed)](https://platform.claude.com/docs/en/build-with-claude/claude-models-on-google-cloud/anthropic-managed), use that platform&apos;s credentials instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">Request to update work item metadata.</param>

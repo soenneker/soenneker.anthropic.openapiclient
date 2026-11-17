@@ -84,11 +84,19 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.EnforcedSpendLimitReachedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RampLimitExceededErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message429Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ContractSpendLimitReachedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.EnforcedSpendLimitReachedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RampLimitExceededErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message429Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Message429Error_error_details : IComposedTypeWrapper, IParsable
         {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ContractSpendLimitReachedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ContractSpendLimitReachedErrorDetails? ContractSpendLimitReachedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.ContractSpendLimitReachedErrorDetails ContractSpendLimitReachedErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.EnforcedSpendLimitReachedErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -122,6 +130,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message429Error_error.Message429Error_error_details();
+                result.ContractSpendLimitReachedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.ContractSpendLimitReachedErrorDetails();
                 result.EnforcedSpendLimitReachedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.EnforcedSpendLimitReachedErrorDetails();
                 result.Message429ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Messages.Message429Error_error_detailsMember1();
                 result.RampLimitExceededErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.RampLimitExceededErrorDetails();
@@ -133,9 +142,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(EnforcedSpendLimitReachedErrorDetails != null || Message429ErrorErrorDetailsMember1 != null || RampLimitExceededErrorDetails != null)
+                if(ContractSpendLimitReachedErrorDetails != null || EnforcedSpendLimitReachedErrorDetails != null || Message429ErrorErrorDetailsMember1 != null || RampLimitExceededErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(EnforcedSpendLimitReachedErrorDetails, Message429ErrorErrorDetailsMember1, RampLimitExceededErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(ContractSpendLimitReachedErrorDetails, EnforcedSpendLimitReachedErrorDetails, Message429ErrorErrorDetailsMember1, RampLimitExceededErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -146,7 +155,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.EnforcedSpendLimitReachedErrorDetails>(null, EnforcedSpendLimitReachedErrorDetails, Message429ErrorErrorDetailsMember1, RampLimitExceededErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.ContractSpendLimitReachedErrorDetails>(null, ContractSpendLimitReachedErrorDetails, EnforcedSpendLimitReachedErrorDetails, Message429ErrorErrorDetailsMember1, RampLimitExceededErrorDetails);
             }
         }
     }

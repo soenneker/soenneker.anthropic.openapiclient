@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentPausedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentRunFailedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentRunStartedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentRunSucceededEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentUnpausedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionBudgetReachedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionIdledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionOutcomeEvaluationEndedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionPendingEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionRequiresActionEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionRunningEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusIdledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusRescheduledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusRunStartedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusTerminatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionThreadCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionThreadIdledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionThreadTerminatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookUserProfileEnforcementActionOpenedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookUserProfileEnforcementActionResolvedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookUserProfileProgramStatusUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialRefreshFailedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultDeletedEventData"/>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookAgentUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentPausedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentRunFailedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentRunStartedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentRunSucceededEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentUnpausedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookDeploymentUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyFailedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyRecoveredEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionBudgetReachedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionIdledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionOutcomeEvaluationEndedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionPendingEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionRequiresActionEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionRunningEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusIdledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusRescheduledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusRunStartedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionStatusTerminatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionThreadCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionThreadIdledEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionThreadTerminatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookSessionUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookUserProfileEnforcementActionOpenedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookUserProfileEnforcementActionResolvedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookUserProfileProgramStatusUpdatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialArchivedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialCreatedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialDeletedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultCredentialRefreshFailedEventData"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookVaultDeletedEventData"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaWebhookEventData : IComposedTypeWrapper, IParsable
@@ -148,6 +148,22 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #nullable restore
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentUpdatedEventData BetaWebhookEnvironmentUpdatedEventData { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyFailedEventData"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyFailedEventData? BetaWebhookExternalKeyFailedEventData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyFailedEventData BetaWebhookExternalKeyFailedEventData { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyRecoveredEventData"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyRecoveredEventData? BetaWebhookExternalKeyRecoveredEventData { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyRecoveredEventData BetaWebhookExternalKeyRecoveredEventData { get; set; }
 #endif
         /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreArchivedEventData"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -467,6 +483,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             {
                 result.BetaWebhookEnvironmentUpdatedEventData = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentUpdatedEventData();
             }
+            else if("external_key.failed".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.BetaWebhookExternalKeyFailedEventData = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyFailedEventData();
+            }
+            else if("external_key.recovered".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.BetaWebhookExternalKeyRecoveredEventData = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyRecoveredEventData();
+            }
             else if("memory_store.archived".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
             {
                 result.BetaWebhookMemoryStoreArchivedEventData = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookMemoryStoreArchivedEventData();
@@ -662,6 +686,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             else if(BetaWebhookEnvironmentUpdatedEventData != null)
             {
                 return BetaWebhookEnvironmentUpdatedEventData.GetFieldDeserializers();
+            }
+            else if(BetaWebhookExternalKeyFailedEventData != null)
+            {
+                return BetaWebhookExternalKeyFailedEventData.GetFieldDeserializers();
+            }
+            else if(BetaWebhookExternalKeyRecoveredEventData != null)
+            {
+                return BetaWebhookExternalKeyRecoveredEventData.GetFieldDeserializers();
             }
             else if(BetaWebhookMemoryStoreArchivedEventData != null)
             {
@@ -859,6 +891,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             else if(BetaWebhookEnvironmentUpdatedEventData != null)
             {
                 writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookEnvironmentUpdatedEventData>(null, BetaWebhookEnvironmentUpdatedEventData);
+            }
+            else if(BetaWebhookExternalKeyFailedEventData != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyFailedEventData>(null, BetaWebhookExternalKeyFailedEventData);
+            }
+            else if(BetaWebhookExternalKeyRecoveredEventData != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWebhookExternalKeyRecoveredEventData>(null, BetaWebhookExternalKeyRecoveredEventData);
             }
             else if(BetaWebhookMemoryStoreArchivedEventData != null)
             {

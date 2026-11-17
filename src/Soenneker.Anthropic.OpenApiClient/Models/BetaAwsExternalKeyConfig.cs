@@ -12,7 +12,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public partial class BetaAwsExternalKeyConfig : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Full ARN of the AWS KMS key. On Claude Platform on AWS, alias ARNs are rejected, and your organization&apos;s own key must be a single-Region key in your organization&apos;s AWS account.</summary>
+        /// <summary>Full ARN of the AWS KMS key. On Claude Platform on AWS, alias ARNs are rejected, and your organization&apos;s own key must be a single-Region key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? KmsArn { get; set; }
