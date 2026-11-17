@@ -16,7 +16,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>RFC 3339 datetime string indicating when the RBAC Role was created.</summary>
         public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>Name of the RBAC Role. For a role created by Anthropic, this is Anthropic&apos;s name for the access that the role grants. Anthropic may change this name, so to keep a lasting reference to a role, store its `id`.</summary>
+        /// <summary>Name of the RBAC Role. For a built-in role, this is Anthropic&apos;s name for the access that the role grants. Anthropic may change this name, so to keep a lasting reference to a role, store its `id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DisplayName { get; set; }
@@ -31,6 +31,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #nullable restore
 #else
         public string Id { get; set; }
+#endif
+        /// <summary>Whether the RBAC Role is built-in or custom. More values of `type` may be added, so do not treat every role that is not `built_in` as `custom`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.RbacRoleSource? Source { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.RbacRoleSource Source { get; set; }
 #endif
         /// <summary>Object type.For RBAC Roles, this is always `&quot;rbac_role&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -71,6 +79,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "display_name", n => { DisplayName = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.RbacRoleSource>(global::Soenneker.Anthropic.OpenApiClient.Models.RbacRoleSource.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
             };
@@ -85,6 +94,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("display_name", DisplayName);
             writer.WriteStringValue("id", Id);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.RbacRoleSource>("source", Source);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteAdditionalData(AdditionalData);

@@ -39,7 +39,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_rolesBetaTrue
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRbacRoleList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_rolesBetaTrue.BetaRbacRoleList400Error">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
@@ -67,7 +67,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_rolesBetaTrue
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_rolesBetaTrue.BetaRbacRoleList400Error.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },

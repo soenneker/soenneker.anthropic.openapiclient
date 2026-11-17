@@ -123,7 +123,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Plugins.Item.Instal
             /// <summary>Number of items to return per page.Defaults to `20`. Ranges from `1` to `100`.</summary>
             [QueryParameter("limit")]
             public int? Limit { get; set; }
-            /// <summary>For a `read:org_audit` or `read:compliance_org_data` key created for all of a parent organization&apos;s linked organizations: a child organization of that parent to read instead of the organization the key was created in, given as the organization&apos;s UUID or its `org_`-prefixed ID. A value that is neither returns a 400; an organization that is not a child of the key&apos;s parent, or where the Plugins API is not available, returns a 404. Any other key may pass only its own organization&apos;s ID here; another organization returns a 404.</summary>
+            /// <summary>For a `read:org_audit` or `read:compliance_org_data` key created for all of a parent organization&apos;s linked organizations: a child organization of that parent to read instead of the organization the key was created in, given as the organization&apos;s UUID or its `org_`-prefixed ID. A value that is neither returns a 400; an organization that is not a child of the key&apos;s parent, or where the Plugins API is not available, returns a 404. Any other key may pass only its own organization&apos;s ID here; another organization returns a 404. A key with no organization of its own must always pass `organization_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_id")]

@@ -8,12 +8,12 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The server judged the invocation high-risk; it does not execute and a synthetic error tool result is appended.
+    /// The server judged the invocation high-risk, or reached no judgement and did not hold it for client approval (for example, because the organization is out of credits or has reached a spend limit); it does not execute and a synthetic error tool result is appended.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaManagedAgentsAgentAutoEvaluatedPermissionDeny : IParsable
     {
-        /// <summary>The judgement&apos;s grounds in registry-bound terms. Open registry; currently &quot;high_risk&quot; (judged high-risk; the call does not run). Clients must tolerate values outside this set.</summary>
+        /// <summary>The judgement&apos;s grounds in registry-bound terms. Open registry; currently &quot;high_risk&quot; (judged high-risk; the call does not run) and &quot;indeterminate&quot; (no judgement was reached; the call does not run). Clients must tolerate values outside this set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ReasonCode { get; set; }

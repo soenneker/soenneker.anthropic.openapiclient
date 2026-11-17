@@ -67,7 +67,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #endif
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>ID of the user profile the key is bound to, or null if the key is not bound to one. A key bound to a user profile can only be attached to a Workspace that has the same user profile. A key that isn&apos;t bound can be attached to a Workspace whatever its user profile.</summary>
+        /// <summary>ID of the user profile the key is bound to, or null if the key is not bound to one. A key bound to a user profile can only be attached to a Workspace that has the same user profile. A key that isn&apos;t bound can only be attached to a Workspace that has no user profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKey.BetaExternalKey_user_profile_id? UserProfileId { get; set; }

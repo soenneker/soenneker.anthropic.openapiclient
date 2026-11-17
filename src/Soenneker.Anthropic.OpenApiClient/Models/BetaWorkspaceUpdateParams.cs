@@ -53,7 +53,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public UntypedNode Tags { get; set; }
 #endif
-        /// <summary>ID of a user profile to attach to the Workspace. Every inference request through the Workspace must then name this user profile; the API rejects a request that names none or a different one. Once set, it can&apos;t be replaced or removed (sending the same ID again changes nothing); only deleting the user profile clears it. The default Workspace can&apos;t have a user profile.</summary>
+        /// <summary>ID of a user profile to attach to the Workspace. Every inference request through the Workspace must then name this user profile; the API rejects a request that names none or a different one. Once set, it can&apos;t be replaced or removed (sending the same ID again changes nothing); only deleting the user profile clears it. It can&apos;t be set on a Workspace whose External Key isn&apos;t bound to this user profile. The default Workspace can&apos;t have a user profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserProfileId { get; set; }

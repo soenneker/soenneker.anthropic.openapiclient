@@ -39,10 +39,10 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_roles.Item.Per
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RbacRolePermissionList"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_roles.Item.Permissions.RbacRolePermissionList400Error">When receiving a 400 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 401 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 403 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_roles.Item.Permissions.RbacRolePermissionList404Error">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 408 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse">When receiving a 412 status code</exception>
@@ -67,10 +67,10 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_roles.Item.Per
             var requestInfo = ToGetRequestInformation(requestConfiguration);
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
-                { "400", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "400", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_roles.Item.Permissions.RbacRolePermissionList400Error.CreateFromDiscriminatorValue },
                 { "401", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "403", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
-                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_roles.Item.Permissions.RbacRolePermissionList404Error.CreateFromDiscriminatorValue },
                 { "408", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "409", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
                 { "412", global::Soenneker.Anthropic.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },

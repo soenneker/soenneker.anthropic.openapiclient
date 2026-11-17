@@ -87,6 +87,59 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
+        /// Change a Bundle&apos;s instructions. The update is partial: a field left out is unchanged, and `instructions` sent as null or as an empty string clears them. The later of two updates wins. Sessions that start after the change use the new instructions; sessions already running keep the ones they started with. Some Bundles are managed in claude.ai, and an update of one returns 400.
+        /// </summary>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle400Error">When receiving a 400 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 401 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle403Error">When receiving a 403 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle409Error">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 412 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 413 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 429 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 431 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 499 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 500 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 501 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 503 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 504 status code</exception>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public async Task<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle?> PostAsync(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagUpdateBundleRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#nullable restore
+#else
+        public async Task<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle> PostAsync(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagUpdateBundleRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = ToPostRequestInformation(body, requestConfiguration);
+            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
+            {
+                { "400", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle400Error.CreateFromDiscriminatorValue },
+                { "401", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle403Error.CreateFromDiscriminatorValue },
+                { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.WithBundle_idBetaTrue.BetaClaudeTagBundle409Error.CreateFromDiscriminatorValue },
+                { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "431", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "499", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "500", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "501", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "503", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "504", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+            };
+            return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagBundle.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+        }
+        /// <summary>
         /// Get one Bundle. What the Bundle grants (connectors, repositories and credentials) is never returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
@@ -103,6 +156,28 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Bundles.
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
+            return requestInfo;
+        }
+        /// <summary>
+        /// Change a Bundle&apos;s instructions. The update is partial: a field left out is unchanged, and `instructions` sent as null or as an empty string clears them. The later of two updates wins. Sessions that start after the change use the new instructions; sessions already running keep the ones they started with. Some Bundles are managed in claude.ai, and an update of one returns 400.
+        /// </summary>
+        /// <returns>A <see cref="RequestInformation"/></returns>
+        /// <param name="body">The request body</param>
+        /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagUpdateBundleRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        {
+#nullable restore
+#else
+        public RequestInformation ToPostRequestInformation(global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeTagUpdateBundleRequestBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        {
+#endif
+            if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
+            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
+            requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
             return requestInfo;
         }
         /// <summary>

@@ -21,7 +21,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsEffort Effort { get; set; }
 #endif
-        /// <summary>The model that will power your agent.See [models](https://docs.anthropic.com/en/docs/models-overview) for additional details and options.</summary>
+        /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get; set; }

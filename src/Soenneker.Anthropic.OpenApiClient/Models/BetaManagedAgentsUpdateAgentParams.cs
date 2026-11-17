@@ -48,10 +48,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>Model identifier. Accepts the [model string](https://platform.claude.com/docs/en/about-claude/models/overview#latest-models-comparison), e.g. `claude-opus-5-5`, or a `model_config` object for additional configuration control. Omit to preserve. Cannot be cleared.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelConfigParams? Model { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelParams? Model { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelConfigParams Model { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelParams Model { get; set; }
 #endif
         /// <summary>Multiagent orchestration configuration. Full replacement. Omit to preserve; send null to clear.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,7 +117,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "execution_identity", n => { ExecutionIdentity = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsExecutionIdentityParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsExecutionIdentityParams.CreateFromDiscriminatorValue); } },
                 { "mcp_servers", n => { McpServers = n.GetCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMCPServerParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMCPServerParams.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelConfigParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelConfigParams.CreateFromDiscriminatorValue); } },
+                { "model", n => { Model = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelParams.CreateFromDiscriminatorValue); } },
                 { "multiagent", n => { Multiagent = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMultiagentParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMultiagentParams.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "skills", n => { Skills = n.GetCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsSkillParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsSkillParams.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -137,7 +137,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsExecutionIdentityParams>("execution_identity", ExecutionIdentity);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMCPServerParams>("mcp_servers", McpServers);
             writer.WriteObjectValue<UntypedNode>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelConfigParams>("model", Model);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsModelParams>("model", Model);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsMultiagentParams>("multiagent", Multiagent);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsSkillParams>("skills", Skills);
