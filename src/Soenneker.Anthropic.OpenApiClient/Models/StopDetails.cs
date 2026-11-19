@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
-    /// <summary>
-    /// Structured information about a refusal.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class RefusalStopDetails : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class StopDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -26,10 +25,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>Human-readable explanation of the refusal.This text is not guaranteed to be stable. `null` when no explanation is available for the category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation? Explanation { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation? Explanation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation Explanation { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation Explanation { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -40,9 +39,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public string Type { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails"/> and sets the default values.
         /// </summary>
-        public RefusalStopDetails()
+        public StopDetails()
         {
             AdditionalData = new Dictionary<string, object>();
             Type = "refusal";
@@ -50,12 +49,12 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails();
+            return new global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +65,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.RefusalCategory>(global::Soenneker.Anthropic.OpenApiClient.Models.RefusalCategory.CreateFromDiscriminatorValue); } },
-                { "explanation", n => { Explanation = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation>(global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation.CreateFromDiscriminatorValue); } },
+                { "explanation", n => { Explanation = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation>(global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -78,23 +77,23 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.RefusalCategory>("category", Category);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation>("explanation", Explanation);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation>("explanation", Explanation);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails_explanationMember1"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails_explanationMember1"/>, <see cref="string"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class RefusalStopDetails_explanation : IComposedTypeWrapper, IParsable
+        public partial class StopDetails_explanation : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails_explanationMember1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails_explanationMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails_explanationMember1? RefusalStopDetailsExplanationMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails_explanationMember1? StopDetailsExplanationMember1 { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails_explanationMember1 RefusalStopDetailsExplanationMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails_explanationMember1 StopDetailsExplanationMember1 { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -107,18 +106,18 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails.RefusalStopDetails_explanation();
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails.StopDetails_explanation();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;
                 }
                 else {
-                    result.RefusalStopDetailsExplanationMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails_explanationMember1();
+                    result.StopDetailsExplanationMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails_explanationMember1();
                 }
                 return result;
             }
@@ -128,9 +127,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(RefusalStopDetailsExplanationMember1 != null)
+                if(StopDetailsExplanationMember1 != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(RefusalStopDetailsExplanationMember1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(StopDetailsExplanationMember1);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -146,7 +145,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                     writer.WriteStringValue(null, String);
                 }
                 else {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.RefusalStopDetails_explanationMember1>(null, RefusalStopDetailsExplanationMember1);
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.StopDetails_explanationMember1>(null, StopDetailsExplanationMember1);
                 }
             }
         }

@@ -152,10 +152,10 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_keys.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Partially update an external key config. Omitted fields are left unchanged.`display_name` is always editable. `geo` and `provider_config` cannotbe changed once any workspace references this config, because previouslyencrypted data requires the original key identity to decrypt.
+        /// Partially update an external key config. Omitted fields are left unchanged.`display_name` is always editable. `geo` and `provider_config` cannotbe changed once any workspace references this config, and a Google Cloudkey&apos;s provider and `key_name` cannot be changed at all.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.ExternalKey"/></returns>
-        /// <param name="body">Partial update — omitted fields are unchanged.`display_name` is always editable. `geo` and `provider_config`cannot be changed once any workspace references this config.</param>
+        /// <param name="body">Partial update — omitted fields are unchanged.`display_name` is always editable. `geo` and `provider_config`cannot be changed once any workspace references this config, and a GoogleCloud key&apos;s provider and `key_name` cannot be changed at all.</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_keys.Item.ExternalKey400Error">When receiving a 400 status code</exception>
@@ -245,10 +245,10 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_keys.Item
             return requestInfo;
         }
         /// <summary>
-        /// Partially update an external key config. Omitted fields are left unchanged.`display_name` is always editable. `geo` and `provider_config` cannotbe changed once any workspace references this config, because previouslyencrypted data requires the original key identity to decrypt.
+        /// Partially update an external key config. Omitted fields are left unchanged.`display_name` is always editable. `geo` and `provider_config` cannotbe changed once any workspace references this config, and a Google Cloudkey&apos;s provider and `key_name` cannot be changed at all.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
-        /// <param name="body">Partial update — omitted fields are unchanged.`display_name` is always editable. `geo` and `provider_config`cannot be changed once any workspace references this config.</param>
+        /// <param name="body">Partial update — omitted fields are unchanged.`display_name` is always editable. `geo` and `provider_config`cannot be changed once any workspace references this config, and a GoogleCloud key&apos;s provider and `key_name` cannot be changed at all.</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

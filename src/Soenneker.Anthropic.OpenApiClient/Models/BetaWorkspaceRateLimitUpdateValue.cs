@@ -12,7 +12,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public partial class BetaWorkspaceRateLimitUpdateValue : IParsable
     #pragma warning restore CS1591
     {
-        /// <summary>Rate limiter type.</summary>
+        /// <summary>Rate limiter type. `input_tokens_per_minute` counts every input token, cache reads included. `input_tokens_per_minute_cache_aware` does not count cache reads, and on current models the organization&apos;s input-token limit usually has this type. A workspace limit of either type applies alongside the organization&apos;s limit, not in place of it. Because cache reads count toward an `input_tokens_per_minute` limit, it can reject requests that read mostly from the cache while the organization&apos;s limit still has room.</summary>
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceRateLimitUpdateValue_type? Type { get; set; }
         /// <summary>New limit value. Set to null to clear the workspace override and fall back to the organization limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER

@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// Partial update — omitted fields are unchanged.`display_name` is always editable. `geo` and `provider_config`cannot be changed once any workspace references this config.
+    /// Partial update — omitted fields are unchanged.`display_name` is always editable. `geo` and `provider_config`cannot be changed once any workspace references this config, and a GoogleCloud key&apos;s provider and `key_name` cannot be changed at all.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaExternalKeyUpdateParams : IParsable

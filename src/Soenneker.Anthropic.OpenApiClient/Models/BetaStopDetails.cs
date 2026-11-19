@@ -7,11 +7,10 @@ using System.IO;
 using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
-    /// <summary>
-    /// Structured information about a refusal.
-    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public partial class BetaRefusalStopDetails : IAdditionalDataHolder, IParsable
+    #pragma warning disable CS1591
+    public partial class BetaStopDetails : IAdditionalDataHolder, IParsable
+    #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
@@ -26,34 +25,34 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>Human-readable explanation of the refusal.This text is not guaranteed to be stable. `null` when no explanation is available for the category.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation? Explanation { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation? Explanation { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation Explanation { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation Explanation { get; set; }
 #endif
         /// <summary>Opaque code that refunds the cache-miss cost when retrying this refusedrequest on the fallback model. Pass it as `fallback_credit_token` on theretry request. Expires 5 minutes after the refusal.The retry is sent either with the same request body (`system`, `messages`,`tools`, and other render-shaping fields), or with the same body plus oneappended `assistant` message whose content is the partial text (with anytrailing whitespace stripped from the final text block) and pairedserver-tool blocks from this refusal — which also authorizes thatappended turn as an assistant-prefill continuation on models that otherwisedisallow prefill. A token minted mid-server-tool-loop whose partial contentwas continuable may only be redeemed the second way — if a same-body retryis rejected with a 400 saying the token must be redeemed by continuing thepartial response, retry the second way instead. Either way: same workspace,same platform; a mismatch is a 400. Resending a token for an already-warmprefix is permitted but yields no additional credit.`null` when the refused model isn&apos;t eligible for a fallback credit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token? FallbackCreditToken { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token? FallbackCreditToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token FallbackCreditToken { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token FallbackCreditToken { get; set; }
 #endif
         /// <summary>Whether the accompanying `fallback_credit_token` may be redeemed with theappended-assistant retry form. Only set when `fallback_credit_token` ispresent.`true`: retry by resending the same request body plus one appended`assistant` message whose content is this response&apos;s `content` with anytrailing whitespace stripped from the final text block and unpaired`tool_use` blocks omitted (the same appended-turn shape described on`fallback_credit_token`), with the token attached. `false`: retry byresending the original request body unchanged, with the token attached —the appended-assistant form is not available for this refusal (nocontinuable partial content, or the request uses `output_format` or a`tool_choice` that forces tool use). One exception: when the request used`output_format` or a forced `tool_choice` and the refusal arrived afterserver tools (including MCP connector tools) had already executed, thetoken may not be redeemable by either retry form; if the exact-body retryis then rejected with a 400 saying the token must be redeemed bycontinuing the partial response, discard the token and retry without it.Advisory: if an appended-assistant retry is rejected with a 400 despite`true`, fall back to resending the original request body with the token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim? FallbackHasPrefillClaim { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim? FallbackHasPrefillClaim { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim FallbackHasPrefillClaim { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim FallbackHasPrefillClaim { get; set; }
 #endif
         /// <summary>The server&apos;s suggested retry target for this refusal. Populated when a fallback attempt could not be made (the fallback model&apos;s rate limit was exhausted, or it was overloaded); names the fallback model the caller can retry directly. Null otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model? RecommendedModel { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model? RecommendedModel { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model RecommendedModel { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model RecommendedModel { get; set; }
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,9 +63,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public string Type { get; set; }
 #endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails"/> and sets the default values.
         /// </summary>
-        public BetaRefusalStopDetails()
+        public BetaStopDetails()
         {
             AdditionalData = new Dictionary<string, object>();
             Type = "refusal";
@@ -74,12 +73,12 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails();
+            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,10 +89,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "category", n => { Category = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalCategory>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalCategory.CreateFromDiscriminatorValue); } },
-                { "explanation", n => { Explanation = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation.CreateFromDiscriminatorValue); } },
-                { "fallback_credit_token", n => { FallbackCreditToken = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token.CreateFromDiscriminatorValue); } },
-                { "fallback_has_prefill_claim", n => { FallbackHasPrefillClaim = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim.CreateFromDiscriminatorValue); } },
-                { "recommended_model", n => { RecommendedModel = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model.CreateFromDiscriminatorValue); } },
+                { "explanation", n => { Explanation = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation.CreateFromDiscriminatorValue); } },
+                { "fallback_credit_token", n => { FallbackCreditToken = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token.CreateFromDiscriminatorValue); } },
+                { "fallback_has_prefill_claim", n => { FallbackHasPrefillClaim = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim.CreateFromDiscriminatorValue); } },
+                { "recommended_model", n => { RecommendedModel = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
         }
@@ -105,26 +104,26 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalCategory>("category", Category);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation>("explanation", Explanation);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token>("fallback_credit_token", FallbackCreditToken);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim>("fallback_has_prefill_claim", FallbackHasPrefillClaim);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model>("recommended_model", RecommendedModel);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation>("explanation", Explanation);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token>("fallback_credit_token", FallbackCreditToken);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim>("fallback_has_prefill_claim", FallbackHasPrefillClaim);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model>("recommended_model", RecommendedModel);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_explanationMember1"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_explanationMember1"/>, <see cref="string"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BetaRefusalStopDetails_explanation : IComposedTypeWrapper, IParsable
+        public partial class BetaStopDetails_explanation : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_explanationMember1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_explanationMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_explanationMember1? BetaRefusalStopDetailsExplanationMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_explanationMember1? BetaStopDetailsExplanationMember1 { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_explanationMember1 BetaRefusalStopDetailsExplanationMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_explanationMember1 BetaStopDetailsExplanationMember1 { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,18 +136,18 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_explanation();
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_explanation();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;
                 }
                 else {
-                    result.BetaRefusalStopDetailsExplanationMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_explanationMember1();
+                    result.BetaStopDetailsExplanationMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_explanationMember1();
                 }
                 return result;
             }
@@ -158,9 +157,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaRefusalStopDetailsExplanationMember1 != null)
+                if(BetaStopDetailsExplanationMember1 != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaRefusalStopDetailsExplanationMember1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaStopDetailsExplanationMember1);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -176,23 +175,23 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                     writer.WriteStringValue(null, String);
                 }
                 else {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_explanationMember1>(null, BetaRefusalStopDetailsExplanationMember1);
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_explanationMember1>(null, BetaStopDetailsExplanationMember1);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_credit_tokenMember1"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_credit_tokenMember1"/>, <see cref="string"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BetaRefusalStopDetails_fallback_credit_token : IComposedTypeWrapper, IParsable
+        public partial class BetaStopDetails_fallback_credit_token : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_credit_tokenMember1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_credit_tokenMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_credit_tokenMember1? BetaRefusalStopDetailsFallbackCreditTokenMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_credit_tokenMember1? BetaStopDetailsFallbackCreditTokenMember1 { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_credit_tokenMember1 BetaRefusalStopDetailsFallbackCreditTokenMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_credit_tokenMember1 BetaStopDetailsFallbackCreditTokenMember1 { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -205,18 +204,18 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_credit_token();
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_credit_token();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;
                 }
                 else {
-                    result.BetaRefusalStopDetailsFallbackCreditTokenMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_credit_tokenMember1();
+                    result.BetaStopDetailsFallbackCreditTokenMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_credit_tokenMember1();
                 }
                 return result;
             }
@@ -226,9 +225,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaRefusalStopDetailsFallbackCreditTokenMember1 != null)
+                if(BetaStopDetailsFallbackCreditTokenMember1 != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaRefusalStopDetailsFallbackCreditTokenMember1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaStopDetailsFallbackCreditTokenMember1);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -244,41 +243,41 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                     writer.WriteStringValue(null, String);
                 }
                 else {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_credit_tokenMember1>(null, BetaRefusalStopDetailsFallbackCreditTokenMember1);
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_credit_tokenMember1>(null, BetaStopDetailsFallbackCreditTokenMember1);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="bool"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1"/>
+        /// Composed type wrapper for classes <see cref="bool"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_has_prefill_claimMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BetaRefusalStopDetails_fallback_has_prefill_claim : IComposedTypeWrapper, IParsable
+        public partial class BetaStopDetails_fallback_has_prefill_claim : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_has_prefill_claimMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1? BetaRefusalStopDetailsFallbackHasPrefillClaimMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_has_prefill_claimMember1? BetaStopDetailsFallbackHasPrefillClaimMember1 { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1 BetaRefusalStopDetailsFallbackHasPrefillClaimMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_has_prefill_claimMember1 BetaStopDetailsFallbackHasPrefillClaimMember1 { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="bool"/></summary>
             public bool? Boolean { get; set; }
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_fallback_has_prefill_claim();
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_fallback_has_prefill_claim();
                 if(parseNode.GetBoolValue() is bool booleanValue)
                 {
                     result.Boolean = booleanValue;
                 }
                 else {
-                    result.BetaRefusalStopDetailsFallbackHasPrefillClaimMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1();
+                    result.BetaStopDetailsFallbackHasPrefillClaimMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_has_prefill_claimMember1();
                 }
                 return result;
             }
@@ -288,9 +287,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaRefusalStopDetailsFallbackHasPrefillClaimMember1 != null)
+                if(BetaStopDetailsFallbackHasPrefillClaimMember1 != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaRefusalStopDetailsFallbackHasPrefillClaimMember1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaStopDetailsFallbackHasPrefillClaimMember1);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -306,23 +305,23 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                     writer.WriteBoolValue(null, Boolean);
                 }
                 else {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1>(null, BetaRefusalStopDetailsFallbackHasPrefillClaimMember1);
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_fallback_has_prefill_claimMember1>(null, BetaStopDetailsFallbackHasPrefillClaimMember1);
                 }
             }
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_recommended_modelMember1"/>, <see cref="string"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_recommended_modelMember1"/>, <see cref="string"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-        public partial class BetaRefusalStopDetails_recommended_model : IComposedTypeWrapper, IParsable
+        public partial class BetaStopDetails_recommended_model : IComposedTypeWrapper, IParsable
         {
-            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_recommended_modelMember1"/></summary>
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_recommended_modelMember1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_recommended_modelMember1? BetaRefusalStopDetailsRecommendedModelMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_recommended_modelMember1? BetaStopDetailsRecommendedModelMember1 { get; set; }
 #nullable restore
 #else
-            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_recommended_modelMember1 BetaRefusalStopDetailsRecommendedModelMember1 { get; set; }
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_recommended_modelMember1 BetaStopDetailsRecommendedModelMember1 { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="string"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -335,18 +334,18 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
-            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model"/></returns>
+            /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model"/></returns>
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model CreateFromDiscriminatorValue(IParseNode parseNode)
+            public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model CreateFromDiscriminatorValue(IParseNode parseNode)
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.BetaRefusalStopDetails_recommended_model();
+                var result = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.BetaStopDetails_recommended_model();
                 if(parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;
                 }
                 else {
-                    result.BetaRefusalStopDetailsRecommendedModelMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_recommended_modelMember1();
+                    result.BetaStopDetailsRecommendedModelMember1 = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_recommended_modelMember1();
                 }
                 return result;
             }
@@ -356,9 +355,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaRefusalStopDetailsRecommendedModelMember1 != null)
+                if(BetaStopDetailsRecommendedModelMember1 != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaRefusalStopDetailsRecommendedModelMember1);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaStopDetailsRecommendedModelMember1);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -374,7 +373,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                     writer.WriteStringValue(null, String);
                 }
                 else {
-                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_recommended_modelMember1>(null, BetaRefusalStopDetailsRecommendedModelMember1);
+                    writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails_recommended_modelMember1>(null, BetaStopDetailsRecommendedModelMember1);
                 }
             }
         }

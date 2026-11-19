@@ -9,27 +9,36 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     #pragma warning disable CS1591
-    public partial class BetaRefusalStopDetails_fallback_has_prefill_claimMember1 : IAdditionalDataHolder, IParsable
+    public partial class BetaClaudeCodeRbacGroupStatusDeleted : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Always `deleted`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Type { get; set; }
+#nullable restore
+#else
+        public string Type { get; set; }
+#endif
         /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1"/> and sets the default values.
+        /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeRbacGroupStatusDeleted"/> and sets the default values.
         /// </summary>
-        public BetaRefusalStopDetails_fallback_has_prefill_claimMember1()
+        public BetaClaudeCodeRbacGroupStatusDeleted()
         {
             AdditionalData = new Dictionary<string, object>();
+            Type = "deleted";
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1"/></returns>
+        /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeRbacGroupStatusDeleted"/></returns>
         /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
-        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1 CreateFromDiscriminatorValue(IParseNode parseNode)
+        public static global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeRbacGroupStatusDeleted CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails_fallback_has_prefill_claimMember1();
+            return new global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeRbacGroupStatusDeleted();
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -39,6 +48,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "type", n => { Type = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -48,6 +58,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

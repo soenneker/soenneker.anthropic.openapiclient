@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Api_keys;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Api_keysBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_code;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Compliance_settings;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Compliance_settingsBetaTrue;
@@ -72,6 +73,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Api_keysBetaTrue.Api_keysBetaTrueRequestBuilder Api_keysBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Api_keysBetaTrue.Api_keysBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The claude_code property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_code.Claude_codeRequestBuilder Claude_code
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_code.Claude_codeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The claude_tag property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Claude_tag.Claude_tagRequestBuilder Claude_tag

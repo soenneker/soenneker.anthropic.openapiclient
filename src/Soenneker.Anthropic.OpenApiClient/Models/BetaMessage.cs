@@ -81,10 +81,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         /// <summary>Structured information about why model output stopped.This is `null` when the `stop_reason` has no additional detail to report.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails? StopDetails { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails? StopDetails { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails StopDetails { get; set; }
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails StopDetails { get; set; }
 #endif
         /// <summary>The reason that we stopped.This may be one the following values:* `&quot;end_turn&quot;`: the model reached a natural stopping point* `&quot;max_tokens&quot;`: we exceeded the requested `max_tokens` or the model&apos;s maximum* `&quot;stop_sequence&quot;`: one of your provided custom `stop_sequences` was generated* `&quot;tool_use&quot;`: the model invoked one or more tools* `&quot;pause_turn&quot;`: we paused a long-running turn. You may provide the response back as-is in a subsequent request to let the model continue.* `&quot;refusal&quot;`: when streaming classifiers intervene to handle potential policy violations* `&quot;model_context_window_exceeded&quot;`: we exceeded the model&apos;s context windowIn non-streaming mode this value is always non-null. In streaming mode, it is null in the `message_start` event and non-null otherwise.</summary>
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopReason? StopReason { get; set; }
@@ -147,7 +147,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "input_transformations", n => { InputTransformations = n.GetCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaInputTransformation>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaInputTransformation.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "model", n => { Model = n.GetStringValue(); } },
                 { "role", n => { Role = n.GetStringValue(); } },
-                { "stop_details", n => { StopDetails = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails.CreateFromDiscriminatorValue); } },
+                { "stop_details", n => { StopDetails = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails.CreateFromDiscriminatorValue); } },
                 { "stop_reason", n => { StopReason = n.GetEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopReason>(); } },
                 { "stop_sequence", n => { StopSequence = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaMessage.BetaMessage_stop_sequence>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaMessage.BetaMessage_stop_sequence.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
@@ -169,7 +169,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.Anthropic.OpenApiClient.Models.BetaInputTransformation>("input_transformations", InputTransformations);
             writer.WriteStringValue("model", Model);
             writer.WriteStringValue("role", Role);
-            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaRefusalStopDetails>("stop_details", StopDetails);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopDetails>("stop_details", StopDetails);
             writer.WriteEnumValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaStopReason>("stop_reason", StopReason);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaMessage.BetaMessage_stop_sequence>("stop_sequence", StopSequence);
             writer.WriteStringValue("type", Type);

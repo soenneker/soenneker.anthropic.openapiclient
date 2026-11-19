@@ -30,7 +30,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.WorkspaceRateLimitValue.WorkspaceRateLimitValue_source Source { get; set; }
 #endif
-        /// <summary>The limiter type (for example, `requests_per_minute` or `input_tokens_per_minute`).</summary>
+        /// <summary>The limiter type (for example, `requests_per_minute` or `input_tokens_per_minute_cache_aware`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get; set; }
