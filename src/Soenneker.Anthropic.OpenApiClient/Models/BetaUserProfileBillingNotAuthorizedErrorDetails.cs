@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// The customer that the named user profile represents has not authorized the caller to bill them, or the authorization that the request&apos;s credential uses has ended. The response does not say which applies.
+    /// The customer that the request&apos;s user profile represents has not authorized the caller to bill them, or the authorization that the request&apos;s credential uses has ended. The response does not say which applies.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaUserProfileBillingNotAuthorizedErrorDetails : IAdditionalDataHolder, IParsable
