@@ -14,9 +14,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public partial class BetaManagedAgentsCacheCreationUsage : IParsable
     {
         /// <summary>Tokens used to create 1-hour ephemeral cache entries.</summary>
-        public int? Ephemeral1hInputTokens { get; set; }
+        public long? Ephemeral1hInputTokens { get; set; }
         /// <summary>Tokens used to create 5-minute ephemeral cache entries.</summary>
-        public int? Ephemeral5mInputTokens { get; set; }
+        public long? Ephemeral5mInputTokens { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -35,8 +35,8 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "ephemeral_1h_input_tokens", n => { Ephemeral1hInputTokens = n.GetIntValue(); } },
-                { "ephemeral_5m_input_tokens", n => { Ephemeral5mInputTokens = n.GetIntValue(); } },
+                { "ephemeral_1h_input_tokens", n => { Ephemeral1hInputTokens = n.GetLongValue(); } },
+                { "ephemeral_5m_input_tokens", n => { Ephemeral5mInputTokens = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -46,8 +46,8 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("ephemeral_1h_input_tokens", Ephemeral1hInputTokens);
-            writer.WriteIntValue("ephemeral_5m_input_tokens", Ephemeral5mInputTokens);
+            writer.WriteLongValue("ephemeral_1h_input_tokens", Ephemeral1hInputTokens);
+            writer.WriteLongValue("ephemeral_5m_input_tokens", Ephemeral5mInputTokens);
         }
     }
 }

@@ -84,11 +84,19 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWork
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspacePolicyViolationErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWorkspace_idBetaTrue.BetaWorkspace400Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaApprovalRequiredErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalStorageNotAvailableErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaGrantRequiredErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewNotAvailableErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewOnWithExternalStorageErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaInvalidStorageArnErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationNotEligibleErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageAttachLimitReachedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageNotAttachableErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileMismatchErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileStillRequiredErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageVerificationFailedErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaTranscriptsStorageRequiredErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileNotFoundErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspacePolicyViolationErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWorkspace_idBetaTrue.BetaWorkspace400Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaWorkspace400Error_error_details : IComposedTypeWrapper, IParsable
         {
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaApprovalRequiredErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaApprovalRequiredErrorDetails? BetaApprovalRequiredErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaApprovalRequiredErrorDetails BetaApprovalRequiredErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -105,6 +113,46 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWork
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails BetaExternalKeyValidationTimedOutErrorDetails { get; set; }
 #endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalStorageNotAvailableErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalStorageNotAvailableErrorDetails? BetaExternalStorageNotAvailableErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalStorageNotAvailableErrorDetails BetaExternalStorageNotAvailableErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaGrantRequiredErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaGrantRequiredErrorDetails? BetaGrantRequiredErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaGrantRequiredErrorDetails BetaGrantRequiredErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewNotAvailableErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewNotAvailableErrorDetails? BetaHumanReviewNotAvailableErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewNotAvailableErrorDetails BetaHumanReviewNotAvailableErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewOnWithExternalStorageErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewOnWithExternalStorageErrorDetails? BetaHumanReviewOnWithExternalStorageErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewOnWithExternalStorageErrorDetails BetaHumanReviewOnWithExternalStorageErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaInvalidStorageArnErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaInvalidStorageArnErrorDetails? BetaInvalidStorageArnErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaInvalidStorageArnErrorDetails BetaInvalidStorageArnErrorDetails { get; set; }
+#endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,6 +160,62 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWork
 #nullable restore
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails BetaKeyProfileMismatchErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationNotEligibleErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationNotEligibleErrorDetails? BetaOrganizationNotEligibleErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationNotEligibleErrorDetails BetaOrganizationNotEligibleErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageAttachLimitReachedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageAttachLimitReachedErrorDetails? BetaStorageAttachLimitReachedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageAttachLimitReachedErrorDetails BetaStorageAttachLimitReachedErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageNotAttachableErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageNotAttachableErrorDetails? BetaStorageNotAttachableErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageNotAttachableErrorDetails BetaStorageNotAttachableErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileMismatchErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileMismatchErrorDetails? BetaStorageProfileMismatchErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileMismatchErrorDetails BetaStorageProfileMismatchErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileStillRequiredErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileStillRequiredErrorDetails? BetaStorageProfileStillRequiredErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileStillRequiredErrorDetails BetaStorageProfileStillRequiredErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageVerificationFailedErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageVerificationFailedErrorDetails? BetaStorageVerificationFailedErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageVerificationFailedErrorDetails BetaStorageVerificationFailedErrorDetails { get; set; }
+#endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaTranscriptsStorageRequiredErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaTranscriptsStorageRequiredErrorDetails? BetaTranscriptsStorageRequiredErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaTranscriptsStorageRequiredErrorDetails BetaTranscriptsStorageRequiredErrorDetails { get; set; }
 #endif
             /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileNotFoundErrorDetails"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,9 +250,22 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWork
             {
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWorkspace_idBetaTrue.BetaWorkspace400Error_error.BetaWorkspace400Error_error_details();
+                result.BetaApprovalRequiredErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaApprovalRequiredErrorDetails();
                 result.BetaExternalKeyValidationFailedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails();
                 result.BetaExternalKeyValidationTimedOutErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationTimedOutErrorDetails();
+                result.BetaExternalStorageNotAvailableErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalStorageNotAvailableErrorDetails();
+                result.BetaGrantRequiredErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaGrantRequiredErrorDetails();
+                result.BetaHumanReviewNotAvailableErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewNotAvailableErrorDetails();
+                result.BetaHumanReviewOnWithExternalStorageErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaHumanReviewOnWithExternalStorageErrorDetails();
+                result.BetaInvalidStorageArnErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaInvalidStorageArnErrorDetails();
                 result.BetaKeyProfileMismatchErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaKeyProfileMismatchErrorDetails();
+                result.BetaOrganizationNotEligibleErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationNotEligibleErrorDetails();
+                result.BetaStorageAttachLimitReachedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageAttachLimitReachedErrorDetails();
+                result.BetaStorageNotAttachableErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageNotAttachableErrorDetails();
+                result.BetaStorageProfileMismatchErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileMismatchErrorDetails();
+                result.BetaStorageProfileStillRequiredErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageProfileStillRequiredErrorDetails();
+                result.BetaStorageVerificationFailedErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaStorageVerificationFailedErrorDetails();
+                result.BetaTranscriptsStorageRequiredErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaTranscriptsStorageRequiredErrorDetails();
                 result.BetaUserProfileNotFoundErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileNotFoundErrorDetails();
                 result.BetaWorkspace400ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWorkspace_idBetaTrue.BetaWorkspace400Error_error_detailsMember1();
                 result.BetaWorkspacePolicyViolationErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspacePolicyViolationErrorDetails();
@@ -160,9 +277,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWork
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaExternalKeyValidationFailedErrorDetails != null || BetaExternalKeyValidationTimedOutErrorDetails != null || BetaKeyProfileMismatchErrorDetails != null || BetaUserProfileNotFoundErrorDetails != null || BetaWorkspace400ErrorErrorDetailsMember1 != null || BetaWorkspacePolicyViolationErrorDetails != null)
+                if(BetaApprovalRequiredErrorDetails != null || BetaExternalKeyValidationFailedErrorDetails != null || BetaExternalKeyValidationTimedOutErrorDetails != null || BetaExternalStorageNotAvailableErrorDetails != null || BetaGrantRequiredErrorDetails != null || BetaHumanReviewNotAvailableErrorDetails != null || BetaHumanReviewOnWithExternalStorageErrorDetails != null || BetaInvalidStorageArnErrorDetails != null || BetaKeyProfileMismatchErrorDetails != null || BetaOrganizationNotEligibleErrorDetails != null || BetaStorageAttachLimitReachedErrorDetails != null || BetaStorageNotAttachableErrorDetails != null || BetaStorageProfileMismatchErrorDetails != null || BetaStorageProfileStillRequiredErrorDetails != null || BetaStorageVerificationFailedErrorDetails != null || BetaTranscriptsStorageRequiredErrorDetails != null || BetaUserProfileNotFoundErrorDetails != null || BetaWorkspace400ErrorErrorDetailsMember1 != null || BetaWorkspacePolicyViolationErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaExternalKeyValidationFailedErrorDetails, BetaExternalKeyValidationTimedOutErrorDetails, BetaKeyProfileMismatchErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaApprovalRequiredErrorDetails, BetaExternalKeyValidationFailedErrorDetails, BetaExternalKeyValidationTimedOutErrorDetails, BetaExternalStorageNotAvailableErrorDetails, BetaGrantRequiredErrorDetails, BetaHumanReviewNotAvailableErrorDetails, BetaHumanReviewOnWithExternalStorageErrorDetails, BetaInvalidStorageArnErrorDetails, BetaKeyProfileMismatchErrorDetails, BetaOrganizationNotEligibleErrorDetails, BetaStorageAttachLimitReachedErrorDetails, BetaStorageNotAttachableErrorDetails, BetaStorageProfileMismatchErrorDetails, BetaStorageProfileStillRequiredErrorDetails, BetaStorageVerificationFailedErrorDetails, BetaTranscriptsStorageRequiredErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -173,7 +290,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.WithWork
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaExternalKeyValidationFailedErrorDetails>(null, BetaExternalKeyValidationFailedErrorDetails, BetaExternalKeyValidationTimedOutErrorDetails, BetaKeyProfileMismatchErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaApprovalRequiredErrorDetails>(null, BetaApprovalRequiredErrorDetails, BetaExternalKeyValidationFailedErrorDetails, BetaExternalKeyValidationTimedOutErrorDetails, BetaExternalStorageNotAvailableErrorDetails, BetaGrantRequiredErrorDetails, BetaHumanReviewNotAvailableErrorDetails, BetaHumanReviewOnWithExternalStorageErrorDetails, BetaInvalidStorageArnErrorDetails, BetaKeyProfileMismatchErrorDetails, BetaOrganizationNotEligibleErrorDetails, BetaStorageAttachLimitReachedErrorDetails, BetaStorageNotAttachableErrorDetails, BetaStorageProfileMismatchErrorDetails, BetaStorageProfileStillRequiredErrorDetails, BetaStorageVerificationFailedErrorDetails, BetaTranscriptsStorageRequiredErrorDetails, BetaUserProfileNotFoundErrorDetails, BetaWorkspace400ErrorErrorDetailsMember1, BetaWorkspacePolicyViolationErrorDetails);
             }
         }
     }

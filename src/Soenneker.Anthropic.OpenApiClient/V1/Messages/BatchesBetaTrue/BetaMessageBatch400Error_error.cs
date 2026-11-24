@@ -84,7 +84,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
-        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeKeyCreatorNotMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCmekKeyDisabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationOnHoldErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue.BetaMessageBatch400Error_error_detailsMember1"/>
+        /// Composed type wrapper for classes <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeKeyCreatorNotMemberErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaCmekKeyDisabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationOnHoldErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceHumanReviewDisabledErrorDetails"/>, <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue.BetaMessageBatch400Error_error_detailsMember1"/>
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BetaMessageBatch400Error_error_details : IComposedTypeWrapper, IParsable
@@ -121,6 +121,14 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue
 #else
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationOnHoldErrorDetails BetaOrganizationOnHoldErrorDetails { get; set; }
 #endif
+            /// <summary>Composed type representation for type <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceHumanReviewDisabledErrorDetails"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceHumanReviewDisabledErrorDetails? BetaWorkspaceHumanReviewDisabledErrorDetails { get; set; }
+#nullable restore
+#else
+            public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceHumanReviewDisabledErrorDetails BetaWorkspaceHumanReviewDisabledErrorDetails { get; set; }
+#endif
             /// <summary>
             /// Creates a new instance of the appropriate class based on discriminator value
             /// </summary>
@@ -134,6 +142,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue
                 result.BetaCmekKeyDisabledErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaCmekKeyDisabledErrorDetails();
                 result.BetaMessageBatch400ErrorErrorDetailsMember1 = new global::Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue.BetaMessageBatch400Error_error_detailsMember1();
                 result.BetaOrganizationOnHoldErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaOrganizationOnHoldErrorDetails();
+                result.BetaWorkspaceHumanReviewDisabledErrorDetails = new global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceHumanReviewDisabledErrorDetails();
                 return result;
             }
             /// <summary>
@@ -142,9 +151,9 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue
             /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
             public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
             {
-                if(BetaClaudeCodeKeyCreatorNotMemberErrorDetails != null || BetaCmekKeyDisabledErrorDetails != null || BetaMessageBatch400ErrorErrorDetailsMember1 != null || BetaOrganizationOnHoldErrorDetails != null)
+                if(BetaClaudeCodeKeyCreatorNotMemberErrorDetails != null || BetaCmekKeyDisabledErrorDetails != null || BetaMessageBatch400ErrorErrorDetailsMember1 != null || BetaOrganizationOnHoldErrorDetails != null || BetaWorkspaceHumanReviewDisabledErrorDetails != null)
                 {
-                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaClaudeCodeKeyCreatorNotMemberErrorDetails, BetaCmekKeyDisabledErrorDetails, BetaMessageBatch400ErrorErrorDetailsMember1, BetaOrganizationOnHoldErrorDetails);
+                    return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(BetaClaudeCodeKeyCreatorNotMemberErrorDetails, BetaCmekKeyDisabledErrorDetails, BetaMessageBatch400ErrorErrorDetailsMember1, BetaOrganizationOnHoldErrorDetails, BetaWorkspaceHumanReviewDisabledErrorDetails);
                 }
                 return new Dictionary<string, Action<IParseNode>>();
             }
@@ -155,7 +164,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Messages.BatchesBetaTrue
             public virtual void Serialize(ISerializationWriter writer)
             {
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeKeyCreatorNotMemberErrorDetails>(null, BetaClaudeCodeKeyCreatorNotMemberErrorDetails, BetaCmekKeyDisabledErrorDetails, BetaMessageBatch400ErrorErrorDetailsMember1, BetaOrganizationOnHoldErrorDetails);
+                writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaClaudeCodeKeyCreatorNotMemberErrorDetails>(null, BetaClaudeCodeKeyCreatorNotMemberErrorDetails, BetaCmekKeyDisabledErrorDetails, BetaMessageBatch400ErrorErrorDetailsMember1, BetaOrganizationOnHoldErrorDetails, BetaWorkspaceHumanReviewDisabledErrorDetails);
             }
         }
     }

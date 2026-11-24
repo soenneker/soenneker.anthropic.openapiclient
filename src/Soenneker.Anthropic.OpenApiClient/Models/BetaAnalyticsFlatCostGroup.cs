@@ -105,7 +105,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_rbac_group_id RbacGroupId { get; set; }
 #endif
-        /// <summary>Service tier the usage was served at. Populated only when `service_tier` is in `group_by[]`; null for usage with no service tier (for example, code execution) and for Claude Enterprise usage.</summary>
+        /// <summary>Service tier the usage was served at. Populated only when `service_tier` is in `group_by[]`; null for usage with no service tier (for example, code execution).</summary>
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaUsageReportServiceTier? ServiceTier { get; set; }
         /// <summary>Claude Managed Agents session that incurred the usage. Populated only when `session_id` is in `group_by[]`; null for usage outside a managed session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -127,7 +127,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsSpeed? Speed { get; set; }
         /// <summary>Token type when `cost_type` is `tokens`; null otherwise.</summary>
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaCostReportTokenType? TokenType { get; set; }
-        /// <summary>User profile the usage was attributed to, as a tagged `uprof_` ID. Populated only when `user_profile_id` is in `group_by[]`; null for usage that named no profile and for Claude Enterprise usage.</summary>
+        /// <summary>User profile the usage was attributed to, as a tagged `uprof_` ID. Populated only when `user_profile_id` is in `group_by[]`; null for usage that named no profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_user_profile_id? UserProfileId { get; set; }
@@ -135,7 +135,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_user_profile_id UserProfileId { get; set; }
 #endif
-        /// <summary>Workspace the usage occurred in, as a tagged workspace ID, including the organization&apos;s default workspace. Populated only when `workspace_id` is in `group_by[]`; null for Claude Enterprise usage.</summary>
+        /// <summary>Workspace the usage occurred in, as a tagged workspace ID, including a Claude Platform organization&apos;s default workspace. Populated only when `workspace_id` is in `group_by[]`; null for usage in a Claude Enterprise organization&apos;s default workspace, which is its only workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatCostGroup.BetaAnalyticsFlatCostGroup_workspace_id? WorkspaceId { get; set; }

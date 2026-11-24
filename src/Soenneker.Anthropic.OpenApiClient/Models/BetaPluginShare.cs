@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
     /// <summary>
-    /// One share the owner of a member-owned Plugin has given. Shares areread-only in this API and have no ID of their own; who gave a share isrecorded on the Compliance API activity feed, not here.
+    /// One share the owner of a member-owned Plugin has given. Shares areread-only in this API and have no ID of their own. The Plugin&apos;s `owner` isthe member who gave the share.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BetaPluginShare : IAdditionalDataHolder, IParsable

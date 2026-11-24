@@ -12,6 +12,8 @@ using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Compliance_settingsBeta
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Cost_reportBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_keys;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_keysBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_storage;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_storageBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Federation_issuers;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Federation_issuersBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Federation_rules;
@@ -108,6 +110,16 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_keysBetaTrue.External_keysBetaTrueRequestBuilder External_keysBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_keysBetaTrue.External_keysBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The external_storage property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_storage.External_storageRequestBuilder External_storage
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_storage.External_storageRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The external_storageBetaTrue property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_storageBetaTrue.External_storageBetaTrueRequestBuilder External_storageBetaTrue
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.External_storageBetaTrue.External_storageBetaTrueRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The federation_issuers property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Federation_issuers.Federation_issuersRequestBuilder Federation_issuers

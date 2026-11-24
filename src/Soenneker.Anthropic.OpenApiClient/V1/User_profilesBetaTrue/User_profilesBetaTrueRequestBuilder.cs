@@ -34,7 +34,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profilesBetaTrue
         {
         }
         /// <summary>
-        /// List User Profiles
+        /// List the user profiles in your organization, newest first by default.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles) for how to set up and manage profiles.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaListUserProfilesResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profilesBetaTrue
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaListUserProfilesResponse>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaListUserProfilesResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create User Profile
+        /// Register one of your end customers and get the ID to send on the requests you make for them.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles#create-a-profile-for-each-end-customer) for what to send.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfile"/></returns>
         /// <param name="body">The settings for a new user profile.Each request creates a new profile, even when another profile already has the same values.</param>
@@ -138,7 +138,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profilesBetaTrue
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfile>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfile.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List User Profiles
+        /// List the user profiles in your organization, newest first by default.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles) for how to set up and manage profiles.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -157,7 +157,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profilesBetaTrue
             return requestInfo;
         }
         /// <summary>
-        /// Create User Profile
+        /// Register one of your end customers and get the ID to send on the requests you make for them.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles#create-a-profile-for-each-end-customer) for what to send.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The settings for a new user profile.Each request creates a new profile, even when another profile already has the same values.</param>
@@ -188,7 +188,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profilesBetaTrue
             return new global::Soenneker.Anthropic.OpenApiClient.V1.User_profilesBetaTrue.User_profilesBetaTrueRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List User Profiles
+        /// List the user profiles in your organization, newest first by default.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles) for how to set up and manage profiles.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class User_profilesBetaTrueRequestBuilderGetQueryParameters 

@@ -12,6 +12,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
     public partial class BetaComplianceSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>Read-only. Whether Access Transparency is on for the organization. Returned only when the request sends the `anthropic-beta: efs-2026-10-01` header and Access Transparency is available to the organization; otherwise omitted. If the status can&apos;t be read, getting Compliance Settings returns an error; an update still saves, but then reports `disabled` whatever the real status, so get the settings again to check it.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAccessTransparency? AccessTransparency { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAccessTransparency AccessTransparency { get; set; }
+#endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Whether the Compliance API is enabled for this organization.</summary>
@@ -56,6 +64,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "access_transparency", n => { AccessTransparency = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAccessTransparency>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaAccessTransparency.CreateFromDiscriminatorValue); } },
                 { "state", n => { State = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceSettingsState>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceSettingsState.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetStringValue(); } },
             };
@@ -67,6 +76,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAccessTransparency>("access_transparency", AccessTransparency);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaComplianceSettingsState>("state", State);
             writer.WriteStringValue("type", Type);
             writer.WriteAdditionalData(AdditionalData);

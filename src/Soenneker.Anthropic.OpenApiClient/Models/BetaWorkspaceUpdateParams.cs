@@ -37,6 +37,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string ExternalKeyId { get; set; }
 #endif
+        /// <summary>Changes to where the Workspace&apos;s retained inference data and transcript copies go, and to whether Anthropic&apos;s human review applies. Requires the `efs-2026-10-01` `anthropic-beta` value. An omitted member is unchanged. Cannot be null. An Admin API key can&apos;t set this field, because it doesn&apos;t belong to a user or a service account. Use an API key that belongs to one, or an OAuth token.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyUpdateParams? InferenceDataPrivacy { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyUpdateParams InferenceDataPrivacy { get; set; }
+#endif
         /// <summary>Name of the Workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,6 +90,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "data_residency", n => { DataResidency = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaDataResidencyUpdateParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaDataResidencyUpdateParams.CreateFromDiscriminatorValue); } },
                 { "display_color", n => { DisplayColor = n.GetStringValue(); } },
                 { "external_key_id", n => { ExternalKeyId = n.GetStringValue(); } },
+                { "inference_data_privacy", n => { InferenceDataPrivacy = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyUpdateParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyUpdateParams.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "user_profile_id", n => { UserProfileId = n.GetStringValue(); } },
@@ -97,6 +106,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaDataResidencyUpdateParams>("data_residency", DataResidency);
             writer.WriteStringValue("display_color", DisplayColor);
             writer.WriteStringValue("external_key_id", ExternalKeyId);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyUpdateParams>("inference_data_privacy", InferenceDataPrivacy);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<UntypedNode>("tags", Tags);
             writer.WriteStringValue("user_profile_id", UserProfileId);

@@ -36,6 +36,14 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_external_key_id ExternalKeyId { get; set; }
 #endif
+        /// <summary>Where the Workspace&apos;s retained inference data and transcript copies go, and whether Anthropic&apos;s human review applies. Requires the `efs-2026-10-01` `anthropic-beta` value. When omitted, `safeguards_storage` and `transcripts_storage` are `internal` and `human_review` is `enabled`. Cannot be null. An Admin API key can&apos;t set this field, because it doesn&apos;t belong to a user or a service account. Use an API key that belongs to one, or an OAuth token.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyCreateParams? InferenceDataPrivacy { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyCreateParams InferenceDataPrivacy { get; set; }
+#endif
         /// <summary>Name of the Workspace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -81,6 +89,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
                 { "data_residency", n => { DataResidency = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaDataResidencyCreateParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaDataResidencyCreateParams.CreateFromDiscriminatorValue); } },
                 { "display_color", n => { DisplayColor = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_display_color>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_display_color.CreateFromDiscriminatorValue); } },
                 { "external_key_id", n => { ExternalKeyId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_external_key_id>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_external_key_id.CreateFromDiscriminatorValue); } },
+                { "inference_data_privacy", n => { InferenceDataPrivacy = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyCreateParams>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyCreateParams.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "user_profile_id", n => { UserProfileId = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_user_profile_id>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_user_profile_id.CreateFromDiscriminatorValue); } },
@@ -96,6 +105,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaDataResidencyCreateParams>("data_residency", DataResidency);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_display_color>("display_color", DisplayColor);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_external_key_id>("external_key_id", ExternalKeyId);
+            writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaInferenceDataPrivacyCreateParams>("inference_data_privacy", InferenceDataPrivacy);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<UntypedNode>("tags", Tags);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspaceCreateParams.BetaWorkspaceCreateParams_user_profile_id>("user_profile_id", UserProfileId);

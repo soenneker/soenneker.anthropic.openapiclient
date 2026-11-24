@@ -34,7 +34,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
         {
         }
         /// <summary>
-        /// Get token usage across a date range, broken out by dimension.Returns one row per combination of the requested `group_by[]`dimensions (and time bucket, when `time_bucket_width` is set) that hasusage in the range, ranked by the `order_by` metric or ordered by timebucket; every combination is returned across pages. With no `group_by[]`and no `time_bucket_width`, a single row aggregates the whole range.Includes all usage, whether or not it is attributable to a seat user.Requires an API key with the `read:analytics` scope, or an Admin API key.
+        /// Get token usage across a date range, broken out by dimension.Returns one row per combination of the requested `group_by[]`dimensions (and time bucket, when `time_bucket_width` is set) that hasusage in the range, ranked by the `order_by` metric or ordered by timebucket; every combination is returned across pages. With no `group_by[]`and no `time_bucket_width`, a single row aggregates the whole range.Includes all usage, whether or not it is attributable to a seat user.Requires an API key with the `read:analytics` scope, or an Admin API key.This endpoint is in beta and is not available to organizations with HIPAAreadiness enabled: their API requests return a 400 error. A parentorganization&apos;s report across its child organizations leaves out the childorganizations that have HIPAA readiness enabled. If the parent has childorganizations and all of them have HIPAA readiness enabled, the requestreturns a 400 error.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatUsageResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -87,7 +87,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatUsageResponse>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatUsageResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get token usage across a date range, broken out by dimension.Returns one row per combination of the requested `group_by[]`dimensions (and time bucket, when `time_bucket_width` is set) that hasusage in the range, ranked by the `order_by` metric or ordered by timebucket; every combination is returned across pages. With no `group_by[]`and no `time_bucket_width`, a single row aggregates the whole range.Includes all usage, whether or not it is attributable to a seat user.Requires an API key with the `read:analytics` scope, or an Admin API key.
+        /// Get token usage across a date range, broken out by dimension.Returns one row per combination of the requested `group_by[]`dimensions (and time bucket, when `time_bucket_width` is set) that hasusage in the range, ranked by the `order_by` metric or ordered by timebucket; every combination is returned across pages. With no `group_by[]`and no `time_bucket_width`, a single row aggregates the whole range.Includes all usage, whether or not it is attributable to a seat user.Requires an API key with the `read:analytics` scope, or an Admin API key.This endpoint is in beta and is not available to organizations with HIPAAreadiness enabled: their API requests return a 400 error. A parentorganization&apos;s report across its child organizations leaves out the childorganizations that have HIPAA readiness enabled. If the parent has childorganizations and all of them have HIPAA readiness enabled, the requestreturns a 400 error.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -115,7 +115,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             return new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBetaTrue.UsageBetaTrueRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Get token usage across a date range, broken out by dimension.Returns one row per combination of the requested `group_by[]`dimensions (and time bucket, when `time_bucket_width` is set) that hasusage in the range, ranked by the `order_by` metric or ordered by timebucket; every combination is returned across pages. With no `group_by[]`and no `time_bucket_width`, a single row aggregates the whole range.Includes all usage, whether or not it is attributable to a seat user.Requires an API key with the `read:analytics` scope, or an Admin API key.
+        /// Get token usage across a date range, broken out by dimension.Returns one row per combination of the requested `group_by[]`dimensions (and time bucket, when `time_bucket_width` is set) that hasusage in the range, ranked by the `order_by` metric or ordered by timebucket; every combination is returned across pages. With no `group_by[]`and no `time_bucket_width`, a single row aggregates the whole range.Includes all usage, whether or not it is attributable to a seat user.Requires an API key with the `read:analytics` scope, or an Admin API key.This endpoint is in beta and is not available to organizations with HIPAAreadiness enabled: their API requests return a 400 error. A parentorganization&apos;s report across its child organizations leaves out the childorganizations that have HIPAA readiness enabled. If the parent has childorganizations and all of them have HIPAA readiness enabled, the requestreturns a 400 error.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsageBetaTrueRequestBuilderGetQueryParameters 
@@ -140,7 +140,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("actor_types%5B%5D")]
             public string ActorTypes { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by sessions of specific Claude Managed Agents agents. Use `group_by[]=agent_id` to break out per-agent values. Claude Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by sessions of specific Claude Managed Agents agents. Use `group_by[]=agent_id` to break out per-agent values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("agent_ids%5B%5D")]
@@ -150,7 +150,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("agent_ids%5B%5D")]
             public string AgentIds { get; set; }
 #endif
-            /// <summary>Filter to usage authenticated by specific API keys, by tagged API key ID (`apikey_...`), whichever identity the usage is attributed to. Include an empty entry (`api_key_ids[]=`) to also match usage that no API key authenticated. Use `group_by[]=api_key_id` to break out per-key values; usage without a key has a null `api_key_id`. Claude Platform organizations only.</summary>
+            /// <summary>Filter to usage authenticated by specific API keys, by tagged API key ID (`apikey_...`), whichever identity the usage is attributed to. Include an empty entry (`api_key_ids[]=`) to also match usage that no API key authenticated. Use `group_by[]=api_key_id` to break out per-key values; usage without a key has a null `api_key_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("api_key_ids%5B%5D")]
@@ -190,7 +190,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("context_windows%5B%5D")]
             public string ContextWindows { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that specific deployments started. Use `group_by[]=deployment_id` to break out per-deployment values. Claude Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that specific deployments started. Use `group_by[]=deployment_id` to break out per-deployment values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("deployment_ids%5B%5D")]
@@ -210,7 +210,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("ending_at")]
             public string EndingAt { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that ran in specific environments. Use `group_by[]=environment_id` to break out per-environment values. Claude Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by Claude Managed Agents sessions that ran in specific environments. Use `group_by[]=environment_id` to break out per-environment values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("environment_ids%5B%5D")]
@@ -262,7 +262,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             /// <summary>Row order. A metric ranks rows by that metric in the `order` direction. `time` orders rows by time bucket in the `order` direction (newest first by default) and, within a bucket, by `total_tokens`, highest first. `time` takes effect only with `time_bucket_width`; without it, `time` is the same as `total_tokens`. Defaults to `total_tokens`.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.Anthropic.OpenApiClient.Models.BetaAnalyticsFlatUsageOrderBy? OrderBy { get; set; }
-            /// <summary>Filter a parent organization&apos;s report to specific child organizations, by organization UUID or `org_` ID; an ID that is not one of its child organizations matches nothing. Requires an API key created at the parent organization level. Use `group_by[]=organization_id` to break out per-organization values.</summary>
+            /// <summary>Filter a parent organization&apos;s report to specific child organizations, by organization UUID or `org_` ID; an ID that is not one of its child organizations matches nothing. The report leaves out child organizations with HIPAA readiness enabled, and naming one returns a 400 error. Requires an API key created at the parent organization level. Use `group_by[]=organization_id` to break out per-organization values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("organization_ids%5B%5D")]
@@ -302,7 +302,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("rbac_group_ids%5B%5D")]
             public string RbacGroupIds { get; set; }
 #endif
-            /// <summary>Filter to specific service tiers. Use `group_by[]=service_tier` to break out per-tier values. Claude Platform organizations only; matches nothing for a Claude Enterprise organization.</summary>
+            /// <summary>Filter to specific service tiers. Use `group_by[]=service_tier` to break out per-tier values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("service_tiers%5B%5D")]
@@ -312,7 +312,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("service_tiers%5B%5D")]
             public string ServiceTiers { get; set; }
 #endif
-            /// <summary>Filter to usage incurred by specific Claude Managed Agents sessions, by tagged session ID (`sesn_...`). Use `group_by[]=session_id` to break out per-session values. Claude Platform organizations only.</summary>
+            /// <summary>Filter to usage incurred by specific Claude Managed Agents sessions, by tagged session ID (`sesn_...`). Use `group_by[]=session_id` to break out per-session values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("session_ids%5B%5D")]
@@ -355,7 +355,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("time_bucket_width")]
             public string TimeBucketWidth { get; set; }
 #endif
-            /// <summary>Filter to usage attributed to specific user profiles, by tagged user profile ID (`uprof_...`). Use `group_by[]=user_profile_id` to break out per-profile values. Claude Platform organizations only.</summary>
+            /// <summary>Filter to usage attributed to specific user profiles, by tagged user profile ID (`uprof_...`). Use `group_by[]=user_profile_id` to break out per-profile values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user_profile_ids%5B%5D")]
@@ -365,7 +365,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Analytics.UsageBeta
             [QueryParameter("user_profile_ids%5B%5D")]
             public string UserProfileIds { get; set; }
 #endif
-            /// <summary>Filter to usage in specific workspaces, by tagged workspace ID (`wrkspc_...`). Use `group_by[]=workspace_id` to break out per-workspace values. Claude Platform organizations only; matches nothing for a Claude Enterprise organization.</summary>
+            /// <summary>Filter to usage in specific workspaces, by tagged workspace ID (`wrkspc_...`). Use `group_by[]=workspace_id` to break out per-workspace values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("workspace_ids%5B%5D")]

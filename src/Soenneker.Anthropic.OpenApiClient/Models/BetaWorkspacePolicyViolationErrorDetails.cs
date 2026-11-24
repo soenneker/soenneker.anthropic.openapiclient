@@ -23,7 +23,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
 #else
         public string ErrorCode { get; set; }
 #endif
-        /// <summary>The request field the broken rule applies to.</summary>
+        /// <summary>The request field the broken rule applies to. Other values may be returned.</summary>
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspacePolicyField? Field { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaWorkspacePolicyViolationErrorDetails"/> and sets the default values.

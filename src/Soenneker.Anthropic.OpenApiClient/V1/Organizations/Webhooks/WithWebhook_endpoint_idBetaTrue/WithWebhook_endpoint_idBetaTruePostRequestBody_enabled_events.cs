@@ -16,6 +16,14 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Webhooks.WithWebhoo
         #pragma warning disable CS1591
         External_keyRecovered,
         #pragma warning restore CS1591
+        [EnumMember(Value = "external_storage.failed")]
+        #pragma warning disable CS1591
+        External_storageFailed,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "external_storage.recovered")]
+        #pragma warning disable CS1591
+        External_storageRecovered,
+        #pragma warning restore CS1591
         [EnumMember(Value = "user_profile.enforcement_action_opened")]
         #pragma warning disable CS1591
         User_profileEnforcement_action_opened,

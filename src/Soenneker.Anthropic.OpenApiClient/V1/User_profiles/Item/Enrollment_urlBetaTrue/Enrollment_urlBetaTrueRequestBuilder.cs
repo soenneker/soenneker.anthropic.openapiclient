@@ -34,7 +34,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Enrollment_url
         {
         }
         /// <summary>
-        /// Create Enrollment URL
+        /// Create a link that sends the profile&apos;s end customer to the Verification Portal from Claude Platform on AWS.On the Claude API, create an action URL instead. See [Send an end customer a link to the Verification Portal](https://platform.claude.com/docs/en/manage-claude/user-profiles-verification-portal) for when to create the link and what the end customer sees.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnrollmentUrl"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -85,7 +85,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Enrollment_url
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnrollmentUrl>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaEnrollmentUrl.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create Enrollment URL
+        /// Create a link that sends the profile&apos;s end customer to the Verification Portal from Claude Platform on AWS.On the Claude API, create an action URL instead. See [Send an end customer a link to the Verification Portal](https://platform.claude.com/docs/en/manage-claude/user-profiles-verification-portal) for when to create the link and what the end customer sees.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

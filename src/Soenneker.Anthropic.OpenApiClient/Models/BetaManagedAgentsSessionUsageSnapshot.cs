@@ -24,9 +24,9 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCacheCreationUsage CacheCreation { get; set; }
 #endif
         /// <summary>Total tokens read from prompt cache.</summary>
-        public int? CacheReadInputTokens { get; set; }
+        public long? CacheReadInputTokens { get; set; }
         /// <summary>Total input tokens consumed across all turns.</summary>
-        public int? InputTokens { get; set; }
+        public long? InputTokens { get; set; }
         /// <summary>Cumulative list cost of the session across all turns, priced at public list rates.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -36,7 +36,7 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
         public global::Soenneker.Anthropic.OpenApiClient.Models.BetaMonetaryAmount ListCost { get; set; }
 #endif
         /// <summary>Total output tokens generated across all turns.</summary>
-        public int? OutputTokens { get; set; }
+        public long? OutputTokens { get; set; }
         /// <summary>Cumulative server-executed tool usage across all turns.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -65,10 +65,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             {
                 { "active_seconds", n => { ActiveSeconds = n.GetDoubleValue(); } },
                 { "cache_creation", n => { CacheCreation = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCacheCreationUsage>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCacheCreationUsage.CreateFromDiscriminatorValue); } },
-                { "cache_read_input_tokens", n => { CacheReadInputTokens = n.GetIntValue(); } },
-                { "input_tokens", n => { InputTokens = n.GetIntValue(); } },
+                { "cache_read_input_tokens", n => { CacheReadInputTokens = n.GetLongValue(); } },
+                { "input_tokens", n => { InputTokens = n.GetLongValue(); } },
                 { "list_cost", n => { ListCost = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaMonetaryAmount>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaMonetaryAmount.CreateFromDiscriminatorValue); } },
-                { "output_tokens", n => { OutputTokens = n.GetIntValue(); } },
+                { "output_tokens", n => { OutputTokens = n.GetLongValue(); } },
                 { "server_tool_use", n => { ServerToolUse = n.GetObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsServerToolUsage>(global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsServerToolUsage.CreateFromDiscriminatorValue); } },
             };
         }
@@ -81,10 +81,10 @@ namespace Soenneker.Anthropic.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("active_seconds", ActiveSeconds);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsCacheCreationUsage>("cache_creation", CacheCreation);
-            writer.WriteIntValue("cache_read_input_tokens", CacheReadInputTokens);
-            writer.WriteIntValue("input_tokens", InputTokens);
+            writer.WriteLongValue("cache_read_input_tokens", CacheReadInputTokens);
+            writer.WriteLongValue("input_tokens", InputTokens);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaMonetaryAmount>("list_cost", ListCost);
-            writer.WriteIntValue("output_tokens", OutputTokens);
+            writer.WriteLongValue("output_tokens", OutputTokens);
             writer.WriteObjectValue<global::Soenneker.Anthropic.OpenApiClient.Models.BetaManagedAgentsServerToolUsage>("server_tool_use", ServerToolUse);
         }
     }

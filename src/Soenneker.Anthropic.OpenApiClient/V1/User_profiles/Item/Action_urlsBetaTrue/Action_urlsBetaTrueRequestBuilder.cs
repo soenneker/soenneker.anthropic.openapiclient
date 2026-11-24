@@ -34,7 +34,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Action_urlsBet
         {
         }
         /// <summary>
-        /// Create Action URL
+        /// Create a link that sends the profile&apos;s end customer to the Verification Portal.See [Send an end customer a link to the Verification Portal](https://platform.claude.com/docs/en/manage-claude/user-profiles-verification-portal) for when to create the link and what the end customer sees.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileActionUrl"/></returns>
         /// <param name="body">The request body</param>
@@ -87,7 +87,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Action_urlsBet
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileActionUrl>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.BetaUserProfileActionUrl.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create Action URL
+        /// Create a link that sends the profile&apos;s end customer to the Verification Portal.See [Send an end customer a link to the Verification Portal](https://platform.claude.com/docs/en/manage-claude/user-profiles-verification-portal) for when to create the link and what the end customer sees.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

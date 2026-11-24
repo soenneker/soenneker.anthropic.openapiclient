@@ -52,7 +52,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item
         {
         }
         /// <summary>
-        /// Delete User Profile
+        /// Delete a user profile, for example when the end customer closes their account.Stop sending the profile&apos;s ID first. See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles#delete-a-profile) for what happens after a delete.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.DeletedUserProfile"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -103,7 +103,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.DeletedUserProfile>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.DeletedUserProfile.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get User Profile
+        /// Get a user profile by ID to check the details stored for it.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles) for how to set up and manage profiles.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.UserProfile"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -154,7 +154,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.UserProfile>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.UserProfile.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Update User Profile
+        /// Change the details of a user profile, leaving the fields that you don&apos;t send as they are.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles#update-a-profile) for how each field is updated.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.Anthropic.OpenApiClient.Models.UserProfile"/></returns>
         /// <param name="body">The request body</param>
@@ -207,7 +207,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item
             return await RequestAdapter.SendAsync<global::Soenneker.Anthropic.OpenApiClient.Models.UserProfile>(requestInfo, global::Soenneker.Anthropic.OpenApiClient.Models.UserProfile.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete User Profile
+        /// Delete a user profile, for example when the end customer closes their account.Stop sending the profile&apos;s ID first. See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles#delete-a-profile) for what happens after a delete.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -226,7 +226,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item
             return requestInfo;
         }
         /// <summary>
-        /// Get User Profile
+        /// Get a user profile by ID to check the details stored for it.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles) for how to set up and manage profiles.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -245,7 +245,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item
             return requestInfo;
         }
         /// <summary>
-        /// Update User Profile
+        /// Change the details of a user profile, leaving the fields that you don&apos;t send as they are.See the [User profiles guide](https://platform.claude.com/docs/en/manage-claude/user-profiles#update-a-profile) for how each field is updated.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

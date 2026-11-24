@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.Anthropic.OpenApiClient.Models
 {
-    /// <summary>The request field the broken rule applies to.</summary>
+    /// <summary>The request field the broken rule applies to. Other values may be returned.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum WorkspacePolicyField
     {

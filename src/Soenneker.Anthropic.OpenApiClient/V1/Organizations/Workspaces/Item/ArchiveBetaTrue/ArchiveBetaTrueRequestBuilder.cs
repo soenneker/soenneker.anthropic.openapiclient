@@ -44,7 +44,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Item.Arc
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Item.ArchiveBetaTrue.BetaWorkspace403Error">When receiving a 403 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 404 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 408 status code</exception>
-        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 409 status code</exception>
+        /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Item.ArchiveBetaTrue.BetaWorkspace409Error">When receiving a 409 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 412 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 413 status code</exception>
         /// <exception cref="global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse">When receiving a 429 status code</exception>
@@ -72,7 +72,7 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Item.Arc
                 { "403", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Item.ArchiveBetaTrue.BetaWorkspace403Error.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "408", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
-                { "409", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
+                { "409", global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Workspaces.Item.ArchiveBetaTrue.BetaWorkspace409Error.CreateFromDiscriminatorValue },
                 { "412", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "413", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
                 { "429", global::Soenneker.Anthropic.OpenApiClient.Models.BetaErrorResponse.CreateFromDiscriminatorValue },
