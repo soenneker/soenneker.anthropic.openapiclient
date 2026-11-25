@@ -26,6 +26,7 @@ using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Plugin_marketplaces;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Plugin_marketplacesBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Plugins;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.PluginsBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Providers;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rate_limits;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rate_limitsBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rbac_groups;
@@ -180,6 +181,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.Organizations
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.PluginsBetaTrue.PluginsBetaTrueRequestBuilder PluginsBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.PluginsBetaTrue.PluginsBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The providers property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Providers.ProvidersRequestBuilder Providers
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Providers.ProvidersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The rate_limits property</summary>
         public global::Soenneker.Anthropic.OpenApiClient.V1.Organizations.Rate_limits.Rate_limitsRequestBuilder Rate_limits

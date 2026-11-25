@@ -7,6 +7,7 @@ using Soenneker.Anthropic.OpenApiClient.Models;
 using Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Action_urls;
 using Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Action_urlsBetaTrue;
 using Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Enrollment_urlBetaTrue;
+using Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Providers;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -34,6 +35,11 @@ namespace Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item
         public global::Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Enrollment_urlBetaTrue.Enrollment_urlBetaTrueRequestBuilder Enrollment_urlBetaTrue
         {
             get => new global::Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Enrollment_urlBetaTrue.Enrollment_urlBetaTrueRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The providers property</summary>
+        public global::Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Providers.ProvidersRequestBuilder Providers
+        {
+            get => new global::Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.Providers.ProvidersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.Anthropic.OpenApiClient.V1.User_profiles.Item.WithUser_profile_ItemRequestBuilder"/> and sets the default values.
